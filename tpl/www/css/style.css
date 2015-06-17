@@ -5,7 +5,7 @@ body,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,sele
 body{font:12px "微软雅黑","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%; color:#666;}
 input{font-family:"微软雅黑","Arial","Arial Narrow",HELVETICA;}
 a{color:#666;text-decoration:none}
-a:hover{color:#00F;text-decoration:underline}
+a:hover{color:#fff;text-decoration:none;}
 em{font-style:normal}
 img{border:0;vertical-align:middle}
 table{border-collapse:collapse;border-spacing:0}
@@ -14,13 +14,17 @@ p{word-wrap:break-word}
 .fr{ float:right;}
 .cl,.clear{ clear:both;height:0;line-height:0;content:'.';display:block;visibility:hidden;}
 .wrap{ width:980px; margin:0 auto;}
+.wrap a:hover{color:red;}
 .hand{cursor:pointer;}
 .red{color:red;}
 .tag{color:#000;text-decoration:underline;}
 /* 公共页头样式 */
-.head{ width:980px;margin:0 auto 10px;}
-.head .head_right{float:right;}
-.head .logo{ float:left;}
+.head{ background-color: #eaeaea;position: relative;z-index: 1;}
+.head .top_box{background: rgba(0, 0, 0, 0) url("/images/topbg.jpg") repeat-x scroll 0 0;height: 28px;line-height: 28px;}
+.head .head_right{width: 980px;margin: auto;}
+.head .headerCont{background-color: #eaeaea;clear: both; height: 162px;margin: 0 auto;position: relative;width: 980px;}
+.head .logo{ margin-top: 40px;float: left;}
+.head .logo span{ font-size: 100px;}
 .top_nav{height:26px; line-height:26px; text-align:right; color:#666;}
 .head .search{ width:253px; height:28px;border:1px solid #e7e7e7; margin-top:5px;float:right;}
 .head .search_input{ width:216px; height:20px; padding:4px; border:0; float:left;}
@@ -43,7 +47,7 @@ p{word-wrap:break-word}
 .home_banner{ height:180px; position:relative;width:980px;margin:0 auto 10px;}
 .home_banner .pro_ul{ width:980px; height:180px;list-style:none;}
 .home_banner .page_ul{ width:980px; position:absolute; top:160px; text-align:center;list-style:none;}
-.home_banner .page_ul li{ width:45px; height:12px; background:#000; display:inline-block; +display:inline; zoom:1; margin:0 2px; cursor:pointer; filter:alpha(opacity=60);opacity:0.6;}
+.home_banner .page_ul li{ width:45px; height:12px; background:#000; display:inline-block; display:inline; zoom:1; margin:0 2px; cursor:pointer; filter:alpha(opacity=60);opacity:0.6;}
 .home_banner .page_ul .on{ background:#3375b9;}
 
 
