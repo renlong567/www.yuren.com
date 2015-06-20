@@ -20,7 +20,7 @@ p{word-wrap:break-word}
 .tag{color:#000;text-decoration:underline;}
 /* 公共页头样式 */
 .head{ background-color: #eaeaea;position: relative;z-index: 1;}
-.head .top_box{background: rgba(0, 0, 0, 0) url("/images/topbg.jpg") repeat-x scroll 0 0;height: 28px;line-height: 28px;}
+.head .top_box{background: rgba(0, 0, 0, 0) url("../images/topbg.jpg") repeat-x scroll 0 0;height: 28px;line-height: 28px;}
 .head .head_right{width: 980px;margin: auto;}
 .head .headerCont{background-color: #eaeaea;clear: both; height: 162px;margin: 0 auto;position: relative;width: 980px;}
 .head .logo{ margin-top: 40px;float: left;}

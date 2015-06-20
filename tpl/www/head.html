@@ -1,17 +1,17 @@
 <!-- head title=$title css="css/style.css,artdialog.css" extjs="jquery.artdialog.js" js="js/global.js" close=false html5=true -->
 <script type="text/javascript">
-    $(document).ready(function () {
-        $.cart.total();
-        $.phpok.json(api_url('login', 'status'), function (data) {
-            if (data.status == 'ok') {
-                var logout = "javascript:$.user.logout('" + data.content.user_name + "');void(0)";
-                var html = ' <a href="{url ctrl=usercp/}">{lang个人中心}</a> | <a href="' + logout + '">{lang退出}</a>';
-            } else {
-                var html = ' <a href="{url ctrl=register/}">{lang注册}</a> | <a href="{url ctrl=login/}">{lang登录}</a>';
-            }
-            $("#top_html_user_login").html(html);
-        });
-    });
+//    $(document).ready(function () {
+//        $.cart.total();
+//        $.phpok.json(api_url('login', 'status'), function (data) {
+//            if (data.status == 'ok') {
+//                var logout = "javascript:$.user.logout('" + data.content.user_name + "');void(0)";
+//                var html = ' <a href="{url ctrl=usercp/}">{lang个人中心}</a> | <a href="' + logout + '">{lang退出}</a>';
+//            } else {
+//                var html = ' <a href="{url ctrl=register/}">{lang注册}</a> | <a href="{url ctrl=login/}">{lang登录}</a>';
+//            }
+//            $("#top_html_user_login").html(html);
+//        });
+//    });
 </script>
 </head>
 <body>
@@ -25,15 +25,15 @@
                 <div class="fr">
                     <span>
                         <a id="setForIndex" onclick="this.style.behavior = 'url(#default#homepage)';
-                                this.setHomePage('http://www.bjhdis.com/')" style=" cursor:pointer" title="设为首页">设为首页</a>
+                                this.setHomePage('http://www.bjhdis.com/')" style=" cursor:pointer" title="设为首页">{lang设为首页}</a>
                     </span>
                     <span>|</span>
                     <span>
-                        <a href="javascript:AddFavorite('http://www.bjhdis.com/','郑州经开区育人学校')">加入收藏</a>
+                        <a href="javascript:AddFavorite('http://www.yureninternational.com/','{lang郑州育人国际学校}')">{lang加入收藏}</a>
                     </span>
                     <span>|</span>
                     <span>
-                        <a href="/Category_38/Index.aspx" style="color:red;">English</a>
+                        <a href="index.php?_langid=en_US" style="color:red;">English</a>
                     </span>
                 </div>
             </div>
