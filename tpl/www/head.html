@@ -12,6 +12,26 @@
 //            $("#top_html_user_login").html(html);
 //        });
 //    });
+
+    if ('' != '') {
+        document.getElementById('topKeyWord').value = '';
+    }
+    document.getElementById("topKeyWord").onkeydown = function (e) {
+        e = e || window.event;
+        if (e.keyCode == 13) {
+            gSearch();
+        }
+    }
+
+    function gSearch() {
+        var keyword = document.getElementById('topKeyWord').value;
+        if (keyword == '' || keyword == "请输入搜索关键字") {
+            alert("{lang请输入搜索关键字}");
+        }
+        else {
+            window.location = "{url ctrl=search/}&keywords=" + encodeURI(keyword);
+        }
+    }
 </script>
 </head>
 <body>
@@ -40,11 +60,33 @@
         </div>
         <div class="headerCont">
             <div class="logo"><a href="{$sys.url}" title="{$config.title}"><img src="{$config.logo}" alt="{$config.title}" width="446" height="79" /></a></div>
-            <div class="search">
-                <form method="post" action="{url ctrl=search/}" onsubmit="return top_search();">
-                    <input name="keywords" value="{$keywords}" id="top-keywords" type="text" class="search_input" placeholder="{lang请输入关键字}" />
-                    <input name="" type="submit" class="search_btn" value="" />
-                </form>
+            <div class="fr">
+<!--                                <div class="search">
+                                    <form method="post" action="{url ctrl=search/}" onsubmit="return top_search();">
+                                        <input name="" type="submit" class="search_btn" value="" />
+                                        <input name="keywords" value="{$keywords}" id="top-keywords" type="text" class="search_input" placeholder="{lang请输入关键字}" />
+                                    </form>
+                                </div>-->
+                <div class="search">
+                    <a class="searchBtn" href="javascript:gSearch()"></a>
+                    <input id="topKeyWord" class="keyWord" type="text" onfocus="this.value = '';this.style.color = '#333'" maxlength="50">
+                </div>
+                <div class="view">
+                    <input id="tongji" type="hidden" value="145400" name="tongji">
+                    <span class="tit">
+                        <img src="images/fangwen.gif">
+                    </span>
+                    <span id="TotalNum" class="con">
+                        <img border="0" src="images/0.gif">
+                        <img border="0" src="images/0.gif">
+                        <img border="0" src="images/1.gif">
+                        <img border="0" src="images/4.gif">
+                        <img border="0" src="images/5.gif">
+                        <img border="0" src="images/4.gif">
+                        <img border="0" src="images/0.gif">
+                        <img border="0" src="images/0.gif">
+                    </span>
+                </div>
             </div>
         </div>
         <!--<div class="cl"></div>-->

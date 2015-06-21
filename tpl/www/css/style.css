@@ -2,9 +2,9 @@
 /* CSS Document */
 
 body,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0;list-style:none;}
-body{font:12px "微软雅黑","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%; color:#666;}
+body{font:12px "微软雅黑","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%; color:#666;min-width: 980px;}
 input{font-family:"微软雅黑","Arial","Arial Narrow",HELVETICA;}
-a{color:#666;text-decoration:none}
+a{color:#adadad;text-decoration:none}
 a:hover{color:#fff;text-decoration:none;}
 em{font-style:normal}
 img{border:0;vertical-align:middle}
@@ -15,44 +15,69 @@ p{word-wrap:break-word}
 .cl,.clear{ clear:both;height:0;line-height:0;content:'.';display:block;visibility:hidden;}
 .wrap{ width:980px; margin:0 auto;}
 .wrap a:hover{color:red;}
+.wrap .spic { background: #fff none repeat scroll 0 0;border: 1px solid #e4e4e4;overflow: hidden;}
+.wrap .spic .hd {
+    background: rgba(0, 0, 0, 0) url("../images/hd3.gif") repeat-x scroll 0 0;
+    border-top: medium none;
+    height: 35px;
+    line-height: 35px;
+}
+.wrap .spic .hd h3 {
+    color: #a60000;
+    float: left;
+    font-size: 14px;
+    padding-left: 15px;
+}
+.warp .spic .hd h3 a:hover {
+    color: #f00;
+    font-size: 14px;
+}
 .hand{cursor:pointer;}
 .red{color:red;}
 .tag{color:#000;text-decoration:underline;}
 /* 公共页头样式 */
 .head{ background-color: #eaeaea;position: relative;z-index: 1;}
-.head .top_box{background: rgba(0, 0, 0, 0) url("../images/topbg.jpg") repeat-x scroll 0 0;height: 28px;line-height: 28px;}
+.head .top_box{background: rgba(0, 0, 0, 0) url("../images/topbg.jpg") repeat-x scroll 0 0;height: 28px;line-height: 28px;width: 100%;}
 .head .head_right{width: 980px;margin: auto;}
+.head_right .fr span{ margin-left: 10px;}
 .head .headerCont{background-color: #eaeaea;clear: both; height: 162px;margin: 0 auto;position: relative;width: 980px;}
 .head .logo{ margin-top: 40px;float: left;}
 .head .logo span{ font-size: 100px;}
 .top_nav{height:26px; line-height:26px; text-align:right; color:#666;}
-.head .search{ width:253px; height:28px;border:1px solid #e7e7e7; margin-top:5px;float:right;}
-.head .search_input{ width:216px; height:20px; padding:4px; border:0; float:left;}
-.head .search_btn{width:28px; height:28px; float:left; background:url("../images/icon-search.jpg") center center no-repeat; float:left; cursor:pointer; border:0;}
+.head .headerCont .fr{ width:500px;float:right;margin-top: 50px;}
 
-.head .nav{width:980px; height:35px; background:#3375b9; border-radius:4px;margin-top:5px;list-style:none;}
-.head .nav li{ float:left;position:relative;list-style:none;}
-.head .nav li a{display:inline-block;padding: 0 32px;border-right: 1px solid #F4F4F4;height: 35px;line-height: 35px;color: #fff;text-decoration: none; font-size:14px;}
+.search { background: rgba(0, 0, 0, 0) url("../images/ser.gif") no-repeat scroll 0 0;clear: both;float: right;height: 42px;line-height: 42px;margin-top: 10px;overflow: hidden;width: 364px;}
+.search .searchBtn { cursor: pointer;display: block;float: right;height: 40px;width: 74px;}
+.search .keyWord { background-color: transparent;border: medium none;color: #999;height: 30px;line-height: 30px;margin-top: 4px;width: 282px;}
+
+.head .view { clear: both;color: #009900;display: inline;float: right;font-size: 18px;height: 32px;overflow: hidden;padding-top: 14px;text-align: right;width: 500px;}
+.head .view img{margin-left: -4px;}
+.head .nav{height:45px; background:#3375b9;line-height: 45px;list-style:none;}
+.head .nav ul{margin: 0 auto;width: 980px;}
+.head .nav li{ float:left;position:relative;list-style:none;text-align: center;}
+.head .nav li a{display:inline-block;padding: 0 32px;color: #fff;text-decoration: none; font-size:14px;}
 .head .nav li:hover a,.head .nav li.current a{ background:#23a0e7; color:#fff;}
 .head .nav li a.first,.head .nav li.current a.first{ border-radius:4px 0 0 4px;padding-left:39px;}
 .head .nav li a.last,.head .nav li.current a.last {border-right:0; border-radius:0 4px 4px 0;padding-left:39px;}
-.head .nav ul ul{width:100%;display: none;position: absolute;top: 100%;left: 0;border-top: 1px solid white;background: #23a0e7; z-index:1000;}
+.head .nav ul ul{width:100%;display: none;position: absolute;top: 100%;left: 0;background: #23a0e7; z-index:1000;}
 .head .nav ul ul li {background: #23a0e7;float: none;}
 .head .nav li:hover ul{display:block;}
 .head .nav ul ul li a{ border-right:0;}
-.head .nav ul ul li a:hover{ background:#3375b9;}
+.head .nav ul ul li a:hover{ background:#3375b9;width: 100%;}
 
 /* 首页Banner 样式 */
+.home_banner{ background: rgba(0, 0, 0, 0) url("../images/babg.jpg") no-repeat scroll center center;  height: 350px;}
+#fous { height: 330px;margin: 0 auto;padding-top: 12px;position: relative;width: 980px;}
+#fous .hd .prev { background: rgba(0, 0, 0, 0) url("../images/bon2.png") no-repeat scroll 0 0;cursor: pointer;display: block;height: 66px;left: -78px;position: absolute;top: 40%;width: 66px;}
+#fous .hd .next { background: rgba(0, 0, 0, 0) url("../images/bon2.png") no-repeat scroll 0 -66px;cursor: pointer;display: block;height: 66px;position: absolute;right: -78px;top: 40%;width: 66px;}
+.home_banner .pro_ul{ width:980px; height:300px;list-style:none;}
+.home_banner .page_ul{ bottom: 46px;left: 48%;position: absolute;}
+.home_banner .page_ul li { background: rgba(0, 0, 0, 0) url("../images/bon1.png") no-repeat scroll 0 0;cursor: pointer;display: inline;float: left;height: 16px;margin-right: 1px;width: 16px;}
+.home_banner .page_ul .on{ background: rgba(0, 0, 0, 0) url("../images/bon1.png") no-repeat scroll -21px 0;}
 
-.home_banner{ height:180px; position:relative;width:980px;margin:0 auto 10px;}
-.home_banner .pro_ul{ width:980px; height:180px;list-style:none;}
-.home_banner .page_ul{ width:980px; position:absolute; top:160px; text-align:center;list-style:none;}
-.home_banner .page_ul li{ width:45px; height:12px; background:#000; display:inline-block; display:inline; zoom:1; margin:0 2px; cursor:pointer; filter:alpha(opacity=60);opacity:0.6;}
-.home_banner .page_ul .on{ background:#3375b9;}
-
-
-.home_left{ width:265px; float:left;}
-.home_right{ width:700px; float:right;}
+.home_left{ height: 100%;overflow: hidden;width: 724px;float:left;}
+.home_left .news_banner{}
+.home_right{ height: 100%;overflow: hidden;width: 240px;float:right;}
 .m_box{ overflow:hidden; margin-bottom:10px;}
 .m_t{ border-bottom:1px solid #3375b9; height:30px; line-height:30px; margin-bottom:5px; overflow:hidden;}
 .m_t .more{ float:right; font-size:11px; padding-top:5px; line-height:25px;color:#3375b9; background:url("../images/arrow-right.png") right 13px no-repeat; padding-right:8px;}
