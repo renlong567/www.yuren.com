@@ -44,12 +44,11 @@
                                 </div>-->
                 <div class="fr">
                     <span>
-                        <a id="setForIndex" onclick="this.style.behavior = 'url(#default#homepage)';
-                                this.setHomePage('http://www.bjhdis.com/')" style=" cursor:pointer" title="设为首页">{lang设为首页}</a>
+                        <a id="setForIndex" onclick="set_home()" style=" cursor:pointer" title="设为首页">{lang设为首页}</a>
                     </span>
                     <span>|</span>
                     <span>
-                        <a href="javascript:AddFavorite('http://www.yureninternational.com/','{lang郑州育人国际学校}')">{lang加入收藏}</a>
+                        <a href="javascript:add_fav('http://www.yureninternational.com/','{lang郑州育人国际学校}')">{lang加入收藏}</a>
                     </span>
                     <span>|</span>
                     <span>
@@ -61,12 +60,6 @@
         <div class="headerCont">
             <div class="logo"><a href="{$sys.url}" title="{$config.title}"><img src="{$config.logo}" alt="{$config.title}" width="446" height="79" /></a></div>
             <div class="fr">
-<!--                                <div class="search">
-                                    <form method="post" action="{url ctrl=search/}" onsubmit="return top_search();">
-                                        <input name="" type="submit" class="search_btn" value="" />
-                                        <input name="keywords" value="{$keywords}" id="top-keywords" type="text" class="search_input" placeholder="{lang请输入关键字}" />
-                                    </form>
-                                </div>-->
                 <div class="search">
                     <a class="searchBtn" href="javascript:gSearch()"></a>
                     <input id="topKeyWord" class="keyWord" type="text" onfocus="this.value = '';this.style.color = '#333'" maxlength="50">
