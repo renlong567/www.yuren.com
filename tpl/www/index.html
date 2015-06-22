@@ -25,27 +25,31 @@
             'mainCell': '.pro_ul',
             'autoPlay': true
         });
+
+        $(".news_banner").slide({
+            'titCell': '.page_ul li',
+            'mainCell': '.pro_ul',
+            'autoPlay': true
+        });
     });
 </script>
 <div class="wrap">
     <div class="home_left">
         <div class="news_banner">
-            <div id="fous">
-                <!-- php:$list = phpok('picplayer') -->
-                <ul class="pro_ul">
+            <div class="hd">
+                <!-- php:$list = phpok('xinwentupian') -->
+                <ul>
                     <!-- loop from=$list.rslist key=$key value=$value -->
                     <li><a href="{$value.link}" target="{$value.target}" title="{$value.title}"><img src="{$value.pic.filename}" width="980" alt="{$value.title}" /></a></li>
                     <!-- /loop -->
                 </ul>
-                <div class="hd">
-                    <a class="prev"></a>
-                    <a class="next"></a>
-                    <ul class="page_ul">
-                        <!-- loop from=$list.rslist key=$key value=$value -->
-                        <li></li>
-                        <!-- /loop -->
-                    </ul>
-                </div>
+            </div>
+            <div class="bd">
+                <ul>
+                    <!-- loop from=$list.rslist key=$key value=$value -->
+                    <li></li>
+                    <!-- /loop -->
+                </ul>
             </div>
         </div>
 
@@ -176,13 +180,13 @@
     <div class="spic" id="photoslist">
         <!-- php:$list = phpok('tujixiangce','fields=thumb') -->
         <div class="hd">
-        <h3 class="title">
-            <a>{$list.project.title}</a>
-            <div class="pn">
-                <span class="prev"></span>
-                <span class="next"></span>
-            </div>
-        </h3>
+            <h3 class="title">
+                <a>{$list.project.title}</a>
+                <div class="pn">
+                    <span class="prev"></span>
+                    <span class="next"></span>
+                </div>
+            </h3>
         </div>
         <ul class="imglist">
             <!-- loop from=$list.rslist key=$key value=$value -->

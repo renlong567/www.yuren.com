@@ -63,7 +63,7 @@ p{word-wrap:break-word}
 .head .nav ul ul li {background: #23a0e7;float: none;}
 .head .nav li:hover ul{display:block;}
 .head .nav ul ul li a{ border-right:0;}
-.head .nav ul ul li a:hover{ background:#3375b9;width: 100%;}
+.head .nav ul ul li a:hover{ background:#3375b9;}
 
 /* 首页Banner 样式 */
 .home_banner{ background: rgba(0, 0, 0, 0) url("../images/babg.jpg") no-repeat scroll center center;  height: 350px;}
@@ -76,7 +76,9 @@ p{word-wrap:break-word}
 .home_banner .page_ul .on{ background: rgba(0, 0, 0, 0) url("../images/bon1.png") no-repeat scroll -21px 0;}
 
 .home_left{ height: 100%;overflow: hidden;width: 724px;float:left;}
-.home_left .news_banner{}
+.home_left .news_banner{ height: 100%;overflow: hidden;width: 355px;}
+.home_left .news_banner .hd{ height: 230px;margin-bottom: 10px;position: relative;}
+.home_left .news_banner .bd{ float: left;margin-right: 6px;}
 .home_right{ height: 100%;overflow: hidden;width: 240px;float:right;}
 .m_box{ overflow:hidden; margin-bottom:10px;}
 .m_t{ border-bottom:1px solid #3375b9; height:30px; line-height:30px; margin-bottom:5px; overflow:hidden;}
