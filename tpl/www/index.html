@@ -25,11 +25,16 @@
             'mainCell': '.pro_ul',
             'autoPlay': true
         });
+        $(".news_banner").slide({
+            'titCell': '.page_ul li',
+            'mainCell': '.pro_ul',
+            'autoPlay': true
+        });
     });
 </script>
 <div class="wrap">
     <div class="home_right">
-        <!-- php:$list = phpok('news','fields=id') -->
+        <!-- php:$list = phpok('xygg','fields=id') -->
         <div class="m_box">
             <div class="m_t">
                 <p class="name">{$list.project.title}</p>
@@ -44,14 +49,6 @@
             </ul>
         </div>
 
-        <div class="m_box">
-            <ul class="home_news">
-                <!-- php:$list = phpok('xiazaizhongxin') -->
-                <!-- loop from=$list.rslist key=$key value=$value -->
-                <li><a href="{$value.url}" title="{$value.title}">{$value.title}</a></li>
-                <!-- /loop -->
-            </ul>
-        </div>
         <div class="m_box">
             <div class="m_t">
                 <p class="name">{lang联系我们}</p>
