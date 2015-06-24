@@ -68,6 +68,35 @@
 
 
     <div class="home_left">
+        <div class="partA">
+            <div class="news_banner">
+                <div class="hd">
+                    <!-- php:$list = phpok('xwtp') -->
+                    <ul class="pro_ul">
+                        <!-- loop from=$list.rslist key=$key value=$value -->
+                        <li>
+                            <div>
+                                <a href="{$value.link}" target="{$value.target}" title="{$value.title}"><img src="{$value.pic.filename}" width="343" height="230" alt="{$value.title}" /></a>
+                            </div>
+                            <div class="title">
+                                <a target="{$value.target}" href="{$value.link}" title="{$value.title}">{$value.title}</a>
+                            </div>
+                        </li>
+                        <!-- /loop -->
+                    </ul>
+                </div>
+                <div class="bd">
+                    <ul class="page_ul">
+                        <!-- loop from=$list.rslist key=$key value=$value -->
+                        <li><a href="{$value.link}" target="{$value.target}" title="{$value.title}"><img src="{$value.pic.filename}" width="81" height="56" alt="{$value.title}" /></a></li>
+                        <!-- /loop -->
+                    </ul>
+                </div>
+            </div>
+                        <div class="newBox">
+                
+            </div>
+        </div>
         <!-- if $page_rs -->
         <div class="m_box">
             <div class="m_t">

@@ -75,10 +75,31 @@ p{word-wrap:break-word}
 .home_banner .page_ul li { background: rgba(0, 0, 0, 0) url("../images/bon1.png") no-repeat scroll 0 0;cursor: pointer;display: inline;float: left;height: 16px;margin-right: 1px;width: 16px;}
 .home_banner .page_ul .on{ background: rgba(0, 0, 0, 0) url("../images/bon1.png") no-repeat scroll -21px 0;}
 
+.partA, .partB, .partC, .partD, .partF {
+    clear: both;
+    height: 100%;
+    overflow: hidden;
+}
 .home_left{ height: 100%;overflow: hidden;width: 724px;float:left;}
-.home_left .news_banner{ height: 100%;overflow: hidden;width: 355px;}
+.home_left .newBox {
+    border: 1px solid #e4e4e4;
+    height: 298px;
+    overflow: visible;
+    position: relative;
+    float: left;
+}
+.home_left .news_banner{float: left; height: 100%;overflow: hidden;width: 355px;}
 .home_left .news_banner .hd{ height: 230px;margin-bottom: 10px;position: relative;}
-.home_left .news_banner .bd{ float: left;margin-right: 6px;}
+.home_left .news_banner .hd .pro_ul li .title{ background: black none repeat scroll 0 0;
+    bottom: 0;
+    height: 30px;
+    line-height: 30px;
+    opacity: 0.6;
+    position: absolute;
+    text-align: center;
+    width: 343px;}
+.home_left .news_banner .hd .pro_ul li .title a{color: #fff;}
+.home_left .news_banner .bd li{ float: left;margin-right: 6px;}
 .home_right{ height: 100%;overflow: hidden;width: 240px;float:right;}
 .m_box{ overflow:hidden; margin-bottom:10px;}
 .m_t{ border-bottom:1px solid #3375b9; height:30px; line-height:30px; margin-bottom:5px; overflow:hidden;}
