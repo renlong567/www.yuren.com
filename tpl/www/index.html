@@ -66,7 +66,6 @@
         </div>
     </div>
 
-
     <div class="home_left">
         <div class="partA">
             <div class="news_banner">
@@ -93,10 +92,38 @@
                     </ul>
                 </div>
             </div>
-                        <div class="newBox">
-                
+            <div class="newBox">
+                <div class="hd">
+                    <!-- php:$list = phpok('dongtairedian','fields=id');var_dump($list); -->
+                    <!-- loop from=$list.all key=$key value=$value -->
+                    <h3 class=""><a href="{$value.link}">{$value.title}</a></h3>
+                    <!-- /loop -->
+                </div>
+                <div class="bd">
+                    <ul>
+                        <!-- loop from=$list.all key=$key value=$value -->
+                        {if $key == 0}
+                        <li class="t">
+                            <div class="con">
+                                <div class="title">
+                                    <a class="tit" title="标题：热烈庆祝北京市海淀国际学校成立 点击数：3227 发表时间：13年10月15日" target="_blank" href="/Item/218.aspx">热烈庆祝北京市海淀国际学校成立</a>
+                                </div>
+                                <div class="intro">
+                                    <a class="more" target="_blank" href="/Item/218.aspx"></a>
+                                </div>
+                            </div>
+                        </li>
+                        {else}
+                        <li class="n">
+
+                        </li>
+                        {/if}
+                        <!-- /loop -->
+                    </ul>
+                </div>
             </div>
         </div>
+
         <!-- if $page_rs -->
         <div class="m_box">
             <div class="m_t">
