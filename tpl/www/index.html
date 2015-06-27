@@ -30,6 +30,7 @@
             'mainCell': '.pro_ul',
             'autoPlay': true
         });
+        $(".newBox").slide({titCell: ".hd h3", mainCell: ".bd ", effect: "fade", autoPlay: false});
     });
 </script>
 <div class="wrap">
@@ -94,19 +95,21 @@
             </div>
             <div class="newBox">
                 <div class="hd">
-                    <!-- php:$list = phpok('dongtairedian','fields=id');var_dump($list); -->
-                    <!-- loop from=$list.all key=$key value=$value -->
-                    <h3 class=""><a href="{$value.link}">{$value.title}</a></h3>
+                    <!-- php:$list = phpok('dongtairedian') -->
+                    <!-- loop from=$list.sublist key=$key value=$value -->
+                    <h3 class=""><a href="{$value.url}">{$value.title}</a></h3>
                     <!-- /loop -->
                 </div>
                 <div class="bd">
-                    <ul>
-                        <!-- loop from=$list.all key=$key value=$value -->
-                        {if $key == 0}
+                    <ul class="topicList">
+                    <!-- php:$arclist = phpok('dongtairedian_list','cateid='.$value.id.'&fields=id') -->
+                    <!-- loop from=$arclist.rslist key=$k value=$v -->
+
+                        {if $k == 0}
                         <li class="t">
                             <div class="con">
                                 <div class="title">
-                                    <a class="tit" title="标题：热烈庆祝北京市海淀国际学校成立 点击数：3227 发表时间：13年10月15日" target="_blank" href="/Item/218.aspx">热烈庆祝北京市海淀国际学校成立</a>
+                                    <a class="tit" title="{$v.title}" target="_blank" href="{$v.url}">{$v.title}</a>
                                 </div>
                                 <div class="intro">
                                     <a class="more" target="_blank" href="/Item/218.aspx"></a>
