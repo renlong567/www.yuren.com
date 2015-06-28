@@ -32,6 +32,11 @@ p{word-wrap:break-word}
     color: #f00;
     font-size: 14px;
 }
+.warp .spic .bd {
+    height: 236px;
+    padding: 14px;
+    position: relative;
+}
 .hand{cursor:pointer;}
 .red{color:red;}
 .tag{color:#000;text-decoration:underline;}
@@ -106,7 +111,7 @@ p{word-wrap:break-word}
     text-align: center;
     width: 100px;
 }
-.home_left .newBox .hd h3 .on {
+.home_left .newBox .hd .on {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
@@ -122,9 +127,10 @@ p{word-wrap:break-word}
 }
 .home_left .newBox .hd h3 a {
     font-size: 14px;
+    color: #000;
 }
 .home_left .newBox .bd ul{
-        list-style-type: none;
+    list-style-type: none;
     vertical-align: bottom;
 }
 .home_left .newBox .bd .topicList .t {
@@ -133,8 +139,34 @@ p{word-wrap:break-word}
     padding-bottom: 5px;
     text-align: center;
 }
+.home_left .newBox .bd .intro {
+    border-bottom: 1px dashed #c2c2c2;
+    line-height: 24px;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    padding-top: 8px;
+}
+.home_left .newBox .bd .intro a{
+    color:#666;
+    font-size: 12px;
+}
 .home_left .newBox .bd .topicList .t .title {
     padding: 5px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+.home_left .newBox .bd .topicList .t .title a {
+    color: #000;
+}
+.home_left .newBox .bd .topicList .n {
+    line-height: 28px;
+}
+.home_left .newBox .bd .topicList .n .date {
+    color: #999;
+    float: right;
+}
+.home_left .newBox .bd .topicList .n a {
+    color: #666;
     font-size: 14px;
 }
 .home_left .news_banner{float: left; height: 100%;overflow: hidden;width: 355px;}

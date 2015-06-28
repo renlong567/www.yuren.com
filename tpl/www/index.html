@@ -30,7 +30,6 @@
             'mainCell': '.pro_ul',
             'autoPlay': true
         });
-        $(".newBox").slide({titCell: ".hd h3", mainCell: ".bd ", effect: "fade", autoPlay: false});
     });
 </script>
 <div class="wrap">
@@ -95,16 +94,13 @@
             </div>
             <div class="newBox">
                 <div class="hd">
-                    <!-- php:$list = phpok('dongtairedian') -->
-                    <!-- loop from=$list.sublist key=$key value=$value -->
-                    <h3 class=""><a href="{$value.url}">{$value.title}</a></h3>
-                    <!-- /loop -->
+                    <h3 class="">最新动态</h3>
+                    <h3 class="">热点新闻</h3>
                 </div>
                 <div class="bd">
                     <ul class="topicList">
-                    <!-- php:$arclist = phpok('dongtairedian_list','cateid='.$value.id.'&fields=id') -->
-                    <!-- loop from=$arclist.rslist key=$k value=$v -->
-
+                        <!-- php:$arclist = phpok('zuixindongtai') -->
+                        <!-- loop from=$arclist.rslist key=$k value=$v -->
                         {if $k == 0}
                         <li class="t">
                             <div class="con">
@@ -112,19 +108,61 @@
                                     <a class="tit" title="{$v.title}" target="_blank" href="{$v.url}">{$v.title}</a>
                                 </div>
                                 <div class="intro">
-                                    <a class="more" target="_blank" href="/Item/218.aspx"></a>
+                                    <a class="more" target="_blank" href="{$v.url}">{$v.note ? phpok_cut($v.note,225,'…') : phpok_cut($v.content,225,'…')}</a>
                                 </div>
                             </div>
                         </li>
                         {else}
                         <li class="n">
+                            <div class="con">
+                                <div class="title">
+                                    <span class="date">{func date Y-m $v.dateline}</span>
+                                    <a class="tit" title="{$v.title}" target="_blank" href="{$v.url}">{$v.title}</a>
+                                </div>
+                            </div>
+                        </li>
+                        {/if}
+                        <!-- /loop -->
+                    </ul>
 
+                    <ul class="topicList">
+                        <!-- php:$arclist = phpok('redianxinwen') -->
+                        <!-- loop from=$arclist.rslist key=$k value=$v -->
+                        {if $k == 0}
+                        <li class="t">
+                            <div class="con">
+                                <div class="title">
+                                    <a class="tit" title="{$v.title}" target="_blank" href="{$v.url}">{$v.title}</a>
+                                </div>
+                                <div class="intro">
+                                    <a class="more" target="_blank" href="{$v.url}">{$v.note ? phpok_cut($v.note,225,'…') : phpok_cut($v.content,225,'…')}</a>
+                                </div>
+                            </div>
+                        </li>
+                        {else}
+                        <li class="n">
+                            <div class="con">
+                                <div class="title">
+                                    <span class="date">{func date Y-m $v.dateline}</span>
+                                    <a class="tit" title="{$v.title}" target="_blank" href="{$v.url}">{$v.title}</a>
+                                </div>
+                            </div>
                         </li>
                         {/if}
                         <!-- /loop -->
                     </ul>
                 </div>
             </div>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $(".newBox").slide({
+                        titCell: ".hd h3",
+                        mainCell: ".bd ",
+                        effect: "fade",
+                        autoPlay: false
+                    });
+                });
+            </script>
         </div>
 
         <!-- if $page_rs -->
@@ -175,14 +213,16 @@
                 </div>
             </h3>
         </div>
-        <ul class="imglist">
-            <!-- loop from=$list.rslist key=$key value=$value -->
-            <li>
-                <a href="{$value.url}" title="{$value.title}"><img src="{$value.thumb.gd.thumb}" alt="{$value.title}" /></a>
-                <div class="tit"><a href="{$value.url}" title="{$value.title}">{func phpok_cut $value.title 15 …}</a></div>
-            </li>
-            <!-- /loop -->
-        </ul>
+        <div class="bd">
+            <ul>
+                <!-- loop from=$list.rslist key=$key value=$value -->
+                <li>
+                    <a href="{$value.url}" title="{$value.title}"><img src="{$value.thumb.gd.thumb}" alt="{$value.title}" /></a>
+                    <div class="tit"><a href="{$value.url}" title="{$value.title}">{func phpok_cut $value.title 15 …}</a></div>
+                </li>
+                <!-- /loop -->
+            </ul>
+        </div>
     </div>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -190,7 +230,7 @@
                 'mainCell': 'ul.imglist',
                 'effect': "leftLoop",
                 'autoPlay': true,
-                'vis': 3
+                'vis': 4
             });
         });
     </script>

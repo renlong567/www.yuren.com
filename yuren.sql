@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50612
 File Encoding         : 65001
 
-Date: 2015-06-25 22:56:21
+Date: 2015-06-28 23:14:32
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -160,7 +160,7 @@ CREATE TABLE `qinggan_cate` (
   PRIMARY KEY (`id`),
   KEY `parent_id` (`parent_id`),
   KEY `site_id` (`site_id`,`status`)
-) ENGINE=MyISAM AUTO_INCREMENT=223 DEFAULT CHARSET=utf8 COMMENT='分类管理';
+) ENGINE=MyISAM AUTO_INCREMENT=224 DEFAULT CHARSET=utf8 COMMENT='分类管理';
 
 -- ----------------------------
 -- Records of qinggan_cate
@@ -173,8 +173,7 @@ INSERT INTO `qinggan_cate` VALUES ('154', '1', '0', '1', '图集相册', '30', '
 INSERT INTO `qinggan_cate` VALUES ('207', '1', '7', '1', '常见问题', '30', '', '', '0', '', '', '', 'faq', '');
 INSERT INTO `qinggan_cate` VALUES ('211', '1', '154', '1', '风景旅游', '10', '', '', '0', '', '', '', 'fengjinglvyou', '');
 INSERT INTO `qinggan_cate` VALUES ('220', '1', '0', '1', '最新动态', '255', '', '', '0', '', '', '', 'zxdt', '');
-INSERT INTO `qinggan_cate` VALUES ('221', '1', '220', '1', '最新动态', '10', '', '', '0', '', '', '', 'zuixindongtai', '');
-INSERT INTO `qinggan_cate` VALUES ('222', '1', '220', '1', '热点新闻', '20', '', '', '0', '', '', '', 'redianxinwen', '');
+INSERT INTO `qinggan_cate` VALUES ('223', '1', '0', '1', '热点新闻', '255', '', '', '0', '', '', '', 'rdxw', '');
 
 -- ----------------------------
 -- Table structure for `qinggan_currency`
@@ -319,8 +318,6 @@ INSERT INTO `qinggan_extc` VALUES ('231', '<div class=\"bdsharebuttonbox\"><a hr
 INSERT INTO `qinggan_extc` VALUES ('244', 'Photos');
 INSERT INTO `qinggan_extc` VALUES ('246', 'Links');
 INSERT INTO `qinggan_extc` VALUES ('259', '关于常见问题');
-INSERT INTO `qinggan_extc` VALUES ('272', 'a:2:{s:7:\"default\";s:26:\"index.php?id=dongtairedian\";s:7:\"rewrite\";s:18:\"dongtairedian.html\";}');
-INSERT INTO `qinggan_extc` VALUES ('273', 'a:2:{s:7:\"default\";s:26:\"index.php?id=dongtairedian\";s:7:\"rewrite\";s:18:\"dongtairedian.html\";}');
 
 -- ----------------------------
 -- Table structure for `qinggan_fields`
@@ -443,7 +440,7 @@ CREATE TABLE `qinggan_list` (
   PRIMARY KEY (`id`),
   KEY `project_id` (`project_id`),
   KEY `site_id` (`site_id`,`identifier`,`status`)
-) ENGINE=MyISAM AUTO_INCREMENT=1420 DEFAULT CHARSET=utf8 COMMENT='内容主表';
+) ENGINE=MyISAM AUTO_INCREMENT=1430 DEFAULT CHARSET=utf8 COMMENT='内容主表';
 
 -- ----------------------------
 -- Records of qinggan_list
@@ -484,7 +481,7 @@ INSERT INTO `qinggan_list` VALUES ('1370', '0', '207', '22', '43', '1', 'MySQL�
 INSERT INTO `qinggan_list` VALUES ('1371', '0', '207', '22', '43', '1', 'MySQL安装后需要调整什么?', '1424918471', '0', '1', '0', '4', '', '', '', '', '', 'h', '0', '0', '', '0.0000', '0');
 INSERT INTO `qinggan_list` VALUES ('1372', '0', '207', '22', '43', '1', 'FTP软件使用中的PASV和PORT上传模式', '1424918718', '0', '1', '0', '7', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
 INSERT INTO `qinggan_list` VALUES ('1381', '0', '68', '22', '43', '1', '科技进步给工人带来失业恐惧？', '1428675994', '0', '1', '0', '8', '', '', '', '', '科技 失业恐惧', '', '0', '0', '', '0.0000', '0');
-INSERT INTO `qinggan_list` VALUES ('1382', '0', '68', '22', '43', '1', '站点采用HTTPS协议的利弊分析、及SEO建议', '1433723870', '0', '1', '0', '19', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
+INSERT INTO `qinggan_list` VALUES ('1382', '0', '68', '22', '43', '1', '站点采用HTTPS协议的利弊分析、及SEO建议', '1433723870', '0', '1', '0', '20', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
 INSERT INTO `qinggan_list` VALUES ('1389', '0', '211', '68', '144', '1', '清水岩，内奉中国百仙之一清水祖师', '1430579244', '0', '1', '0', '7', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
 INSERT INTO `qinggan_list` VALUES ('1386', '0', '211', '68', '144', '1', '开元寺，泉州古城的独特标志和象征', '1430559208', '0', '1', '0', '36', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
 INSERT INTO `qinggan_list` VALUES ('1397', '712', '0', '23', '42', '1', '育人理念', '1434774198', '24', '1', '0', '0', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
@@ -492,11 +489,15 @@ INSERT INTO `qinggan_list` VALUES ('1408', '0', '0', '23', '147', '1', '首页',
 INSERT INTO `qinggan_list` VALUES ('1417', '0', '0', '74', '169', '1', '招生信息', '1433681711', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
 INSERT INTO `qinggan_list` VALUES ('1406', '1256', '0', '23', '42', '1', '家长参与', '1434982473', '52', '1', '0', '0', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
 INSERT INTO `qinggan_list` VALUES ('1407', '1256', '0', '23', '42', '1', '学生心声', '1434982487', '51', '1', '0', '0', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
-INSERT INTO `qinggan_list` VALUES ('1410', '0', '219', '22', '43', '1', '招生信息test1', '1433853741', '0', '1', '0', '1', '', '', '', '', '', '', '0', '0', '招生信息test1', '0.0000', '0');
-INSERT INTO `qinggan_list` VALUES ('1411', '0', '0', '22', '167', '1', 'xygg', '1433942580', '0', '1', '0', '2', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
+INSERT INTO `qinggan_list` VALUES ('1410', '0', '219', '22', '43', '1', '招生信息test1', '1433853741', '0', '1', '0', '2', '', '', '', '', '', '', '0', '0', '招生信息test1', '0.0000', '0');
+INSERT INTO `qinggan_list` VALUES ('1411', '0', '0', '22', '167', '1', 'xygg', '1433942580', '0', '1', '0', '5', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
 INSERT INTO `qinggan_list` VALUES ('1416', '0', '0', '74', '169', '1', 'test1', '1433163207', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
-INSERT INTO `qinggan_list` VALUES ('1418', '0', '221', '22', '170', '1', '动态test', '1433688639', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
-INSERT INTO `qinggan_list` VALUES ('1419', '0', '222', '22', '170', '1', '热点Test', '1433775104', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
+INSERT INTO `qinggan_list` VALUES ('1427', '0', '0', '22', '172', '1', '最新动态1', '1433042992', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
+INSERT INTO `qinggan_list` VALUES ('1429', '0', '0', '22', '172', '1', '最新动态13', '1433820620', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
+INSERT INTO `qinggan_list` VALUES ('1422', '0', '0', '22', '171', '1', '热点新闻test1', '1433041785', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
+INSERT INTO `qinggan_list` VALUES ('1428', '0', '0', '22', '172', '1', '最新动态12', '1434425409', '0', '1', '0', '1', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
+INSERT INTO `qinggan_list` VALUES ('1423', '0', '0', '22', '171', '1', '热点新闻test2', '1433646606', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
+INSERT INTO `qinggan_list` VALUES ('1424', '0', '0', '22', '171', '1', '热点新闻test3', '1433041820', '0', '1', '0', '1', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
 
 -- ----------------------------
 -- Table structure for `qinggan_list_21`
@@ -550,8 +551,12 @@ INSERT INTO `qinggan_list_22` VALUES ('1381', '1', '43', '68', '734', '<p style=
 INSERT INTO `qinggan_list_22` VALUES ('1382', '1', '43', '68', '736', '<p style=\"text-align:center\"><strong><img src=\"res/201504/10/auto_736.png\" alt=\"auto_736.png\"/></strong></p><p style=\"text-align: left; text-indent: 2em;\"><strong>注：</strong>本文作者为Moz网站专栏作家Cyrus Shepard，是一篇关于“HTTPS站点优化建议及技巧”的分享型文章。文章写于谷歌宣布将“HTTPS协议作为搜索引擎排名参考因素”后。</p><p style=\"text-align: left; text-indent: 2em;\">谷歌几乎没有明确对外公开过影响谷歌搜索引擎排名的因素具体有哪些，因而当其在去年8月份宣布采用“HTTPS加密协议有利于搜索引擎排名”时，我的心情就两字儿：震惊！</p><p style=\"text-align: left; text-indent: 2em;\">HTTPS与其他的谷歌参考因素不同，实行起来比较复杂，有一定的风险性，而且还需一些额外的费用。但利益也是显而易见的，使用HTTPS协议的站点更安全、且在搜索排名上更具优势。</p><p style=\"text-align: left; text-indent: 2em;\">据Moz网站2014年9月份的调查数据显示：</p><p style=\"text-align: left; text-indent: 2em;\"><span style=\"text-indent: 2em;\">17.24%的站长表示其网站已采用HTTPS协议；</span></p><p style=\"text-align: left; text-indent: 2em;\">24.9%的站长表示正在搭建中；</p><p style=\"text-align: left; text-indent: 2em;\">57.85%的站长表示目前仍无此项计划。</p><p style=\"text-align: left; text-indent: 2em;\">如下图：</p><p style=\"text-align:center\"><a href=\"http://upload.chinaz.com/2015/0410/1428648643514.jpg\"><img src=\"res/201504/10/auto_737.jpg\" border=\"0\" alt=\"站长之家, 搜索引擎排名, HTTPS搭建, https和http有什么区别\" style=\"margin: 0px; padding: 0px; border: 1px solid rgb(153, 153, 153); font-style: inherit; font-variant: inherit; line-height: inherit; vertical-align: middle; color: transparent; display: inline-block; width: 600px; height: auto;\"/></a></p><p style=\"text-align: left; text-indent: 2em;\">虽然大部分站长仍无转向HTTPS阵营的打算，但相比之前的情况已有提升。看来，谷歌的算法更新对站长们还是很有震慑力的。</p><p style=\"text-align: left; text-indent: 2em;\">采用HTTPS协议对SEO有何好处？</p><p style=\"text-align: left; text-indent: 2em;\">除了安全性更高这一好处外，HTTPS对SEO也是有一定益处的。</p><p style=\"text-align: left; text-indent: 2em;\">1、使用HTTPS协议有利于搜索引擎排名</p><p style=\"text-align: left; text-indent: 2em;\">去年8月份，谷歌曾发布公告表示将把“是否使用安全加密协议（即HTTPS）”作为搜索引擎排名的一项参考因素。同等情况下，HTTPS站点能比HTTP站点获得更好的搜索排名。</p><p style=\"text-align: left; text-indent: 2em;\">不过得说明下，影响谷歌搜索引擎排名的因素已有逾200项，因而HTTPS协议的影响到底几何目前尚不清楚。</p><p style=\"text-align: left; text-indent: 2em;\">因而，与其他谷歌排名影响因素一样的是，HTTPS协议也并非独立存在的。</p><p style=\"text-align: left; text-indent: 2em;\">建议：</p><p style=\"text-align: left; text-indent: 2em;\">如果只是为了搜索引擎排名的话，那有很多因素的影响力比HTTPS协议大。</p><p style=\"text-align: left; text-indent: 2em;\">如下图（14个影响力大于HTTPS协议的影响因素）：</p><p style=\"text-align:center\"><a href=\"http://upload.chinaz.com/2015/0410/1428648643875.png\"><img src=\"res/201504/10/auto_738.png\" border=\"0\" alt=\"站长之家, 搜索引擎排名, HTTPS搭建, https和http有什么区别\" style=\"margin: 0px; padding: 0px; border: 1px solid rgb(153, 153, 153); font-style: inherit; font-variant: inherit; line-height: inherit; vertical-align: middle; color: transparent; display: inline-block; width: 600px; height: auto;\"/></a></p><p style=\"text-align: left; text-indent: 2em;\">更多影响因素可查看：<a href=\"http://www.chinaz.com/web/2014/0911/367371.shtml\" target=\"_blank\">影响谷歌搜索引擎排名的因素调查（完整版）</a></p><p style=\"text-align: left; text-indent: 2em;\">2、安全隐私</p><p style=\"text-align: left; text-indent: 2em;\">不少站长都认为，只有诸如电子商务、金融、社交网络等存在敏感信息安全问题的站点才有采用HTTPS协议的必要，其实不然。任何类型的站点都可以从中获益。</p><blockquote style=\"text-align: left; text-indent: 2em;\"><p style=\"text-align: left; text-indent: 2em;\">1）使用HTTPS协议可认证用户和服务器，确保数据发送到正确的客户机和服务器；</p><p style=\"text-align: left; text-indent: 2em;\">2）HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，要比http协议安全，可防止数据在传输过程中不被窃取、改变，确保数据的完整性。</p><p style=\"text-align: left; text-indent: 2em;\">3）HTTPS是现行架构下最安全的解决方案，虽然不是绝对安全，但它大幅增加了中间人攻击的成本。</p></blockquote><p style=\"text-align: left; text-indent: 2em;\">建议：</p><p style=\"text-align: left; text-indent: 2em;\">在成本费用允许情况下，还是建议站长采用HTTPS加密协议，毕竟网站安全也是用户体验的一个重要环节，而且还有利于搜索引擎排名，何乐而不为呢！</p><p style=\"text-align: left; text-indent: 2em;\">使用HTTPS协议有何挑战？</p><p style=\"text-align: left; text-indent: 2em;\">1、容易忽略的问题</p><p style=\"text-align: left; text-indent: 2em;\">将站点由HTTP转为HTTPS协议涉及到很多问题，有时候会忽略了一些重要的细节问题：</p><p style=\"text-align: left; text-indent: 2em;\">1）robots.txt文件中是否屏蔽了重要的URL链接？</p><p style=\"text-align: left; text-indent: 2em;\">2）Canonical标签指向的URL是否正确？</p><p style=\"text-align: left; text-indent: 2em;\">3）当用户访问你的网站时，是否会出现浏览器安全警告提示窗口？（出现安全警告提示可能会吓走用户）</p><p style=\"text-align: left; text-indent: 2em;\">虽然概率很小，但这几个问题还是可能出现的。</p><p style=\"text-align: left; text-indent: 2em;\">2、网站加载速度问题</p><p style=\"text-align: left; text-indent: 2em;\">HTTPS协议的握手过程比较费时，对网站的响应速度有负面影响。据ACM CoNEXT数据显示，使用HTTPS协议很可能会使页面的加载时间延长近50%。而网站加载速度也是影响搜索引擎排名的一个很重要的因素。</p><p style=\"text-align: left; text-indent: 2em;\">不过，还是可以通过一些技巧来减少这个问题的。比如，压缩文本内容可以降低解码耗用的CPU资源。实际上，建立HTTPS连接，要求额外的TCP往返，因此会新增一些发送和接收的字节，但这是第一次打开网页时的情况。</p><p style=\"text-align: left; text-indent: 2em;\">3、成本</p><p style=\"text-align: left; text-indent: 2em;\">据数据显示，很多站长每年花在SSL证书上的费用在100美元-200美元之间，这对于个人博客、或是小型站点来说是一笔不小的开支。不过，现在网上也有不少免费SSL证书，</p><p style=\"text-align: left; text-indent: 2em;\">4、HTTPS兼容性问题</p><p style=\"text-align: left; text-indent: 2em;\">这里所说得“兼容性”包括很多方面，比如现有的Web应用要尽可能无缝地迁移到HTTPS、浏览器对HTTPS的兼容性问题、HTTPS协议解析以及SSL证书管理等。</p><p style=\"text-align: left; text-indent: 2em;\">5、更多问题</p><p style=\"text-align: left; text-indent: 2em;\">如果你的网站依靠AdSense获得收入的话，那么转型HTTPS站点可能会使得收入大幅下降（谷歌对广告源采用SSL协议的站点有所限制）。</p><p style=\"text-align: left; text-indent: 2em;\">此外，即使是谷歌管理员工具也尚不支持HTTPS站点的迁移工作。要完成SSL加密的全球化，需要的不止是时间，还少不了各方的努力啊。</p><p style=\"text-align: left; text-indent: 2em;\">使用HTTPS协议的站点数量增长情况</p><p style=\"text-align: left; text-indent: 2em;\">如今，越来越多的站点采用了HTTPS协议，不过大多用于登陆页面、或是存在交易信息的页面，很少网站选择全站采用HTTPS协议。</p><p style=\"text-align: left; text-indent: 2em;\">据Builtwith调查数据显示，在排名TOP 10000的网站中，只有4.2%的站点默认使用HTTPS加密访问模式。再将范围放大到TOP 100万个网站，这个百分比则降到了1.9%。</p><p style=\"text-align: left; text-indent: 2em;\">如下图：</p><p style=\"text-align:center\"><a href=\"http://upload.chinaz.com/2015/0410/1428648643761.jpg\"><img src=\"res/201504/10/auto_739.jpg\" border=\"0\" alt=\"站长之家, 搜索引擎排名, HTTPS搭建, https和http有什么区别\" style=\"margin: 0px; padding: 0px; border: 1px solid rgb(153, 153, 153); font-style: inherit; font-variant: inherit; line-height: inherit; vertical-align: middle; color: transparent; display: inline-block; width: 600px; height: auto;\"/></a></p><p style=\"text-align: left; text-indent: 2em;\">不过，随着谷歌和百度等搜索引擎对HTTPS协议的“优待”，这个百分比未来应该会有所上升。</p><p style=\"text-align: left; text-indent: 2em;\"><br/></p><p style=\"text-align: left; text-indent: 2em;\"><strong>HTTPS站点的SEO自检清单</strong></p><blockquote><p style=\"text-align: left; text-indent: 2em;\">1、确保网站的每个元素（包括插件、JS、CSS文件、图片、内容分发网站等）都采用HTTPS协议；</p><p style=\"text-align: left; text-indent: 2em;\">2、使用301重定向将HTTP URL指向HTTPS版地址。记住别误用302跳转；<br/></p><p style=\"text-align: left; text-indent: 2em;\">3、保证Canonical标签指向HTTPS版URL；</p><p style=\"text-align: left; text-indent: 2em;\">4、采用HTTPS协议后，应确保网站内链指向的是HTTPS版URL，而非旧版URL。这对用户体验以及网站优化而言，都是一个很重要的步骤。</p><p style=\"text-align: left; text-indent: 2em;\">5、在谷歌、必应等平台上的管理员工具中监控HTTPS版本站点；</p><p style=\"text-align: left; text-indent: 2em;\">6、使用谷歌管理员工具中Fetch&amp;Render功能（http://googlewebmastercentral.blogspot.com/2014/05/rendering-pages-with-fetch-as-google.html），确保你的HTTPS站点能够正常的被谷歌抓取；</p><p style=\"text-align: left; text-indent: 2em;\">7、更新网站sitemaps，并在谷歌管理员工具中提交新版sitemaps；</p><p style=\"text-align: left; text-indent: 2em;\">8、更新robots.txt文件，加入新版sitemaps内容，确保重要的HTTPS版页面不会被屏蔽；</p><p style=\"text-align: left; text-indent: 2em;\">9、如有必要，还应该更新网站的分析跟踪代码。现在已经有很多新的谷歌分析代码段都能够处理HTTPS站点了。<br/></p><p style=\"text-align: left; text-indent: 2em;\">10、采用HSTS协议（HTTP严格传输安全协议），其作用是强制客户端（如浏览器）使用HTTPS与服务器建立连接。可在保证安全性的前提下，提高网站的响应速度。</p></blockquote>', '');
 INSERT INTO `qinggan_list_22` VALUES ('1410', '1', '43', '219', '889', '<p>招生信息test1招生信息test1招生信息test1招生信息test1招生信息test1</p>', '招生信息test1招生信息test1招生信息test1招生信息test1');
 INSERT INTO `qinggan_list_22` VALUES ('1411', '1', '167', '0', '', '<p>xyggxyggxyggxyggxyggxyggxygg</p>', 'xyggxyggxyggxyggxygg');
-INSERT INTO `qinggan_list_22` VALUES ('1418', '1', '170', '221', '', '<p>动态内容<br/></p>', '动态test摘要');
-INSERT INTO `qinggan_list_22` VALUES ('1419', '1', '170', '222', '', '<p>热点Test内容</p>', '热点Test摘要');
+INSERT INTO `qinggan_list_22` VALUES ('1427', '1', '172', '0', '', '<p>最新动态1</p>', '最新动态1');
+INSERT INTO `qinggan_list_22` VALUES ('1428', '1', '172', '0', '', '<p>最新动态12</p>', '最新动态12');
+INSERT INTO `qinggan_list_22` VALUES ('1429', '1', '172', '0', '', '<p>最新动态13</p>', '最新动态13');
+INSERT INTO `qinggan_list_22` VALUES ('1422', '1', '171', '0', '', '<p>热点新闻test1</p>', '热点新闻test1');
+INSERT INTO `qinggan_list_22` VALUES ('1423', '1', '171', '0', '', '<p>热点新闻test2</p>', '热点新闻test2');
+INSERT INTO `qinggan_list_22` VALUES ('1424', '1', '171', '0', '', '<p>热点新闻test3</p>', '热点新闻test3');
 
 -- ----------------------------
 -- Table structure for `qinggan_list_23`
@@ -791,6 +796,8 @@ INSERT INTO `qinggan_list_cate` VALUES ('1409', '219');
 INSERT INTO `qinggan_list_cate` VALUES ('1410', '219');
 INSERT INTO `qinggan_list_cate` VALUES ('1418', '221');
 INSERT INTO `qinggan_list_cate` VALUES ('1419', '222');
+INSERT INTO `qinggan_list_cate` VALUES ('1420', '222');
+INSERT INTO `qinggan_list_cate` VALUES ('1421', '222');
 
 -- ----------------------------
 -- Table structure for `qinggan_module`
@@ -1078,7 +1085,7 @@ CREATE TABLE `qinggan_phpok` (
   `ext` text NOT NULL COMMENT '扩展属性',
   PRIMARY KEY (`id`),
   UNIQUE KEY `identifier` (`identifier`,`site_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=112 DEFAULT CHARSET=utf8 COMMENT='数据调用中心';
+) ENGINE=MyISAM AUTO_INCREMENT=116 DEFAULT CHARSET=utf8 COMMENT='数据调用中心';
 
 -- ----------------------------
 -- Records of qinggan_phpok
@@ -1090,16 +1097,17 @@ INSERT INTO `qinggan_phpok` VALUES ('21', '产品分类', '45', 'catelist', 'pro
 INSERT INTO `qinggan_phpok` VALUES ('22', '最新产品', '45', 'arclist', 'new_products', '1', '1', '70', 'a:23:{s:5:\"psize\";i:8;s:6:\"offset\";i:0;s:7:\"is_list\";i:1;s:7:\"in_text\";i:1;s:4:\"attr\";b:0;s:11:\"fields_need\";s:9:\"ext.thumb\";s:3:\"tag\";b:0;s:8:\"keywords\";b:0;s:7:\"orderby\";b:0;s:4:\"cate\";b:0;s:8:\"cate_ext\";i:0;s:12:\"catelist_ext\";i:0;s:11:\"project_ext\";i:0;s:11:\"sublist_ext\";i:0;s:10:\"parent_ext\";i:0;s:13:\"fields_format\";i:0;s:8:\"user_ext\";i:0;s:4:\"user\";b:0;s:12:\"userlist_ext\";i:0;s:6:\"in_sub\";i:0;s:10:\"in_project\";i:1;s:7:\"in_cate\";i:0;s:8:\"title_id\";b:0;}');
 INSERT INTO `qinggan_phpok` VALUES ('55', '友情链接', '142', 'arclist', 'link', '1', '1', '0', 'a:23:{s:5:\"psize\";s:2:\"30\";s:6:\"offset\";i:0;s:7:\"is_list\";s:1:\"1\";s:7:\"in_text\";s:1:\"1\";s:4:\"attr\";b:0;s:11:\"fields_need\";b:0;s:3:\"tag\";b:0;s:8:\"keywords\";b:0;s:7:\"orderby\";b:0;s:4:\"cate\";b:0;s:8:\"cate_ext\";i:0;s:12:\"catelist_ext\";i:0;s:11:\"project_ext\";i:0;s:11:\"sublist_ext\";i:0;s:10:\"parent_ext\";i:0;s:13:\"fields_format\";i:0;s:8:\"user_ext\";i:0;s:4:\"user\";b:0;s:12:\"userlist_ext\";i:0;s:6:\"in_sub\";i:0;s:10:\"in_project\";s:1:\"2\";s:7:\"in_cate\";b:0;s:8:\"title_id\";b:0;}');
 INSERT INTO `qinggan_phpok` VALUES ('91', '新闻中心', '43', 'arclist', 'news', '1', '1', '7', 'a:23:{s:5:\"psize\";s:1:\"8\";s:6:\"offset\";i:0;s:7:\"is_list\";s:1:\"1\";s:7:\"in_text\";i:0;s:4:\"attr\";b:0;s:11:\"fields_need\";b:0;s:3:\"tag\";b:0;s:8:\"keywords\";b:0;s:7:\"orderby\";b:0;s:4:\"cate\";b:0;s:8:\"cate_ext\";i:0;s:12:\"catelist_ext\";i:0;s:11:\"project_ext\";i:0;s:11:\"sublist_ext\";i:0;s:10:\"parent_ext\";i:0;s:13:\"fields_format\";i:0;s:8:\"user_ext\";i:0;s:4:\"user\";b:0;s:12:\"userlist_ext\";i:0;s:6:\"in_sub\";i:0;s:10:\"in_project\";s:1:\"2\";s:7:\"in_cate\";b:0;s:8:\"title_id\";b:0;}');
-INSERT INTO `qinggan_phpok` VALUES ('92', '图集相册', '144', 'arclist', 'photo', '1', '1', '0', 'a:23:{s:5:\"psize\";s:2:\"10\";s:6:\"offset\";i:0;s:7:\"is_list\";s:1:\"1\";s:7:\"in_text\";i:0;s:4:\"attr\";b:0;s:11:\"fields_need\";s:9:\"ext.thumb\";s:3:\"tag\";b:0;s:8:\"keywords\";b:0;s:7:\"orderby\";b:0;s:4:\"cate\";b:0;s:8:\"cate_ext\";i:0;s:12:\"catelist_ext\";i:0;s:11:\"project_ext\";i:0;s:11:\"sublist_ext\";i:0;s:10:\"parent_ext\";i:0;s:13:\"fields_format\";i:0;s:8:\"user_ext\";i:0;s:4:\"user\";b:0;s:12:\"userlist_ext\";i:0;s:6:\"in_sub\";i:0;s:10:\"in_project\";s:1:\"1\";s:7:\"in_cate\";i:0;s:8:\"title_id\";b:0;}');
+INSERT INTO `qinggan_phpok` VALUES ('92', '图集相册', '144', 'arclist', 'photo', '1', '1', '154', 'a:13:{s:5:\"psize\";s:2:\"10\";s:6:\"offset\";i:0;s:7:\"is_list\";s:1:\"1\";s:4:\"attr\";s:0:\"\";s:11:\"fields_need\";s:9:\"ext.thumb\";s:3:\"tag\";s:0:\"\";s:8:\"keywords\";s:0:\"\";s:7:\"orderby\";s:0:\"\";s:4:\"cate\";s:0:\"\";s:13:\"fields_format\";i:0;s:4:\"user\";s:0:\"\";s:6:\"in_sub\";i:0;s:8:\"title_id\";s:0:\"\";}');
 INSERT INTO `qinggan_phpok` VALUES ('110', '新闻图片', '169', 'arclist', 'xwtp', '1', '1', '0', 'a:13:{s:5:\"psize\";s:1:\"5\";s:6:\"offset\";i:0;s:7:\"is_list\";s:1:\"1\";s:4:\"attr\";s:0:\"\";s:11:\"fields_need\";s:0:\"\";s:3:\"tag\";s:0:\"\";s:8:\"keywords\";s:0:\"\";s:7:\"orderby\";s:0:\"\";s:4:\"cate\";s:0:\"\";s:13:\"fields_format\";i:0;s:4:\"user\";s:0:\"\";s:6:\"in_sub\";i:0;s:8:\"title_id\";s:0:\"\";}');
-INSERT INTO `qinggan_phpok` VALUES ('111', '动态热点', '170', 'catelist', 'dongtairedian', '1', '1', '220', 'a:13:{s:5:\"psize\";s:1:\"5\";s:6:\"offset\";i:0;s:7:\"is_list\";s:1:\"1\";s:4:\"attr\";s:0:\"\";s:11:\"fields_need\";s:0:\"\";s:3:\"tag\";s:0:\"\";s:8:\"keywords\";s:0:\"\";s:7:\"orderby\";s:9:\"l.id DESC\";s:4:\"cate\";s:0:\"\";s:13:\"fields_format\";i:0;s:4:\"user\";s:0:\"\";s:6:\"in_sub\";i:0;s:8:\"title_id\";s:0:\"\";}');
+INSERT INTO `qinggan_phpok` VALUES ('115', '最新动态', '172', 'arclist', 'zuixindongtai', '1', '1', '0', 'a:13:{s:5:\"psize\";s:1:\"5\";s:6:\"offset\";i:0;s:7:\"is_list\";s:1:\"1\";s:4:\"attr\";s:0:\"\";s:11:\"fields_need\";s:0:\"\";s:3:\"tag\";s:0:\"\";s:8:\"keywords\";s:0:\"\";s:7:\"orderby\";s:9:\"l.id DESC\";s:4:\"cate\";s:0:\"\";s:13:\"fields_format\";i:0;s:4:\"user\";s:0:\"\";s:6:\"in_sub\";i:0;s:8:\"title_id\";s:0:\"\";}');
 INSERT INTO `qinggan_phpok` VALUES ('94', '页脚导航', '147', 'arclist', 'footnav', '1', '1', '0', 'a:23:{s:5:\"psize\";s:2:\"10\";s:6:\"offset\";i:0;s:7:\"is_list\";s:1:\"1\";s:7:\"in_text\";s:1:\"1\";s:4:\"attr\";b:0;s:11:\"fields_need\";b:0;s:3:\"tag\";b:0;s:8:\"keywords\";b:0;s:7:\"orderby\";b:0;s:4:\"cate\";b:0;s:8:\"cate_ext\";i:0;s:12:\"catelist_ext\";i:0;s:11:\"project_ext\";i:0;s:11:\"sublist_ext\";i:0;s:10:\"parent_ext\";i:0;s:13:\"fields_format\";i:0;s:8:\"user_ext\";i:0;s:4:\"user\";b:0;s:12:\"userlist_ext\";i:0;s:6:\"in_sub\";i:0;s:10:\"in_project\";i:0;s:7:\"in_cate\";i:0;s:8:\"title_id\";b:0;}');
 INSERT INTO `qinggan_phpok` VALUES ('95', '客服', '148', 'arclist', 'kefu', '1', '1', '0', 'a:23:{s:5:\"psize\";s:2:\"50\";s:6:\"offset\";i:0;s:7:\"is_list\";s:1:\"1\";s:7:\"in_text\";s:1:\"1\";s:4:\"attr\";b:0;s:11:\"fields_need\";s:8:\"ext.code\";s:3:\"tag\";b:0;s:8:\"keywords\";b:0;s:7:\"orderby\";b:0;s:4:\"cate\";b:0;s:8:\"cate_ext\";i:0;s:12:\"catelist_ext\";i:0;s:11:\"project_ext\";i:0;s:11:\"sublist_ext\";i:0;s:10:\"parent_ext\";i:0;s:13:\"fields_format\";i:0;s:8:\"user_ext\";i:0;s:4:\"user\";b:0;s:12:\"userlist_ext\";i:0;s:6:\"in_sub\";i:0;s:10:\"in_project\";s:1:\"2\";s:7:\"in_cate\";i:0;s:8:\"title_id\";b:0;}');
-INSERT INTO `qinggan_phpok` VALUES ('97', '图集相册', '144', 'arclist', 'tujixiangce', '1', '1', '154', 'a:13:{s:5:\"psize\";s:1:\"6\";s:6:\"offset\";i:0;s:7:\"is_list\";s:1:\"1\";s:4:\"attr\";s:0:\"\";s:11:\"fields_need\";s:9:\"ext.thumb\";s:3:\"tag\";s:0:\"\";s:8:\"keywords\";s:0:\"\";s:7:\"orderby\";s:0:\"\";s:4:\"cate\";s:0:\"\";s:13:\"fields_format\";i:0;s:4:\"user\";s:0:\"\";s:6:\"in_sub\";i:0;s:8:\"title_id\";s:0:\"\";}');
+INSERT INTO `qinggan_phpok` VALUES ('97', '校园风貌', '144', 'arclist', 'tujixiangce', '1', '1', '154', 'a:13:{s:5:\"psize\";s:1:\"6\";s:6:\"offset\";i:0;s:7:\"is_list\";s:1:\"1\";s:4:\"attr\";s:0:\"\";s:11:\"fields_need\";s:9:\"ext.thumb\";s:3:\"tag\";s:0:\"\";s:8:\"keywords\";s:0:\"\";s:7:\"orderby\";s:0:\"\";s:4:\"cate\";s:0:\"\";s:13:\"fields_format\";i:0;s:4:\"user\";s:0:\"\";s:6:\"in_sub\";i:0;s:8:\"title_id\";s:0:\"\";}');
 INSERT INTO `qinggan_phpok` VALUES ('100', '导航菜单', '42', 'arclist', 'menu_mobile', '1', '1', '0', 'a:23:{s:5:\"psize\";s:1:\"4\";s:6:\"offset\";i:0;s:7:\"is_list\";s:1:\"1\";s:7:\"in_text\";s:1:\"1\";s:4:\"attr\";s:6:\"mobile\";s:11:\"fields_need\";b:0;s:3:\"tag\";b:0;s:8:\"keywords\";b:0;s:7:\"orderby\";b:0;s:4:\"cate\";b:0;s:8:\"cate_ext\";i:0;s:12:\"catelist_ext\";i:0;s:11:\"project_ext\";i:0;s:11:\"sublist_ext\";i:0;s:10:\"parent_ext\";i:0;s:13:\"fields_format\";i:0;s:8:\"user_ext\";i:0;s:4:\"user\";b:0;s:12:\"userlist_ext\";i:0;s:6:\"in_sub\";i:0;s:10:\"in_project\";i:0;s:7:\"in_cate\";i:0;s:8:\"title_id\";b:0;}');
 INSERT INTO `qinggan_phpok` VALUES ('104', '资讯中心', '43', 'arclist', 'titlelist', '1', '1', '7', 'a:13:{s:5:\"psize\";s:2:\"10\";s:6:\"offset\";i:0;s:7:\"is_list\";s:1:\"1\";s:4:\"attr\";s:0:\"\";s:11:\"fields_need\";s:0:\"\";s:3:\"tag\";s:0:\"\";s:8:\"keywords\";s:0:\"\";s:7:\"orderby\";s:0:\"\";s:4:\"cate\";s:0:\"\";s:13:\"fields_format\";i:0;s:4:\"user\";s:0:\"\";s:6:\"in_sub\";i:0;s:8:\"title_id\";s:0:\"\";}');
 INSERT INTO `qinggan_phpok` VALUES ('105', '资讯中心', '43', 'catelist', 'news_catelist', '1', '1', '7', 'a:13:{s:5:\"psize\";i:0;s:6:\"offset\";i:0;s:7:\"is_list\";s:1:\"1\";s:4:\"attr\";s:0:\"\";s:11:\"fields_need\";s:0:\"\";s:3:\"tag\";s:0:\"\";s:8:\"keywords\";s:0:\"\";s:7:\"orderby\";s:0:\"\";s:4:\"cate\";s:0:\"\";s:13:\"fields_format\";i:0;s:4:\"user\";s:0:\"\";s:6:\"in_sub\";i:0;s:8:\"title_id\";s:0:\"\";}');
 INSERT INTO `qinggan_phpok` VALUES ('109', '校园公告', '167', 'arclist', 'xygg', '1', '1', '0', 'a:13:{s:5:\"psize\";s:1:\"5\";s:6:\"offset\";i:0;s:7:\"is_list\";s:1:\"1\";s:4:\"attr\";s:0:\"\";s:11:\"fields_need\";s:0:\"\";s:3:\"tag\";s:0:\"\";s:8:\"keywords\";s:0:\"\";s:7:\"orderby\";s:0:\"\";s:4:\"cate\";s:0:\"\";s:13:\"fields_format\";i:0;s:4:\"user\";s:0:\"\";s:6:\"in_sub\";i:0;s:8:\"title_id\";s:0:\"\";}');
+INSERT INTO `qinggan_phpok` VALUES ('114', '热点新闻', '171', 'arclist', 'redianxinwen', '1', '1', '0', 'a:13:{s:5:\"psize\";s:1:\"5\";s:6:\"offset\";i:0;s:7:\"is_list\";s:1:\"1\";s:4:\"attr\";s:0:\"\";s:11:\"fields_need\";s:0:\"\";s:3:\"tag\";s:0:\"\";s:8:\"keywords\";s:0:\"\";s:7:\"orderby\";s:9:\"l.id DESC\";s:4:\"cate\";s:0:\"\";s:13:\"fields_format\";i:0;s:4:\"user\";s:0:\"\";s:6:\"in_sub\";i:0;s:8:\"title_id\";s:0:\"\";}');
 
 -- ----------------------------
 -- Table structure for `qinggan_plugins`
@@ -1176,7 +1184,7 @@ CREATE TABLE `qinggan_popedom` (
   `taxis` tinyint(3) unsigned NOT NULL DEFAULT '255' COMMENT '排序',
   PRIMARY KEY (`id`),
   KEY `gid` (`gid`)
-) ENGINE=MyISAM AUTO_INCREMENT=798 DEFAULT CHARSET=utf8 COMMENT='权限明细';
+) ENGINE=MyISAM AUTO_INCREMENT=812 DEFAULT CHARSET=utf8 COMMENT='权限明细';
 
 -- ----------------------------
 -- Records of qinggan_popedom
@@ -1884,13 +1892,20 @@ INSERT INTO `qinggan_popedom` VALUES ('770', '20', '167', '查看', 'list', '10'
 INSERT INTO `qinggan_popedom` VALUES ('776', '20', '167', '扩展', 'ext', '70');
 INSERT INTO `qinggan_popedom` VALUES ('790', '20', '169', '扩展', 'ext', '70');
 INSERT INTO `qinggan_popedom` VALUES ('784', '20', '169', '查看', 'list', '10');
-INSERT INTO `qinggan_popedom` VALUES ('791', '20', '170', '查看', 'list', '10');
-INSERT INTO `qinggan_popedom` VALUES ('792', '20', '170', '编辑', 'set', '20');
-INSERT INTO `qinggan_popedom` VALUES ('793', '20', '170', '添加', 'add', '30');
-INSERT INTO `qinggan_popedom` VALUES ('794', '20', '170', '修改', 'modify', '40');
-INSERT INTO `qinggan_popedom` VALUES ('795', '20', '170', '删除', 'delete', '50');
-INSERT INTO `qinggan_popedom` VALUES ('796', '20', '170', '启用/禁用', 'status', '60');
-INSERT INTO `qinggan_popedom` VALUES ('797', '20', '170', '扩展', 'ext', '70');
+INSERT INTO `qinggan_popedom` VALUES ('810', '20', '172', '启用/禁用', 'status', '60');
+INSERT INTO `qinggan_popedom` VALUES ('809', '20', '172', '删除', 'delete', '50');
+INSERT INTO `qinggan_popedom` VALUES ('808', '20', '172', '修改', 'modify', '40');
+INSERT INTO `qinggan_popedom` VALUES ('807', '20', '172', '添加', 'add', '30');
+INSERT INTO `qinggan_popedom` VALUES ('806', '20', '172', '编辑', 'set', '20');
+INSERT INTO `qinggan_popedom` VALUES ('805', '20', '172', '查看', 'list', '10');
+INSERT INTO `qinggan_popedom` VALUES ('798', '20', '171', '查看', 'list', '10');
+INSERT INTO `qinggan_popedom` VALUES ('799', '20', '171', '编辑', 'set', '20');
+INSERT INTO `qinggan_popedom` VALUES ('800', '20', '171', '添加', 'add', '30');
+INSERT INTO `qinggan_popedom` VALUES ('801', '20', '171', '修改', 'modify', '40');
+INSERT INTO `qinggan_popedom` VALUES ('802', '20', '171', '删除', 'delete', '50');
+INSERT INTO `qinggan_popedom` VALUES ('803', '20', '171', '启用/禁用', 'status', '60');
+INSERT INTO `qinggan_popedom` VALUES ('804', '20', '171', '扩展', 'ext', '70');
+INSERT INTO `qinggan_popedom` VALUES ('811', '20', '172', '扩展', 'ext', '70');
 
 -- ----------------------------
 -- Table structure for `qinggan_project`
@@ -1942,7 +1957,7 @@ CREATE TABLE `qinggan_project` (
   PRIMARY KEY (`id`),
   KEY `parent_id` (`parent_id`),
   KEY `site_id` (`site_id`,`status`)
-) ENGINE=MyISAM AUTO_INCREMENT=171 DEFAULT CHARSET=utf8 COMMENT='项目管理器';
+) ENGINE=MyISAM AUTO_INCREMENT=173 DEFAULT CHARSET=utf8 COMMENT='项目管理器';
 
 -- ----------------------------
 -- Records of qinggan_project
@@ -1956,12 +1971,13 @@ INSERT INTO `qinggan_project` VALUES ('146', '87', '1', '0', '0', '发展历程'
 INSERT INTO `qinggan_project` VALUES ('92', '87', '1', '0', '0', '联系我们', '', '30', '1', '', '', '', '0', 'images/ico/email.png', '', '', '', '30', '0', 'contact-us', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '');
 INSERT INTO `qinggan_project` VALUES ('93', '87', '1', '0', '0', '工作环境', '', '40', '1', '', '', '', '0', 'images/ico/extension.png', 'l.sort DESC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'work', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '');
 INSERT INTO `qinggan_project` VALUES ('142', '0', '1', '61', '0', '友情链接', '', '120', '1', '', '', '', '0', 'images/ico/link.png', 'l.sort ASC,l.dateline DESC,l.id DESC', '网站名称', '', '30', '0', 'link', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '1', '0', 'post_link', 'project_save', '', '', '', '0', '');
-INSERT INTO `qinggan_project` VALUES ('144', '0', '1', '68', '154', '图集相册', '', '90', '1', '', '', '', '0', 'images/ico/photo.png', 'l.sort DESC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'photo', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '');
+INSERT INTO `qinggan_project` VALUES ('144', '0', '1', '68', '154', '校园风貌', '校园风貌', '90', '1', '', '', '', '0', 'images/ico/photo.png', 'l.sort DESC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'photo', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '');
 INSERT INTO `qinggan_project` VALUES ('147', '0', '1', '23', '0', '页脚导航', '', '35', '1', '', '', '', '0', 'images/ico/menu.png', 'l.sort ASC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'yejiaodaohang', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '');
 INSERT INTO `qinggan_project` VALUES ('149', '0', '1', '0', '0', '首页自定义', '', '10', '1', '', '', '', '0', 'images/ico/home.png', 'l.sort DESC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'index', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '');
 INSERT INTO `qinggan_project` VALUES ('167', '0', '1', '22', '0', '校园公告', '校园公告', '255', '1', '', '', '', '0', '', 'l.sort ASC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'xygg', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '');
 INSERT INTO `qinggan_project` VALUES ('169', '0', '1', '74', '0', '新闻图片', '', '20', '1', '', 'picture-player_list', 'picture-player_content', '0', 'images/ico/picplayer.png', 'l.sort ASC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'xwtp', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '');
-INSERT INTO `qinggan_project` VALUES ('170', '0', '1', '22', '220', '动态热点', '动态热点', '13', '1', '', 'news_list', 'news_content', '0', 'images/ico/article.png', 'l.sort DESC,l.dateline DESC,l.id DESC', '新闻主题', '', '10', '0', 'dongtairedian', '', '', '', '0', '1', '0', '0', '0', '0', '0', '0', '', '0', '0', '1', '', '', '', '', '', '1', '');
+INSERT INTO `qinggan_project` VALUES ('172', '0', '1', '22', '0', '最新动态', '最新动态', '13', '1', '', 'news_list', 'news_content', '0', 'images/ico/article.png', 'l.sort DESC,l.dateline DESC,l.id DESC', '新闻主题', '', '10', '0', 'zuixindongtai', '', '', '', '0', '1', '0', '0', '0', '0', '0', '0', '', '0', '0', '1', '', '', '', '', '', '1', '');
+INSERT INTO `qinggan_project` VALUES ('171', '0', '1', '22', '0', '热点新闻', '热点新闻', '13', '1', '', 'news_list', 'news_content', '0', 'images/ico/article.png', 'l.sort DESC,l.dateline DESC,l.id DESC', '新闻主题', '', '10', '0', 'redianxinwen', '', '', '', '0', '1', '0', '0', '0', '0', '0', '0', '', '0', '0', '1', '', '', '', '', '', '1', '');
 
 -- ----------------------------
 -- Table structure for `qinggan_reply`
@@ -2566,5 +2582,5 @@ CREATE TABLE `qinggan_user_group` (
 -- ----------------------------
 -- Records of qinggan_user_group
 -- ----------------------------
-INSERT INTO `qinggan_user_group` VALUES ('2', '普通会员', '1', '1', '0', '0', '10', '1', '0', '', 'a:1:{i:1;s:526:\"read:149,read:43,read:87,read:90,read:146,read:92,read:93,read:41,read:42,read:147,read:45,read:156,read:150,read:96,post:96,read:144,read:151,read:152,post:152,read:142,read:148,read:159,read:160,post:160,reply:160,post1:160,reply1:160,read:161,post:161,reply:161,post1:161,reply1:161,read:162,post:162,reply:162,post1:162,reply1:162,read:163,read:164,post:164,reply:164,post1:164,reply1:164,read:165,read:166,read:167,read:168,read:169,post:169,reply:169,post1:169,reply1:169,read:170,post:170,reply:170,post1:170,reply1:170\";}');
-INSERT INTO `qinggan_user_group` VALUES ('3', '游客组', '1', '0', '1', '0', '200', '0', '0', '', 'a:1:{i:1;s:572:\"read:149,read:87,read:90,read:146,read:92,read:93,read:43,read:41,read:42,read:147,read:45,read:150,read:96,post:96,read:144,read:151,read:152,read:142,post:142,read:148,read:153,read:156,read:157,read:158,post:158,post1:158,read:159,read:160,post:160,reply:160,post1:160,reply1:160,read:161,post:161,reply:161,post1:161,reply1:161,read:162,post:162,reply:162,post1:162,reply1:162,read:163,read:164,post:164,reply:164,post1:164,reply1:164,read:165,read:166,read:167,read:168,read:169,post:169,reply:169,post1:169,reply1:169,read:170,post:170,reply:170,post1:170,reply1:170\";}');
+INSERT INTO `qinggan_user_group` VALUES ('2', '普通会员', '1', '1', '0', '0', '10', '1', '0', '', 'a:1:{i:1;s:624:\"read:149,read:43,read:87,read:90,read:146,read:92,read:93,read:41,read:42,read:147,read:45,read:156,read:150,read:96,post:96,read:144,read:151,read:152,post:152,read:142,read:148,read:159,read:160,post:160,reply:160,post1:160,reply1:160,read:161,post:161,reply:161,post1:161,reply1:161,read:162,post:162,reply:162,post1:162,reply1:162,read:163,read:164,post:164,reply:164,post1:164,reply1:164,read:165,read:166,read:167,read:168,read:169,post:169,reply:169,post1:169,reply1:169,read:170,post:170,reply:170,post1:170,reply1:170,read:171,post:171,reply:171,post1:171,reply1:171,read:172,post:172,reply:172,post1:172,reply1:172\";}');
+INSERT INTO `qinggan_user_group` VALUES ('3', '游客组', '1', '0', '1', '0', '200', '0', '0', '', 'a:1:{i:1;s:670:\"read:149,read:87,read:90,read:146,read:92,read:93,read:43,read:41,read:42,read:147,read:45,read:150,read:96,post:96,read:144,read:151,read:152,read:142,post:142,read:148,read:153,read:156,read:157,read:158,post:158,post1:158,read:159,read:160,post:160,reply:160,post1:160,reply1:160,read:161,post:161,reply:161,post1:161,reply1:161,read:162,post:162,reply:162,post1:162,reply1:162,read:163,read:164,post:164,reply:164,post1:164,reply1:164,read:165,read:166,read:167,read:168,read:169,post:169,reply:169,post1:169,reply1:169,read:170,post:170,reply:170,post1:170,reply1:170,read:171,post:171,reply:171,post1:171,reply1:171,read:172,post:172,reply:172,post1:172,reply1:172\";}');

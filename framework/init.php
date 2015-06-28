@@ -129,9 +129,9 @@ class _init_phpok
 	//授权相关信息
 	public $license = "LGPL";
 	public $license_code = "ED988858BCB1903A529C762DBA51DD40";
-	public $license_date = "2012-10-29";
-	public $license_name = "phpok";
-	public $license_site = "phpok.com";
+	public $license_date = "";
+	public $license_name = "";
+	public $license_site = "";
 	public $license_powered = true;
 
 	//是否是手机端，如果使用手机端可能会改写网址
