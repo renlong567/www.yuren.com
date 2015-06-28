@@ -108,7 +108,7 @@
                                     <a class="tit" title="{$v.title}" target="_blank" href="{$v.url}">{$v.title}</a>
                                 </div>
                                 <div class="intro">
-                                    <a class="more" target="_blank" href="{$v.url}">{$v.note ? phpok_cut($v.note,225,'…') : phpok_cut($v.content,225,'…')}</a>
+                                    <a class="more" target="_blank" href="{$v.url}">{$v.note ? phpok_cut($v.note,20,'…') : phpok_cut($v.content,20,'…')}</a>
                                 </div>
                             </div>
                         </li>
@@ -116,8 +116,8 @@
                         <li class="n">
                             <div class="con">
                                 <div class="title">
-                                    <span class="date">{func date Y-m $v.dateline}</span>
-                                    <a class="tit" title="{$v.title}" target="_blank" href="{$v.url}">{$v.title}</a>
+                                    <span class="date">{func date Y-m-d $v.dateline}</span>
+                                    <a class="tit" title="{$v.title}" target="_blank" href="{$v.url}">{$v.title ? phpok_cut($v.title,20,'…') : phpok_cut($v.content,20,'…')}</a>
                                 </div>
                             </div>
                         </li>
@@ -135,7 +135,7 @@
                                     <a class="tit" title="{$v.title}" target="_blank" href="{$v.url}">{$v.title}</a>
                                 </div>
                                 <div class="intro">
-                                    <a class="more" target="_blank" href="{$v.url}">{$v.note ? phpok_cut($v.note,225,'…') : phpok_cut($v.content,225,'…')}</a>
+                                    <a class="more" target="_blank" href="{$v.url}">{$v.note ? phpok_cut($v.note,20,'…') : phpok_cut($v.content,20,'…')}</a>
                                 </div>
                             </div>
                         </li>
@@ -143,8 +143,8 @@
                         <li class="n">
                             <div class="con">
                                 <div class="title">
-                                    <span class="date">{func date Y-m $v.dateline}</span>
-                                    <a class="tit" title="{$v.title}" target="_blank" href="{$v.url}">{$v.title}</a>
+                                    <span class="date">{func date Y-m-d $v.dateline}</span>
+                                    <a class="tit" title="{$v.title}" target="_blank" href="{$v.url}">{$v.title ? phpok_cut($v.title,20,'…') : phpok_cut($v.content,20,'…')}</a>
                                 </div>
                             </div>
                         </li>
@@ -200,6 +200,39 @@
             <!-- if $list_id.num % 2 == '' --><div class="clear"></div><!-- /if -->
             <!-- /loop -->
         </div>
+
+        <div class="spic" id="shishengfengcai">
+            <!-- php:$list = phpok('tujixiangce','fields=thumb') -->
+            <div class="hd">
+                <h3 class="title">
+                    <a>{$list.project.title}</a>
+                    <div class="pn">
+                        <span class="prev"></span>
+                        <span class="next"></span>
+                    </div>
+                </h3>
+            </div>
+            <div class="bd">
+                <ul class="ssfcimglist">
+                    <!-- loop from=$list.rslist key=$key value=$value -->
+                    <li>
+                        <a href="{$value.url}" title="{$value.title}"><img src="{$value.thumb.gd.thumb}" alt="{$value.title}" /></a>
+                        <div class="tit"><a href="{$value.url}" title="{$value.title}">{func phpok_cut $value.title 15 …}</a></div>
+                    </li>
+                    <!-- /loop -->
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#shishengfengcai").slide({
+                    'mainCell': 'ul.imglist',
+                    'effect': "leftLoop",
+                    'autoPlay': true,
+                    'vis': 3
+                });
+            });
+        </script>
     </div>
     <div class="cl"></div>
     <div class="spic" id="photoslist">

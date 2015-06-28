@@ -745,6 +745,11 @@ a.download{background:url('../images/icon_download.png') left center no-repeat;p
 
 .home_right .box .en{font-style:italic;font-size:12px;padding-left:10px;}
 
+.ssfcimglist{ overflow:hidden;margin:0;padding:0;}
+.ssfcimglist li{padding:5px 5px 0 5px; float:left;margin:5px 10px;}
+.ssfcimglist li img{border-radius:5px;box-shadow:1px 1px 5px 0px #ccc;}
+.ssfcimglist li .tit{ line-height:22px; padding:2px; text-align:center;overflow:hidden;height:22px;}
+.ssfcimglist:after{clear:both;height:0;line-height:0;content:' ';display:block;visibility:hidden;}
 
 .imglist{ overflow:hidden;margin:0;padding:0;}
 .imglist li{padding:5px 5px 0 5px; float:left;margin:5px 10px;}
