@@ -158,6 +158,9 @@ p{word-wrap:break-word}
 .home_left .newBox .bd .topicList .t .title a {
     color: #000;
 }
+.home_left .newBox .bd .topicList .t .title a:hover {
+    color: #f00;
+}
 .home_left .newBox .bd .topicList .n {
     line-height: 28px;
 }
@@ -168,6 +171,9 @@ p{word-wrap:break-word}
 .home_left .newBox .bd .topicList .n a {
     color: #666;
     font-size: 14px;
+}
+.home_left .newBox .bd .topicList .n a:hover {
+    color: #f00;
 }
 .home_left .news_banner{float: left; height: 100%;overflow: hidden;width: 355px;}
 .home_left .news_banner .hd{ height: 230px;margin-bottom: 10px;position: relative;}
@@ -722,7 +728,7 @@ a.download{background:url('../images/icon_download.png') left center no-repeat;p
 
 
 .h_news{ border:1px solid #ccc; overflow:hidden; margin-bottom:20px; }
-.h_news .plate{ width:330px; float:left; padding:0 0 0 13px; margin-bottom:10px;}
+.h_news .plate{ width:330px; float:left; padding:0 0 0 13px; margin: 15px 0;}
 .h_news .plate_title{ height:30px;  overflow:hidden; margin-bottom:15px;  border-bottom:1px solid #ccc;}
 .h_news .plate_title .ch_name{ color:#2257a3; float:left; margin-right:5px; font-size:16px; line-height:30px;}
 .h_news .plate_title .en_name{ color:#585858; float:left; margin-right:5px; font-size:14px; padding-top:5px; line-height:25px; height:25px;}
@@ -731,6 +737,31 @@ a.download{background:url('../images/icon_download.png') left center no-repeat;p
 .h_news .plate_main dt{ width:330px; height:156px; overflow:hidden; margin-bottom:10px;}
 .h_news .plate_main dt img{ width:330px; height:156px; }
 .h_news .plate_main dd{ overflow:hidden; height:26px; border-bottom:1px dashed #d2d2d2; line-height:26px;}
+.h_news .plate_main .t{
+    overflow:hidden;
+    background: rgba(0, 0, 0, 0) repeat-x scroll left bottom;
+    margin-bottom: 10px;
+}
+.h_news .plate_main .t .pic{
+    float: left;
+}
+.h_news .plate_main .t .title {
+    float: left;
+    width: 210px;
+    margin-left: 10px;
+    text-align: center;
+}
+.h_news .plate_main .t .title .hd {
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.h_news .plate_main .t .title .hd a {
+    margin: 0 auto;
+    color:#000;
+}
+.h_news .plate_main .t .title .hd a:hover {
+    color: #f00;
+}
 .h_news .plate_main dd a{ background:url("../images/arrow-right.png") left center no-repeat; padding-left:12px; color:#172c45; width:260px;height:26px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis; display:block;float:left;}
 .h_news .plate_main dd a:hover{ color:#1f5aa5; text-decoration:none; line-height:26px;}
 .h_news .plate_main dd span{ float:right;}
