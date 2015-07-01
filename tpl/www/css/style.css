@@ -32,11 +32,11 @@ p{word-wrap:break-word}
     color: #f00;
     font-size: 14px;
 }
-.warp .spic .bd {
+/*.warp .spic .bd {
     height: 236px;
     padding: 14px;
     position: relative;
-}
+}*/
 .hand{cursor:pointer;}
 .red{color:red;}
 .tag{color:#000;text-decoration:underline;}
@@ -268,7 +268,7 @@ p{word-wrap:break-word}
 
 
 .page_banner{ width:980px; margin:0 auto 10px;}
-.mb10{ margin-bottom:10px;}
+.mb10{ margin-top:10px;}
 .page_left{ width:200px; float:left; border-right:1px solid #ccc;}
 .page_left .sub_nav{ overflow:hidden; margin-bottom:20px;}
 .sub_nav dt{ height:35px; border-bottom:2px solid #3375b9; padding-left:3px; line-height:35px; font-size:16px;}
@@ -283,6 +283,18 @@ p{word-wrap:break-word}
 .page_contact dd b{ font-size:13px; color:#333;}
 .page_right{ width:764px; float:left; border-left:1px solid #ccc; margin-left:-1px; padding-left:15px;}
 .page_right_title{ height:35px; line-height:35px; font-size:16px; margin-bottom:10px; border-bottom:1px solid #ccc;}
+.page_right .news_banner{float: left; height: 100%;overflow: hidden;width: 355px;}
+.page_right .news_banner .hd{ height: 230px;margin-bottom: 10px;position: relative;}
+.page_right .news_banner .hd .pro_ul li .title{ background: black none repeat scroll 0 0;
+                                               bottom: 0;
+                                               height: 30px;
+                                               line-height: 30px;
+                                               opacity: 0.6;
+                                               position: absolute;
+                                               text-align: center;
+                                               width: 343px;}
+.page_right .news_banner .hd .pro_ul li .title a{color: #fff;}
+.page_right .news_banner .bd li{ float: left;margin-right: 6px;}
 
 /* 面包屑 */
 .breadcrumbs{float:right; font-size:12px; line-height:35px;}
