@@ -755,7 +755,7 @@ function tpl_head($array=array())
 	$html .= '<meta http-equiv="Cache-control" content="no-cache,no-store,must-revalidate,max-age=3" />'."\n\t";
 	$html .= '<meta http-equiv="Expires" content="Mon, 26 Jul 1997 05:00:00 GMT" />'."\n\t";
 	$html .= '<meta name="renderer" content="webkit">'."\n\t";
-	$html .= '<meta name="author" content="phpok,admin@phpok.com" />'."\n\t";
+	$html .= '<meta name="author" content="" />'."\n\t";
 	$html .= '<meta name="license" content="'.$GLOBALS['app']->license.'" />'."\n\t";
 	$seo = $GLOBALS['app']->site['seo'];
 	if($seo['keywords']){

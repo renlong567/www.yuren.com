@@ -56,23 +56,27 @@
                 });
             });
         </script>
-        <div>
-        <ul class="plate">
-            <!-- loop from=$rslist key=$key value=$value -->
-            <li>
-                <!-- if $value.thumb -->
-                <span class="n-img"><a href="{$value.url}" title="{$value.title}"><img src="{$value.thumb.gd.thumb}" alt="{$value.title}" /></a></span>
-                <!-- /if -->
-                <h3><a href="{$value.url}" title="{$value.title}">{$value.title}</a></h3>
-                <div class="n-txt">
-                    {$value.note ? phpok_cut($value.note,225,'…') : phpok_cut($value.content,225,'…')}
-                    <span class="more">[<a href="{$value.url}" title="查看{$value.title}详细信息">查看更多</a>]</span>
-                </div>
-            </li>
-            <!-- /loop -->
-        </ul>
+        <div class="news">
+            <ul class="topicList">
+                <!-- php:$list = phpok('news') -->
+                <!-- loop from=$list.rslist key=$key value=$value -->
+                {if $key == 0}
+                <li class="t">
+                    <div class="con">
+                        <div class="title"><a href="{$value.url}" title="{$value.title}">{$value.title}</a></div>
+                        <div class="intro"><a href="{$value.url}" title="{$value.title}">{$value.content}</a></div>
+                    </div>
+                    {else}
+                <li class="n">
+                    <div class="title">
+                        <span class="date">{func date Y-m-d $value.dateline}</span>
+                        <a href="{$value.url}" title="{$value.title}">{$value.title}</a>
+                    </div>
+                    {/if}
+                </li>
+                <!-- /loop -->
+            </ul>
         </div>
-        <!-- include tpl=block_pagelist -->
     </div>
     <div class="cl"></div>
 </div>

@@ -138,7 +138,7 @@ p{word-wrap:break-word}
     list-style-type: none;
     vertical-align: bottom;
 }
-.home_left .newBox .bd .topicList .t {
+.topicList .t {
     background: rgba(0, 0, 0, 0) repeat-x scroll left bottom;
     margin-bottom: 5px;
     padding-bottom: 5px;
@@ -155,29 +155,29 @@ p{word-wrap:break-word}
     color:#666;
     font-size: 12px;
 }
-.home_left .newBox .bd .topicList .t .title {
+.topicList .t .title {
     padding: 5px 0;
     font-size: 14px;
     font-weight: bold;
 }
-.home_left .newBox .bd .topicList .t .title a {
+.topicList .t .title a {
     color: #000;
 }
-.home_left .newBox .bd .topicList .t .title a:hover {
+.topicList .t .title a:hover {
     color: #f00;
 }
-.home_left .newBox .bd .topicList .n {
+.topicList .n {
     line-height: 28px;
 }
-.home_left .newBox .bd .topicList .n .date {
+.topicList .n .date {
     color: #999;
     float: right;
 }
-.home_left .newBox .bd .topicList .n a {
+.topicList .n a {
     color: #666;
     font-size: 14px;
 }
-.home_left .newBox .bd .topicList .n a:hover {
+.topicList .n a:hover {
     color: #f00;
 }
 .home_left .news_banner{float: left; height: 100%;overflow: hidden;width: 355px;}
@@ -804,3 +804,8 @@ a.download{background:url('../images/icon_download.png') left center no-repeat;p
 .imglist li img{border-radius:5px;box-shadow:1px 1px 5px 0px #ccc;}
 .imglist li .tit{ line-height:22px; padding:2px; text-align:center;overflow:hidden;height:22px;}
 .imglist:after{clear:both;height:0;line-height:0;content:' ';display:block;visibility:hidden;}
+
+.news{ border: 1px solid #eee;
+    float: right;
+    padding: 10px;
+    width: 335px;}
