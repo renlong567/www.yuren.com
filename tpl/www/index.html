@@ -246,19 +246,23 @@
             });
         });
     </script>
-</div>
 
-<div class="cooper">
-    <!-- php:$list = phpok('link') -->
-    <div class="cooper_t">
-        <p class="name">{$list.project.title}</p><span class="name_en">{$list.project.entitle}</span>
-        <a href="{url ctrl=post id=$list.project.identifier/}" class="more">+ 申请友情链接</a>
-        <div class="cl"></div>
-    </div>
-    <div class="home_link">
-        <!-- loop from=$list.rslist key=$key value=$value -->
-        <a href="{$value.link}" target="{$value.target}" title="{$value.title}">{$value.title}</a>
-        <!-- /loop -->
+    <div class="spic">
+        <!-- php:$list = phpok('link') -->
+        <div class="hd">
+            <div class="title">
+                <h3><a>{$list.project.title}</a></h3>
+            </div>
+            <div class="more">
+                <a href="{url ctrl=post id=$list.project.identifier/}">+ 申请友情链接</a>
+            </div>
+            <div class="cl"></div>
+        </div>
+        <div class="home_link">
+            <!-- loop from=$list.rslist key=$key value=$value -->
+            <a href="{$value.link}" target="{$value.target}" title="{$value.title}">{$value.title}</a>
+            <!-- /loop -->
+        </div>
     </div>
 </div>
 <!-- include tpl=foot -->
