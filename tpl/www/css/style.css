@@ -274,30 +274,29 @@ p{word-wrap:break-word}
 
 .page_banner{ width:980px; margin:0 auto 10px;}
 .mb10{ margin-top:10px;}
-.page_left{ width:200px; float:left; border-right:1px solid #ccc;}
-.page_left .sub_nav{ overflow:hidden; margin-bottom:20px;}
+.page_left{ width:240px; float:left;}
+.page_left .sub_nav{ overflow:hidden; margin-bottom:30px;}
 .sub_nav dt{ height:35px; border-bottom:2px solid #3375b9; padding-left:3px; line-height:35px; font-size:16px;}
-.sub_nav dd{ height:30px; line-height:30px; border-bottom:1px solid #ccc; font-size:14px;}
+.sub_nav dd{ height:45px; line-height:50px; border-bottom:1px solid #ccc; font-size:14px;text-align: center;}
 .sub_nav dd.on a{color:red;font-weight:bold;}
-.sub_nav dd a{ display:block; background:url("../images/icon3.gif") 3px 13px no-repeat; padding-left:10px;}
 .sub_nav dd a:hover{ text-decoration:none;}
 
-.page_contact{ overflow:hidden;}
-.page_contact dt,.categ{height:35px; border-bottom:2px solid #3375b9; padding-left:3px; line-height:35px; font-size:16px;font-weight:bold;}
-.page_contact dd{ line-height:22px; padding:3px; color:#666;}
-.page_contact dd b{ font-size:13px; color:#333;}
-.page_right{ width:764px; float:left; border-left:1px solid #ccc; margin-left:-1px; padding-left:15px;}
+.page_contact{ overflow:hidden; font-size:14px;}
+.page_contact dt,.categ{height:35px; border-bottom:2px solid #3375b9; padding-left:3px; line-height:35px; font-size:16px;margin-bottom: 10px;}
+.page_contact dd{ line-height:30px;color:#666;}
+.page_contact dd b{ color:#333;}
+.page_right{ width:724px; float:left; margin-left:-1px; padding-left:15px;}
 .page_right_title{ height:35px; line-height:35px; font-size:16px; margin-bottom:10px; border-bottom:1px solid #ccc;}
 .page_right .news_banner{float: left; height: 100%;overflow: hidden;width: 355px;}
 .page_right .news_banner .hd{ height: 230px;margin-bottom: 10px;position: relative;}
 .page_right .news_banner .hd .pro_ul li .title{ background: black none repeat scroll 0 0;
-                                               bottom: 0;
-                                               height: 30px;
-                                               line-height: 30px;
-                                               opacity: 0.6;
-                                               position: absolute;
-                                               text-align: center;
-                                               width: 343px;}
+                                                bottom: 0;
+                                                height: 30px;
+                                                line-height: 30px;
+                                                opacity: 0.6;
+                                                position: absolute;
+                                                text-align: center;
+                                                width: 343px;}
 .page_right .news_banner .hd .pro_ul li .title a{color: #fff;}
 .page_right .news_banner .bd li{ float: left;margin-right: 6px;}
 
@@ -323,10 +322,10 @@ p{word-wrap:break-word}
 .news_detail{ overflow:hidden; padding-top:10px;}
 .news-extra-area {color: #A9A9A9;text-align: center; line-height:24px; border-bottom:1px dashed #ccc; margin:0 5px 30px;}
 .news_detail h2{ text-align:center; font-size:16px; overflow:hidden; margin-bottom:10px;}
-.news_detail .d_txt{ margin-bottom:10px; line-height:22px;font-size:14px;color:#000;}
+.news_detail .d_txt{  border-bottom:1px solid #ccc; line-height:22px;font-size:14px;color:#000;}
 .news_detail .d_txt p{ margin-bottom:10px;}
 .news_detail .d_txt img{max-width:700px;}
-.news_detail .d_page{ border-top:1px solid #ccc; line-height:24px;}
+.news_detail .d_page{ line-height:30px;}
 .news_detail .d_page a{ color:#333;}
 .news_detail .d_page a:hover{ color:#00C;}
 
@@ -744,13 +743,13 @@ table.form td{padding:3px;}
 a.download{background:url('../images/icon_download.png') left center no-repeat;padding-left:18px;}
 
 
-.h_news{ border:1px solid #ccc; overflow:hidden; margin-bottom:20px; }
-.h_news .plate{ width:330px; float:left; padding:0 0 0 13px; margin: 15px 0;}
+.h_news{ overflow:hidden; margin-bottom:20px; }
+.h_news .plate{ width:330px;margin-bottom: 10px;padding: 10px;border:1px solid #efefef;}
 .h_news .plate_title{ height:30px;  overflow:hidden; margin-bottom:15px;  border-bottom:1px solid #ccc;}
 .h_news .plate_title .ch_name{ color:#2257a3; float:left; margin-right:5px; font-size:16px; line-height:30px;}
 .h_news .plate_title .en_name{ color:#585858; float:left; margin-right:5px; font-size:14px; padding-top:5px; line-height:25px; height:25px;}
 .h_news .plate_title .plate_more{ float:right; background:url("../images/more.jpg") left center no-repeat; padding-left:13px; line-height:30px; }
-.h_news .plate_main{ overflow:hidden;}
+.h_news .plate_main{ overflow:hidden;height: 214px;}
 .h_news .plate_main dt{ width:330px; height:156px; overflow:hidden; margin-bottom:10px;}
 .h_news .plate_main dt img{ width:330px; height:156px; }
 .h_news .plate_main dd{ overflow:hidden; height:26px; border-bottom:1px dashed #d2d2d2; line-height:26px;}
@@ -805,7 +804,10 @@ a.download{background:url('../images/icon_download.png') left center no-repeat;p
 .imglist li .tit{ line-height:22px; padding:2px; text-align:center;overflow:hidden;height:22px;}
 .imglist:after{clear:both;height:0;line-height:0;content:' ';display:block;visibility:hidden;}
 
-.news{ border: 1px solid #eee;
-    float: right;
-    padding: 10px;
-    width: 335px;}
+.news{ border: 1px solid #eee;float: right;padding: 10px;width: 335px;}
+
+.lf{float: left;}
+.rf{float:right;}
+
+
+.contentB{clear: both;margin-top: 10px;float: left;width: 100%;}

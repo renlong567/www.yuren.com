@@ -185,7 +185,7 @@
         <div class="h_news">
             <!-- php:$list = phpok('news_catelist') -->
             <!-- loop from=$list.sublist key=$key value=$value id=list_id -->
-            <div class="plate">
+            <div class="plate {if $key % 2 == 0}lf{else}rf{/if}">
                 <div class="plate_title">
                     <span class="ch_name">{$value.title}</span>
                     <a href="{$value.url}" class="plate_more">{lang更多}</a>
