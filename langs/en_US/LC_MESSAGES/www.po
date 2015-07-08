@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2015-06-16 14:57+0800\n"
-"PO-Revision-Date: 2015-06-20 10:55+0800\n"
+"PO-Revision-Date: 2015-07-08 17:42+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.1\n"
-"X-Poedit-Basepath: ..\\..\\..\\framework\\www\\\n"
+"X-Generator: Poedit 1.8.2\n"
+"X-Poedit-Basepath: ../../../framework/www\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: P_Lang\n"
@@ -24,10 +24,8 @@ msgstr "No products in your shopping cart"
 msgid "无法获取前端用户组信息"
 msgstr "Cannot get the usergroup information"
 
-#: content_control.php:30 plugin_control.php:22 plugin_control.php:49
-#: post_control.php:109 post_control.php:351 upload_control.php:180
-#: upload_control.php:212 upload_control.php:240 upload_control.php:271
-#: upload_control.php:301
+#: content_control.php:30 plugin_control.php:22 plugin_control.php:49 post_control.php:109 post_control.php:351
+#: upload_control.php:180 upload_control.php:212 upload_control.php:240 upload_control.php:271 upload_control.php:301
 msgid "未指定ID"
 msgstr "ID is not specified"
 
@@ -113,9 +111,7 @@ msgstr "Member of audit, temporarily unable to login"
 
 #: login_control.php:83
 msgid "会员被管理员锁定，请联系管理员解锁"
-msgstr ""
-"Member is locked by administrator, please contact your administrator to "
-"unlock"
+msgstr "Member is locked by administrator, please contact your administrator to unlock"
 
 #: login_control.php:86
 msgid "登录密码不正确"
@@ -127,9 +123,7 @@ msgstr "Login success"
 
 #: login_control.php:109
 msgid "官网未配置好邮件通知功能，请联系管理员"
-msgstr ""
-"Official website is not configured email notification feature, please "
-"contact your administrator"
+msgstr "Official website is not configured email notification feature, please contact your administrator"
 
 #: login_control.php:123
 msgid "验证码超时过期，请重新获取"
@@ -143,38 +137,31 @@ msgstr "The verification code does not exist"
 msgid "会员{user}成功退出"
 msgstr "Members, {user} successful exits"
 
-#: open_control.php:123 open_control.php:184 open_control.php:226
-#: open_control.php:257
+#: open_control.php:123 open_control.php:184 open_control.php:226 open_control.php:257
 msgid "首页"
 msgstr "Home"
 
-#: open_control.php:123 open_control.php:184 open_control.php:226
-#: open_control.php:257
+#: open_control.php:123 open_control.php:184 open_control.php:226 open_control.php:257
 msgid "上一页"
 msgstr "Prev"
 
-#: open_control.php:123 open_control.php:184 open_control.php:226
-#: open_control.php:257
+#: open_control.php:123 open_control.php:184 open_control.php:226 open_control.php:257
 msgid "下一页"
 msgstr "Next"
 
-#: open_control.php:123 open_control.php:184 open_control.php:226
-#: open_control.php:257
+#: open_control.php:123 open_control.php:184 open_control.php:226 open_control.php:257
 msgid "尾页"
 msgstr "Last"
 
-#: open_control.php:124 open_control.php:185 open_control.php:227
-#: open_control.php:258
+#: open_control.php:124 open_control.php:185 open_control.php:227 open_control.php:258
 msgid "数量："
 msgstr "Total:"
 
-#: open_control.php:124 open_control.php:185 open_control.php:227
-#: open_control.php:258
+#: open_control.php:124 open_control.php:185 open_control.php:227 open_control.php:258
 msgid "，"
 msgstr ","
 
-#: open_control.php:124 open_control.php:185 open_control.php:227
-#: open_control.php:258
+#: open_control.php:124 open_control.php:185 open_control.php:227 open_control.php:258
 msgid "页码："
 msgstr "Page:"
 
@@ -272,9 +259,7 @@ msgstr "Does not meet the requirements of the project"
 
 #: post_control.php:38
 msgid "项目未启用发布功能，联系管理员启用此功能"
-msgstr ""
-"Project does not have the publishing feature enabled, contact your "
-"administrator to enable this feature"
+msgstr "Project does not have the publishing feature enabled, contact your administrator to enable this feature"
 
 #: post_control.php:43
 msgid "您没有权限执行此操作"
@@ -282,9 +267,7 @@ msgstr "You do not have permission to perform this action"
 
 #: post_control.php:82
 msgid "未配置发布模板，联系管理员进行配置"
-msgstr ""
-"Do not configure publishing templates, contact your administrator to "
-"configure"
+msgstr "Do not configure publishing templates, contact your administrator to configure"
 
 #: post_control.php:99
 msgid "非会员不能操作此信息"
@@ -364,19 +347,15 @@ msgstr "Classification has been deactivated, please contact your administrator"
 
 #: project_control.php:137
 msgid "父级分类已停用，请联系管理员"
-msgstr ""
-"Parent category has been deactivated, please contact your administrator"
+msgstr "Parent category has been deactivated, please contact your administrator"
 
 #: project_control.php:147
 msgid "项目所绑定的根分类已停用，请联系管理员"
-msgstr ""
-"Project binding root category has been deactivated, please contact your "
-"administrator"
+msgstr "Project binding root category has been deactivated, please contact your administrator"
 
 #: project_control.php:252
 msgid "未配置模板{tplfile}，请配置相应的模板"
-msgstr ""
-"Template {tplfile} is not configured, configure the appropriate template"
+msgstr "Template {tplfile} is not configured, configure the appropriate template"
 
 #: register_control.php:27
 msgid "您已登录，不用注册"
@@ -428,8 +407,7 @@ msgstr "Request parameter is incorrect"
 
 #: ueditor_control.php:110 upload_control.php:37
 msgid "系统已禁止游客上传，请联系管理员"
-msgstr ""
-"System has banned visitors to upload, please contact your administrator"
+msgstr "System has banned visitors to upload, please contact your administrator"
 
 #: ueditor_control.php:114 upload_control.php:40
 msgid "系统已禁止会员上传，请联系管理员"
@@ -491,9 +469,8 @@ msgstr "Attachment failed to obtain information, it may have been deleted"
 msgid "数据不存在"
 msgstr "Data does not exist"
 
-#: upload_control.php:220 upload_control.php:224 upload_control.php:227
-#: upload_control.php:248 upload_control.php:252 upload_control.php:255
-#: upload_control.php:279 upload_control.php:283 upload_control.php:286
+#: upload_control.php:220 upload_control.php:224 upload_control.php:227 upload_control.php:248 upload_control.php:252
+#: upload_control.php:255 upload_control.php:279 upload_control.php:283 upload_control.php:286
 msgid "您没有权限修改此附件信息"
 msgstr "You don't have permission to modify the attachment information"
 
@@ -520,8 +497,8 @@ msgstr "Not logged in members cannot perform this operation"
 #: usercp_control.php:21
 msgid "您的账号有异常：无法获取相应的会员组信息，请联系管理员"
 msgstr ""
-"Your account has an exception: failed to get the appropriate user groups "
-"information, please contact your administrator"
+"Your account has an exception: failed to get the appropriate user groups information, please contact your "
+"administrator"
 
 #: usercp_control.php:88
 msgid "您没有这个权限功能，请联系网站管理员"
@@ -533,3 +510,24 @@ msgstr "Project does not exist or is not enabled"
 
 msgid "更多"
 msgstr "more"
+
+msgid "网站首页"
+msgstr "Home"
+
+msgid "学校新闻"
+msgstr "Newsletters"
+
+msgid "学校简介"
+msgstr "About Us"
+
+msgid "管理团队"
+msgstr "Leadership"
+
+msgid "办学特色"
+msgstr "Features"
+
+msgid "招生信息"
+msgstr "Recruitment"
+
+msgid "PHPOK企业程序（简称程序）是锟铻科技有限公司（前身为情感工作室）开发的一套实用性强，定制灵活的企业网站建设系统，基于PHP+MySQL架构，可运行于Linux、Windows、MacOSX、Solaris等各种平台上。"
+msgstr "PHPOK enterprise program (referred to as the program) is Kun Yu Technology Co., Ltd. (formerly known as emotional Studios) to develop a set of practical, customized and flexible enterprise website construction system based on PHP   MySQL architecture that runs on Linux, Windows, MacOSX , Solaris, and other platforms."
