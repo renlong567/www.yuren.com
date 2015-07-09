@@ -39,7 +39,22 @@
             <div class="m_t">
                 <p class="name">{$list.project.title}</p>
                 <span class="name_en">{$list.project.entitle}</span>
-                <a href="{$list.project.url}" class="more" title="阅读更多{$list.project.title}">{lang更多}</a>
+                <a href="{$list.project.url}" class="more" title="{lang阅读更多}{$list.project.title}">{lang更多}</a>
+                <div class="cl"></div>
+            </div>
+            <ul class="home_news">
+                <!-- loop from=$list.rslist key=$key value=$value -->
+                <li><a href="{$value.url}" title="{$value.title}">{func phpok_cut $value.title 17 …}</a><!-- if $value.dateline + 10 * 24 * 3600 > $sys.time --> <img src="images/new.gif" /><!-- /if --></li>
+                <!-- /loop -->
+            </ul>
+        </div>
+
+        <!-- php:$list = phpok('zsxx','fields=id') -->
+        <div class="m_box">
+            <div class="m_t">
+                <p class="name">{$list.project.title}</p>
+                <span class="name_en">{$list.project.entitle}</span>
+                <a href="{$list.project.url}" class="more" title="{lang阅读更多}{$list.project.title}">{lang更多}</a>
                 <div class="cl"></div>
             </div>
             <ul class="home_news">
@@ -57,11 +72,11 @@
             </div>
             <div class="home_contact">
                 <!-- if $config.contactus.company --><h3>{$config.contactus.company}</h3><!-- /if -->
-                <!-- if $config.contactus.address --><div>地址：{$config.contactus.address}</div><!-- /if -->
+                <!-- if $config.contactus.address --><div>{lang地址：}{$config.contactus.address}</div><!-- /if -->
                 <!-- if $config.contactus.email --><div>Email：{$config.contactus.email}</div><!-- /if -->
-                <!-- if $config.contactus.zipcode --><div>邮编：{$config.contactus.zipcode}</div><!-- /if -->
-                <!-- if $config.contactus.tel --><div>电话：{$config.contactus.tel}</div><!-- /if -->
-                <!-- if $config.contactus.fullname --><div>联系人：{$config.contactus.fullname}</div><!-- /if -->
+                <!-- if $config.contactus.zipcode --><div>{lang邮编：}{$config.contactus.zipcode}</div><!-- /if -->
+                <!-- if $config.contactus.tel --><div>{lang电话：}{$config.contactus.tel}</div><!-- /if -->
+                <!-- if $config.contactus.fullname --><div>{lang联系人：}{$config.contactus.fullname}</div><!-- /if -->
             </div>
         </div>
     </div>
@@ -212,11 +227,53 @@
             <!-- if $list_id.num % 2 == '' --><div class="clear"></div><!-- /if -->
             <!-- /loop -->
         </div>
+
+        <div class="spic partC" id="shishengfengcai">
+            <!-- php:$list = phpok('shishengfengcai','fields=thumb') -->
+            <div class="hd">
+                <span class="more">
+                    <a class="" href="{$list.project.url}">{lang更多}</a>
+                </span>
+                <h3 class="title">
+                    <a>{$list.project.title}</a>
+                    <div class="pn">
+                        <span class="prev"></span>
+                        <span class="next"></span>
+                    </div>
+                </h3>
+            </div>
+            <div class="bd">
+                <div class="tempWrap" style="overflow:hidden; position:relative; width:660px">
+                    <ul class="imglist">
+                        <!-- loop from=$list.rslist key=$key value=$value -->
+                        <li>
+                            <a href="{$value.url}" title="{$value.title}"><img src="{$value.thumb.gd.thumb}" alt="{$value.title}" width="80" /></a>
+                            <div class="tit"><a href="{$value.url}" title="{$value.title}">{func phpok_cut $value.title 15 …}</a></div>
+                        </li>
+                        <!-- /loop -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#shishengfengcai").slide({
+                    'mainCell': 'ul.imglist',
+                    'effect': "leftLoop",
+                    'autoPlay': true,
+                    'vis': 6
+                });
+            });
+        </script>
     </div>
+
     <div class="cl"></div>
-    <div class="spic" id="photoslist">
+    <div class="spic partE" id="photoslist">
         <!-- php:$list = phpok('xiaoyuanfengmao','fields=thumb') -->
         <div class="hd">
+            <span class="more">
+                <a class="" href="{$list.project.url}">{lang更多}</a>
+            </span>
             <h3 class="title">
                 <a>{$list.project.title}</a>
                 <div class="pn">
@@ -226,25 +283,41 @@
             </h3>
         </div>
         <div class="bd">
-            <ul class="imglist">
-                <!-- loop from=$list.rslist key=$key value=$value -->
-                <li>
-                    <a href="{$value.url}" title="{$value.title}"><img src="{$value.thumb.gd.thumb}" alt="{$value.title}" /></a>
-                    <div class="tit"><a href="{$value.url}" title="{$value.title}">{func phpok_cut $value.title 15 …}</a></div>
-                </li>
-                <!-- /loop -->
-            </ul>
+            <!-- loop from=$list.rslist key=$key value=$value -->
+            <a class="wh{$key+1}" target="_blank" href="{$value.url}" title="{$value.title}">
+                <img width="453" height="300" alt="{$value.title}" src="{$value.thumb.gd.thumb}">
+                <ins class="mask"></ins>
+                <em></em>
+            </a>
+            <!-- /loop -->
+            <!--            <ul class="imglist">
+                             loop from=$list.rslist key=$key value=$value 
+                            <li>
+                                <a href="{$value.url}" title="{$value.title}"><img src="{$value.thumb.gd.thumb}" alt="{$value.title}" /></a>
+                                <div class="tit"><a href="{$value.url}" title="{$value.title}">{func phpok_cut $value.title 15 …}</a></div>
+                            </li>
+                             /loop 
+                        </ul>-->
         </div>
     </div>
     <script type="text/javascript">
-        $(document).ready(function () {
-            $("#photoslist").slide({
-                'mainCell': 'ul.imglist',
-                'effect': "leftLoop",
-                'autoPlay': true,
-                'vis': 4
-            });
-        });
+        $(".partE a").each(function () {
+            $(this).hover(function () {
+                $(this).addClass("mHover");
+            }, function () {
+                $(this).removeClass("mHover");
+            })
+        })
+
+        m();
+        function m() {
+            var i = Math.floor(Math.random() * 7 + 1);
+            $(".wh" + i).addClass("mHover");
+            setTimeout(function () {
+                $(".wh" + i).removeClass("mHover");
+            }, 2000);
+            setTimeout("m()", 2000);
+        }
     </script>
 
     <div class="spic">
@@ -254,7 +327,7 @@
                 <h3><a>{$list.project.title}</a></h3>
             </div>
             <div class="more">
-                <a href="{url ctrl=post id=$list.project.identifier/}">+ 申请友情链接</a>
+                <a href="{url ctrl=post id=$list.project.identifier/}">+ {lang申请友情链接}</a>
             </div>
             <div class="cl"></div>
         </div>

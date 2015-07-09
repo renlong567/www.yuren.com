@@ -6,11 +6,11 @@
 	<div class="page_right">
 		<div class="page_right_title">
 			<span class="breadcrumbs">
-				您现在的位置：
-				<a href="{$sys.url}" title="{$config.title}">首页</a>
-				<span class="arrow">&nbsp;</span> <a href="{ctrl url=search keywords=$keywords/}" title="搜索关键字：{$keywords}">搜索结果：<span class="red">{$keywords}</span></a>
+				{lang您现在的位置：}
+				<a href="{$sys.url}" title="{$config.title}">{lang首页}</a>
+				<span class="arrow">&nbsp;</span> <a href="{ctrl url=search keywords=$keywords/}" title="{lang搜索关键字：}{$keywords}">{lang搜索结果：}<span class="red">{$keywords}</span></a>
 			</span>
-			搜索结果
+			{lang搜索结果}
 		</div>
 		<ul class="news_list">
 			<!-- loop from=$rslist key=$key value=$value -->
@@ -21,7 +21,7 @@
 				<h3><a href="{$value.url}" title="{$value.title}">{$value.title}</a></h3>
 				<div class="n-txt">
 					{$value.note ? phpok_cut($value.note,225,'…') : phpok_cut($value.content,225,'…')}
-					<span class="more">[<a href="{$value.url}" title="查看{$value.title}详细信息">查看更多</a>]</span>
+					<span class="more">[<a href="{$value.url}" title="{lang查看}{$value.title}{lang详细信息}">{lang查看更多}</a>]</span>
 				</div>
 			</li>
 			<!-- /loop -->

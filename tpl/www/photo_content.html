@@ -12,8 +12,8 @@
 	<div class="page_right">
 		<div class="page_right_title">
 			<span class="breadcrumbs">
-				您现在的位置：
-				<a href="{$sys.url}" title="{$config.title}">首页</a>
+				{lang您现在的位置：}
+				<a href="{$sys.url}" title="{$config.title}">{lang首页}</a>
 				<span class="arrow">&nbsp;</span> <a href="{$page_rs.url}" title="{$page_rs.title}">{$page_rs.title}</a>
 				<!-- if $cate_parent_rs && $cate_parent_rs != $cate_root_rs -->
 				<span class="arrow">&nbsp;</span> <a href="{$cate_parent_rs.url}" title="{$cate_parent_rs.title}">{$cate_parent_rs.title}</a>
@@ -27,8 +27,8 @@
 		<div class="photo">
 			<h1>{$rs.title}</h1>
 			<div class="date-hits">
-				发布日期：<span>{func date Y年m月d日 $rs.dateline}</span>&nbsp;&nbsp;&nbsp;
-				浏览次数：<span id="lblVisits">{$rs.hits}</span>
+				{lang发布日期：}<span>{func date Y年m月d日 $rs.dateline}</span>&nbsp;&nbsp;&nbsp;
+				{lang浏览次数：}<span id="lblVisits">{$rs.hits}</span>
 			</div>
 			<!-- if $rs.pictures -->
 			<div class="picplayerlist">
@@ -43,7 +43,7 @@
 				<!-- /loop -->
 			</ul>
 			<div class="pn">
-				<a href="javascript:void(0);" class="prev">上一张</a> (点击图片在新窗口查看原图) <a href="javascript:void(0);" class="next">下一张</a>
+				<a href="javascript:void(0);" class="prev">{lang上一张}</a> ({lang点击图片在新窗口查看原图}) <a href="javascript:void(0);" class="next">{lang下一张}</a>
 			</div>
 			</div>
 			<script type="text/javascript">
@@ -55,20 +55,20 @@
 			<div class="d_txt">{$rs.content}</div>
 			
 			<div class="prev-next">
-				<p>上一主题：
+				<p>{lang上一主题：}
 					<!-- php:$prev = phpok_prev($rs) -->
 					<!-- if $prev -->
 					<a href="{$prev.url}" title="{$prev.title}">{$prev.title}</a>
 					<!-- else -->
-					没有了
+					{lang没有了}
 					<!-- /if -->
 				</p>
-				<p>下一主题：
+				<p>{lang下一主题：}
 					<!-- php:$next = phpok_next($rs) -->
 					<!-- if $next -->
 					<a href="{$next.url}" title="{$next.title}">{$next.title}</a>
 					<!-- else -->
-					没有了
+					{lang没有了}
 					<!-- /if -->
 				</p>
 			</div>

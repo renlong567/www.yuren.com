@@ -1,4 +1,4 @@
-<!-- head css=css/tips.css title=友情提示 -->
+<!-- head css=css/tips.css title={lang友情提示} -->
 <!-- if !$url -->
 <style type="text/css">
 .body .tips .txt{margin-left:70px;padding-top:10px;line-height:50px;font-weight:bold;}
@@ -9,7 +9,7 @@
 	<div class="tips {$type}">
 		<!-- if($url) -->
 		<div class="title">{$tips}</div>
-		<div class="note"><a href="{$url}">系统将在 <span class="red">{$time}秒</span> 后跳转，手动跳转请点这里</a></div>
+		<div class="note"><a href="{$url}">{lang系统将在} <span class="red">{$time}{lang秒}</span> {lang后跳转，手动跳转请点这里}</a></div>
 		<!-- else -->
 		<div class="txt">{$tips}</div>
 		<!-- /if -->

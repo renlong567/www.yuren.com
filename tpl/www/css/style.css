@@ -558,7 +558,7 @@ p{word-wrap:break-word}
 
 /* 相册图集 */
 .photolist{ overflow:hidden; margin-bottom:10px;}
-.photolist li{padding:5px; float:left;border:1px solid #ccc;border-radius:5px;margin:5px 9px;box-shadow:1px 1px 5px 0px #ccc;}
+.photolist li{padding:5px; float:left;border:1px solid #ccc;border-radius:5px;margin:5px 34px;box-shadow:1px 1px 5px 0px #ccc;}
 .photolist li img{border-radius:5px 5px 0 0;width:160px;}
 .photolist li p{ line-height:22px; padding:2px; text-align:center;overflow:hidden;height:22px;}
 
@@ -809,5 +809,163 @@ a.download{background:url('../images/icon_download.png') left center no-repeat;p
 .lf{float: left;}
 .rf{float:right;}
 
-
 .contentB{clear: both;margin-top: 10px;float: left;width: 100%;}
+
+/*师生风采*/
+.partC {height: 198px;position: relative;}
+.partC .hd .prev {
+    background: rgba(0, 0, 0, 0) url("../images/picOn.png") no-repeat scroll -68px 0;
+    cursor: pointer;
+    display: block;
+    height: 51px;
+    left: 0;
+    position: absolute;
+    top: 79px;
+    width: 33px;
+}
+
+.partC .hd .next {
+    background: rgba(0, 0, 0, 0) url("../images/picOn.png") no-repeat scroll -110px 0;
+    cursor: pointer;
+    display: block;
+    height: 51px;
+    position: absolute;
+    right: 0;
+    top: 79px;
+    width: 33px;
+}
+.partC .bd {
+    background: #fff none repeat scroll 0 0;
+    margin-left: 30px;
+    margin-top: 18px;
+    overflow: hidden;
+}
+.partC .bd li {
+    display: inline;
+    float: left;
+    height: 140px;
+    line-height: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+    overflow: hidden;
+    text-align: center;
+    width: 80px;
+}
+
+/*校园风貌*/
+.partE .bd {
+    height: 236px;
+    padding: 14px;
+    position: relative;
+}
+.partE .bd a {
+    position: absolute;
+}
+em {
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-style: normal;
+    left: 0;
+    line-height: 30px;
+    padding-left: 30%;
+    padding-top: 20%;
+    position: absolute;
+    top: 0;
+}
+.mask {
+    background: rgba(0, 0, 0, 0) url("../images/feng.png") repeat scroll 0 0;
+    cursor: pointer;
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.partE .bd a.mHover .mask {
+    display: block;
+}
+.partE .bd a.mHover em {
+    color: #eee;
+    display: block;
+    font-size: 14px;
+}
+.partE .bd a.wh7 {
+    height: 236px;
+    overflow: hidden;
+    right: 10px;
+    top: 14px;
+    width: 160px;
+}
+.partE .bd a.wh7 img {
+    height: 236px;
+    width: 357px;
+}
+.partE .bd a.wh6 {
+    height: 149px;
+    overflow: hidden;
+    right: 172px;
+    top: 14px;
+    width: 256px;
+}
+.partE .bd a.wh6 img {
+    height: 149px;
+    width: 256px;
+}
+.partE .bd a.wh5 {
+    height: 85px;
+    overflow: hidden;
+    right: 172px;
+    top: 165px;
+    width: 127px;
+}
+.partE .bd a.wh5 img {
+    height: 85px;
+    width: 127px;
+}
+.partE .bd a.wh4 {
+    height: 85px;
+    overflow: hidden;
+    right: 301px;
+    top: 165px;
+    width: 127px;
+}
+.partE .bd a.wh4 img {
+    height: 85px;
+    width: 127px;
+}
+.partE .bd a.wh3 {
+    height: 236px;
+    left: 191px;
+    overflow: hidden;
+    top: 14px;
+    width: 357px;
+}
+.partE .bd a.wh3 img {
+    height: 236px;
+    width: 357px;
+}
+.partE .bd a.wh2 {
+    height: 117px;
+    left: 14px;
+    overflow: hidden;
+    top: 133px;
+    width: 175px;
+}
+.partE .bd a.wh2 img {
+    height: 117px;
+    width: 175px;
+}
+.partE .bd a.wh1 {
+    height: 117px;
+    left: 14px;
+    overflow: hidden;
+    top: 14px;
+    width: 175px;
+}
+.partE .bd a.wh1 img {
+    height: 117px;
+    width: 175px;
+}
