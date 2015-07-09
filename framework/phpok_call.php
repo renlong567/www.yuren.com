@@ -92,16 +92,29 @@ class phpok_call extends phpok_control
 			return false;
 		}
 		if($call_rs['cache'] == 'false' || !$this->db->cache_status() || in_array($call_rs['type_id'],$this->_phpok_nocache_id())){
-			return $this->$func($call_rs);
+			$final_data = $this->$func($call_rs);
 		}else{
 			$cache_tbl = $this->_cache_tbl($call_rs['type_id']);
 			$cache_id = $this->db->cache_id(serialize($call_rs),$cache_tbl);
 			$cache_info = $this->db->cache_get($cache_id);
 			if($cache_info && !is_bool($cache_info)){
-				return $cache_info;
+				$final_data = $cache_info;
 			}
-			return $this->$func($call_rs,$cache_id);
+			$final_data = $this->$func($call_rs,$cache_id);
 		}
+
+                if(!empty($final_data))
+                {
+                    foreach($final_data as &$value)
+                    {
+                        if(!empty($value) && !is_numeric($value) && is_string($value))
+                        {
+                            $value = P_Lang($value);
+                        }
+                    }
+                }
+
+                return $final_data;
 	}
 
 	//读取文章列表
