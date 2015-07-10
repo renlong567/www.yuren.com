@@ -2,10 +2,6 @@
 /***********************************************************
 	Filename: phpok/init.php
 	Note	: PHPOK框架入口引挈文件，请不要改动此文件
-	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
-	Update  : 2012-10-15 15:30
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}
 //强制使用UTF-8编码

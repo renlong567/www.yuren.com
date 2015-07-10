@@ -2,11 +2,7 @@
 /***********************************************************
 	Filename: {phpok}/admin/config.inc.php
 	Note	: 网站后台配置信息
-	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
-	Update  : 2013年6月3日
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}
-$site_rs["title"] = "育人学校";
+$site_rs["title"] = "郑州育人国际学校";
 ?>

@@ -2,7 +2,7 @@
 /* CSS Document */
 
 body,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0;list-style:none;}
-body{font:12px "微软雅黑","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%; color:#666;min-width: 980px;}
+body{font:14px "微软雅黑","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%; color:#666;min-width: 980px;}
 input{font-family:"微软雅黑","Arial","Arial Narrow",HELVETICA;}
 a{color:#adadad;text-decoration:none}
 a:hover{color:#fff;text-decoration:none;}
@@ -46,10 +46,10 @@ p{word-wrap:break-word}
 .tag{color:#000;text-decoration:underline;}
 /* 公共页头样式 */
 .head{ background-color: #eaeaea;position: relative;z-index: 1;}
-.head .top_box{background: rgba(0, 0, 0, 0) url("../images/topbg.jpg") repeat-x scroll 0 0;height: 28px;line-height: 28px;width: 100%;}
+.head .top_box{background: #3a3d42 repeat-x scroll 0 0;height: 40px;line-height: 40px;width: 100%;}
 .head .head_right{width: 980px;margin: auto;}
-.head_right .fr span{ margin-left: 10px;}
-.head .headerCont{background-color: #eaeaea;clear: both; height: 162px;margin: 0 auto;position: relative;width: 980px;}
+.head_right .fr span{ margin-left: 10px;font-size: 14px;}
+.head .headerCont{background-color: #eaeaea;clear: both; height: 190px;margin: 0 auto;position: relative;width: 980px;}
 .head .logo{ margin-top: 40px;float: left;}
 .head .logo span{ font-size: 100px;}
 .top_nav{height:26px; line-height:26px; text-align:right; color:#666;}
@@ -88,6 +88,7 @@ p{word-wrap:break-word}
     clear: both;
     height: 100%;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 .home_left{ height: 100%;overflow: hidden;width: 724px;float:left;}
 .home_left .newBox {
@@ -193,7 +194,7 @@ p{word-wrap:break-word}
 .home_left .news_banner .hd .pro_ul li .title a{color: #fff;}
 .home_left .news_banner .bd li{ float: left;margin-right: 6px;}
 .home_right{ height: 100%;overflow: hidden;width: 240px;float:right;}
-.m_box{ overflow:hidden; margin-bottom:10px;}
+.m_box{ overflow:hidden; margin-bottom:30px;}
 .m_t{ border-bottom:1px solid #3375b9; height:30px; line-height:30px; margin-bottom:5px; overflow:hidden;}
 .m_t .more{ float:right; font-size:11px; padding-top:5px; line-height:25px;color:#3375b9; background:url("../images/arrow-right.png") right 13px no-repeat; padding-right:8px;}
 .m_t .name{ float:left;float: left;padding: 0px;margin: 0px;height: 30px;line-height: 30px; font-size:14px; color:#000; font-weight:bold;}
@@ -201,7 +202,7 @@ p{word-wrap:break-word}
 .home_news { overflow:hidden;}
 .home_news li{padding-left: 8px;height: 25px;line-height: 25px;overflow: hidden;background: url(../images/icon3.gif) no-repeat 0px 10px;}
 
-.home_about{ line-height:22px;}
+.home_about{ line-height:30px;}
 .home_about img{ float:left; margin-right:10px;}
 .home_about p{ margin-bottom:5px;}
 
@@ -687,7 +688,7 @@ div.mbottom10{margin-bottom:10px;}
 
 
 /* 会员个人中心涉及到的CSS，这里的布局基本上以cp_为前缀 */
-div.cp{margin:10px auto;width:1000px;}
+div.cp{margin:10px auto;width:980px;}
 div.cp:after{content:'.',display:block;height:0;line-height:0;overflow:hidden;visibility:hidden;}
 div.cp .left{width:200px;float:left;}
 div.cp .right{width:790px;float:right;}
@@ -752,7 +753,7 @@ a.download{background:url('../images/icon_download.png') left center no-repeat;p
 .h_news .plate_main{ overflow:hidden;height: 214px;}
 .h_news .plate_main dt{ width:330px; height:156px; overflow:hidden; margin-bottom:10px;}
 .h_news .plate_main dt img{ width:330px; height:156px; }
-.h_news .plate_main dd{ overflow:hidden; height:26px; border-bottom:1px dashed #d2d2d2; line-height:26px;}
+.h_news .plate_main dd{ overflow:hidden; height:30px; border-bottom:1px dashed #d2d2d2; line-height:26px;}
 .h_news .plate_main .t{
     overflow:hidden;
     background: rgba(0, 0, 0, 0) repeat-x scroll left bottom;

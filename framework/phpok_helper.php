@@ -2,10 +2,6 @@
 /***********************************************************
 	Filename: phpok/phpok_helper.php
 	Note	: 通用函数
-	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
-	Update  : 2012-10-17 14:49
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}
 
@@ -885,7 +881,7 @@ function form_html($type='text',$id='phpok',$attr='',$content='')
 //取得授权时间
 function license_date()
 {
-	if($GLOBALS['app']->license_site == '.phpok.com') return '2005-'.date("Y",$GLOBALS['app']->time);
+	if($GLOBALS['app']->license_site == '.yureninternational.com') return '2005-'.date("Y",$GLOBALS['app']->time);
 	$date_start = substr($GLOBALS['app']->license_date,0,4);
 	$date_end = date("Y",$GLOBALS['app']->time);
 	if($date_start >= $date_end) return $date_end;

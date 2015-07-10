@@ -1,10 +1,7 @@
 <?php
 /***********************************************************
-	Note	: phpok4升级引挈控制器
+	Note	: 升级引挈控制器
 	Version : 4.x
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
-	Update  : 2015年06月11日 14时33分
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}
 class update_control extends phpok_control
@@ -343,10 +340,7 @@ class update_control extends phpok_control
 			$html = '<?php'."\n";
 			$html.= '/***********************************************************'."\n";
 			$html.= "\t".'文件：version.php'."\n";
-			$html.= "\t".'备注：PHPOK版本'."\n";
-			$html.= "\t".'版本：4.x'."\n";
-			$html.= "\t".'网站：www.phpok.com'."\n";
-			$html.= "\t".'作者：qinggan <qinggan@188.com>'."\n";
+			$html.= "\t".'网站：yureninternational.com'."\n";
 			$html.= "\t".'更新：'.date("Y-m-d H:i",$this->time)."\n";
 			$html.= '***********************************************************/'."\n";
 			$html.= 'if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}'."\n";

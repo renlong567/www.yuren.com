@@ -2,15 +2,15 @@
 Navicat MySQL Data Transfer
 
 Source Server         : localhost
-Source Server Version : 50612
+Source Server Version : 50505
 Source Host           : localhost:3306
 Source Database       : yuren
 
 Target Server Type    : MYSQL
-Target Server Version : 50612
+Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2015-07-09 23:58:22
+Date: 2015-07-10 17:53:38
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -291,7 +291,7 @@ CREATE TABLE `qinggan_extc` (
 -- ----------------------------
 -- Records of qinggan_extc
 -- ----------------------------
-INSERT INTO `qinggan_extc` VALUES ('35', 'Copyright © 2015 郑州育人国际学校 All Rights Reserved');
+INSERT INTO `qinggan_extc` VALUES ('35', 'CopyRight © 2015 郑州育人国际学校 All Rights Reserved');
 INSERT INTO `qinggan_extc` VALUES ('59', 'XXX老师');
 INSERT INTO `qinggan_extc` VALUES ('61', 'admin@domain.com');
 INSERT INTO `qinggan_extc` VALUES ('62', '河南省郑州市经开区第五大街经北五路');
@@ -487,7 +487,7 @@ INSERT INTO `qinggan_list` VALUES ('1427', '0', '0', '22', '172', '1', '最新�
 INSERT INTO `qinggan_list` VALUES ('1429', '0', '0', '22', '172', '1', '最新动态13', '1433820620', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
 INSERT INTO `qinggan_list` VALUES ('1422', '0', '0', '22', '171', '1', '热点新闻test1', '1433041785', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
 INSERT INTO `qinggan_list` VALUES ('1428', '0', '0', '22', '172', '1', '最新动态12', '1434425409', '0', '1', '0', '1', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
-INSERT INTO `qinggan_list` VALUES ('1423', '0', '0', '22', '171', '1', '热点新闻test2', '1433646606', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
+INSERT INTO `qinggan_list` VALUES ('1423', '0', '0', '22', '171', '1', '热点新闻test2', '1433646606', '0', '1', '0', '1', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
 INSERT INTO `qinggan_list` VALUES ('1424', '0', '0', '22', '171', '1', '热点新闻test3', '1433041820', '0', '1', '0', '1', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
 INSERT INTO `qinggan_list` VALUES ('1430', '0', '8', '22', '43', '1', 'test1', '1433248590', '0', '1', '0', '1', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
 INSERT INTO `qinggan_list` VALUES ('1434', '714', '0', '23', '42', '1', '师资队伍', '1433400577', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
@@ -600,28 +600,6 @@ INSERT INTO `qinggan_list_23` VALUES ('1397', '1', '42', '0', 'a:2:{s:7:\"defaul
 INSERT INTO `qinggan_list_23` VALUES ('1406', '1', '42', '0', 'a:2:{s:7:\"default\";s:9:\"index.php\";s:7:\"rewrite\";s:10:\"index.html\";}', '_self');
 INSERT INTO `qinggan_list_23` VALUES ('1407', '1', '42', '0', 'a:2:{s:7:\"default\";s:9:\"index.php\";s:7:\"rewrite\";s:10:\"index.html\";}', '_self');
 INSERT INTO `qinggan_list_23` VALUES ('1434', '1', '42', '0', 'a:2:{s:7:\"default\";s:17:\"index.php?id=ssfc\";s:7:\"rewrite\";s:9:\"ssfc.html\";}', '_self');
-
--- ----------------------------
--- Table structure for `qinggan_list_24`
--- ----------------------------
-DROP TABLE IF EXISTS `qinggan_list_24`;
-CREATE TABLE `qinggan_list_24` (
-  `id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '主题ID',
-  `site_id` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '网站ID',
-  `project_id` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '项目ID',
-  `cate_id` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '主分类ID',
-  `thumb` varchar(255) NOT NULL DEFAULT '' COMMENT '缩略图',
-  `pictures` varchar(255) NOT NULL DEFAULT '' COMMENT '图片',
-  `content` longtext NOT NULL COMMENT '内容',
-  `spec_single` longtext NOT NULL COMMENT '产品属性',
-  `qingdian` longtext NOT NULL COMMENT '包装清单',
-  PRIMARY KEY (`id`),
-  KEY `site_id` (`site_id`,`project_id`,`cate_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='产品';
-
--- ----------------------------
--- Records of qinggan_list_24
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for `qinggan_list_40`
@@ -832,7 +810,6 @@ CREATE TABLE `qinggan_module` (
 INSERT INTO `qinggan_module` VALUES ('21', '图片轮播', '1', '20', '适用于图片播放器，图片友情链接', 'pic,link,target');
 INSERT INTO `qinggan_module` VALUES ('22', '文章资讯', '1', '10', '适用于新闻，文章之类', 'hits,dateline,thumb');
 INSERT INTO `qinggan_module` VALUES ('23', '自定义链接', '1', '30', '适用于导航，页脚文本导航，文字友情链接', 'link,target');
-INSERT INTO `qinggan_module` VALUES ('24', '产品', '1', '40', '适用于电子商务中产品展示模型', 'hits,dateline,thumb');
 INSERT INTO `qinggan_module` VALUES ('40', '单页信息', '1', '60', '适用于公司简介，联系我们', 'hits,dateline');
 INSERT INTO `qinggan_module` VALUES ('46', '留言模块', '0', '100', '', 'dateline,fullname,email,content');
 INSERT INTO `qinggan_module` VALUES ('61', '友情链接', '1', '120', '适用于导航，页脚文本导航，文字友情链接', 'link,target,tel');
@@ -870,9 +847,6 @@ INSERT INTO `qinggan_module_fields` VALUES ('82', '22', '缩略图', 'thumb', 'v
 INSERT INTO `qinggan_module_fields` VALUES ('83', '22', '内容', 'content', 'longtext', '', 'editor', '', 'html_js', '', '255', 'a:13:{s:5:\"width\";s:3:\"950\";s:6:\"height\";s:3:\"360\";s:7:\"is_code\";i:0;s:9:\"btn_image\";i:1;s:9:\"btn_video\";i:1;s:8:\"btn_file\";i:1;s:8:\"btn_page\";i:1;s:8:\"btn_info\";i:1;s:7:\"is_read\";i:0;s:5:\"etype\";s:4:\"full\";s:7:\"btn_map\";i:1;s:7:\"inc_tag\";i:1;s:10:\"paste_text\";i:0;}', '0');
 INSERT INTO `qinggan_module_fields` VALUES ('84', '23', '链接', 'link', 'longtext', '设置导航链接', 'url', '', 'safe', '', '90', 'a:1:{s:5:\"width\";s:3:\"500\";}', '0');
 INSERT INTO `qinggan_module_fields` VALUES ('85', '23', '链接方式', 'target', 'varchar', '设置是否在新窗口打开', 'radio', '', 'safe', '_self', '100', 'a:1:{s:11:\"option_list\";s:5:\"opt:6\";}', '0');
-INSERT INTO `qinggan_module_fields` VALUES ('87', '24', '缩略图', 'thumb', 'varchar', '上传规格要求150x200，该图片仅在首页及产品列表页中使用', 'upload', '', 'safe', '', '30', 'a:3:{s:7:\"cate_id\";s:2:\"12\";s:11:\"is_multiple\";s:1:\"0\";s:11:\"upload_auto\";s:1:\"1\";}', '0');
-INSERT INTO `qinggan_module_fields` VALUES ('88', '24', '图片', 'pictures', 'varchar', '设置产品的图片，支持多图，上传规格为500x500', 'upload', '', 'safe', '', '50', 'a:3:{s:7:\"cate_id\";s:2:\"14\";s:11:\"is_multiple\";s:1:\"1\";s:11:\"upload_auto\";s:1:\"0\";}', '0');
-INSERT INTO `qinggan_module_fields` VALUES ('90', '24', '内容', 'content', 'longtext', '填写产品介绍信息', 'editor', '', 'html_js', '', '255', 'a:12:{s:5:\"width\";s:3:\"950\";s:6:\"height\";s:3:\"400\";s:7:\"is_code\";i:0;s:9:\"btn_image\";i:1;s:9:\"btn_video\";i:1;s:8:\"btn_file\";i:1;s:8:\"btn_page\";i:0;s:8:\"btn_info\";i:0;s:7:\"is_read\";i:0;s:5:\"etype\";s:4:\"full\";s:7:\"btn_map\";i:0;s:7:\"inc_tag\";i:0;}', '0');
 INSERT INTO `qinggan_module_fields` VALUES ('93', '21', '链接方式', 'target', 'varchar', '设置是否在新窗口打开', 'radio', '', 'safe', '_blank', '100', 'a:3:{s:11:\"option_list\";s:5:\"opt:6\";s:9:\"put_order\";s:1:\"0\";s:10:\"ext_select\";b:0;}', '0');
 INSERT INTO `qinggan_module_fields` VALUES ('131', '40', '内容', 'content', 'longtext', '', 'editor', '', 'html_js', '', '255', 'a:7:{s:5:\"width\";s:3:\"800\";s:6:\"height\";s:3:\"360\";s:7:\"is_code\";b:0;s:9:\"btn_image\";s:1:\"1\";s:9:\"btn_video\";s:1:\"1\";s:8:\"btn_file\";s:1:\"1\";s:8:\"btn_page\";b:0;}', '0');
 INSERT INTO `qinggan_module_fields` VALUES ('141', '46', '姓名', 'fullname', 'varchar', '', 'text', '', 'safe', '', '10', 'a:4:{s:8:\"form_btn\";b:0;s:5:\"width\";s:3:\"300\";s:15:\"ext_quick_words\";b:0;s:14:\"ext_quick_type\";b:0;}', '1');
@@ -883,9 +857,7 @@ INSERT INTO `qinggan_module_fields` VALUES ('200', '21', '图片', 'pic', 'varch
 INSERT INTO `qinggan_module_fields` VALUES ('177', '22', '摘要', 'note', 'longtext', '简要文字描述', 'textarea', '', 'safe', '', '20', 'a:2:{s:5:\"width\";s:3:\"800\";s:6:\"height\";s:2:\"80\";}', '0');
 INSERT INTO `qinggan_module_fields` VALUES ('204', '61', '链接方式', 'target', 'varchar', '设置是否在新窗口打开', 'radio', '', 'safe', '_self', '100', 'a:3:{s:11:\"option_list\";s:5:\"opt:6\";s:9:\"put_order\";s:1:\"0\";s:10:\"ext_select\";s:0:\"\";}', '0');
 INSERT INTO `qinggan_module_fields` VALUES ('203', '61', '链接', 'link', 'longtext', '填写链接要求带上http://', 'text', 'height:22px;line-height:22px;padding:3px;border:1px solid #ccc;', 'safe', '', '90', 'a:4:{s:8:\"form_btn\";b:0;s:5:\"width\";s:3:\"280\";s:15:\"ext_quick_words\";b:0;s:14:\"ext_quick_type\";b:0;}', '1');
-INSERT INTO `qinggan_module_fields` VALUES ('217', '24', '参数', 'spec_single', 'longtext', '设置产品的规格参数', 'param', '', 'safe', '', '110', 'a:3:{s:6:\"p_name\";s:140:\"袖型\r\n细节\r\n风格\r\n尺码\r\n人群\r\n版型\r\n颜色\r\n元素\r\n领型\r\n图案\r\n材质\r\n镶嵌方式\r\n款式\r\n重量\r\n圈号\r\n证书\r\n产地\";s:6:\"p_type\";s:1:\"0\";s:7:\"p_width\";s:0:\"\";}', '0');
 INSERT INTO `qinggan_module_fields` VALUES ('218', '64', '客服代码', 'code', 'longtext', '请输入相应的客服代码，不支持JS', 'code_editor', '', 'html', '', '20', 'a:2:{s:5:\"width\";s:3:\"500\";s:6:\"height\";s:3:\"100\";}', '0');
-INSERT INTO `qinggan_module_fields` VALUES ('219', '24', '包装清单', 'qingdian', 'longtext', '设置产品包装中包含哪些清单', 'editor', '', 'html', '', '130', 'a:13:{s:5:\"width\";s:3:\"950\";s:6:\"height\";s:2:\"80\";s:7:\"is_code\";i:0;s:9:\"btn_image\";i:0;s:9:\"btn_video\";i:0;s:8:\"btn_file\";i:0;s:8:\"btn_page\";i:0;s:8:\"btn_info\";i:0;s:7:\"is_read\";i:0;s:5:\"etype\";s:6:\"simple\";s:7:\"btn_map\";i:0;s:7:\"inc_tag\";i:0;s:10:\"paste_text\";i:0;}', '0');
 INSERT INTO `qinggan_module_fields` VALUES ('239', '68', '缩略图', 'thumb', 'varchar', '请上传200x240规格的图片，文件大小建议不超过100KB', 'upload', '', 'safe', '', '30', 'a:3:{s:7:\"cate_id\";s:2:\"12\";s:11:\"is_multiple\";s:1:\"0\";s:11:\"upload_auto\";s:1:\"1\";}', '0');
 INSERT INTO `qinggan_module_fields` VALUES ('240', '68', '图片', 'pictures', 'varchar', '支持多图', 'upload', '', 'safe', '', '50', 'a:3:{s:7:\"cate_id\";s:2:\"15\";s:11:\"is_multiple\";s:1:\"1\";s:11:\"upload_auto\";s:1:\"0\";}', '0');
 INSERT INTO `qinggan_module_fields` VALUES ('244', '61', '联系人电话', 'tel', 'varchar', '填写联系人电话，以方便与人取得联系', 'text', 'height:22px;line-height:22px;padding:3px;border:1px solid #ccc;', 'safe', '', '110', 'a:4:{s:8:\"form_btn\";b:0;s:5:\"width\";s:3:\"280\";s:15:\"ext_quick_words\";b:0;s:14:\"ext_quick_type\";b:0;}', '1');
@@ -1998,7 +1970,7 @@ CREATE TABLE `qinggan_project` (
 -- Records of qinggan_project
 -- ----------------------------
 INSERT INTO `qinggan_project` VALUES ('41', '0', '1', '21', '0', '图片播放器', '', '20', '1', '', '', '', '0', 'images/ico/picplayer.png', 'l.sort ASC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'picture-player', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '');
-INSERT INTO `qinggan_project` VALUES ('42', '0', '1', '23', '0', '导航菜单', '', '30', '1', '', '', '', '0', 'images/ico/menu.png', 'l.sort ASC,l.dateline DESC,l.id DESC', '导航名称', '', '30', '0', 'menu', '', '', '', '1', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '1', '');
+INSERT INTO `qinggan_project` VALUES ('42', '0', '1', '23', '0', '导航菜单', '', '11', '1', '', '', '', '0', 'images/ico/menu.png', 'l.sort ASC,l.dateline DESC,l.id DESC', '导航名称', '', '30', '0', 'menu', '', '', '', '1', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '1', '');
 INSERT INTO `qinggan_project` VALUES ('43', '0', '1', '22', '7', '学校新闻', '', '12', '1', 'news_index', '', '', '1', 'images/ico/article.png', 'l.sort DESC,l.dateline DESC,l.id DESC', '新闻主题', '', '10', '0', 'news', '', '', '', '0', '1', '0', '0', '0', '0', '1', '0', '', '0', '0', '1', '', '', '', '', '', '1', '');
 INSERT INTO `qinggan_project` VALUES ('87', '0', '1', '0', '0', '学校简介', '', '15', '1', '', '', '', '0', 'images/ico/about.png', 'l.sort ASC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'about', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '');
 INSERT INTO `qinggan_project` VALUES ('90', '87', '1', '0', '0', '使命', '', '10', '1', '', '', '', '0', 'images/ico/company.png', 'l.sort ASC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'mission', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '企业 phpok企业');
@@ -2006,16 +1978,16 @@ INSERT INTO `qinggan_project` VALUES ('146', '87', '1', '0', '0', '目标', '', 
 INSERT INTO `qinggan_project` VALUES ('92', '87', '1', '0', '0', '办学理念', '', '30', '1', '', '', '', '0', 'images/ico/email.png', 'l.sort ASC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'philosophy', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '');
 INSERT INTO `qinggan_project` VALUES ('93', '87', '1', '0', '0', '育人理念', '', '40', '1', '', '', '', '0', 'images/ico/extension.png', 'l.sort DESC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'student-development', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '');
 INSERT INTO `qinggan_project` VALUES ('142', '0', '1', '61', '0', '友情链接', '', '120', '1', '', '', '', '0', 'images/ico/link.png', 'l.sort ASC,l.dateline DESC,l.id DESC', '网站名称', '', '30', '0', 'link', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '1', '0', 'post_link', 'project_save', '', '', '', '0', '');
-INSERT INTO `qinggan_project` VALUES ('147', '0', '1', '23', '0', '页脚导航', '', '35', '1', '', '', '', '0', 'images/ico/menu.png', 'l.sort ASC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'yejiaodaohang', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '');
+INSERT INTO `qinggan_project` VALUES ('147', '0', '1', '23', '0', '页脚导航', '', '11', '1', '', '', '', '0', 'images/ico/menu.png', 'l.sort ASC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'yejiaodaohang', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '');
 INSERT INTO `qinggan_project` VALUES ('149', '0', '1', '0', '0', '首页自定义', '', '10', '1', '', '', '', '0', 'images/ico/home.png', 'l.sort DESC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'index', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '');
-INSERT INTO `qinggan_project` VALUES ('167', '0', '1', '22', '0', '校园公告', '校园公告', '255', '1', '', '', '', '0', '', 'l.sort ASC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'xygg', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '');
+INSERT INTO `qinggan_project` VALUES ('167', '0', '1', '22', '0', '校园公告', '校园公告', '14', '1', '', '', '', '0', 'images/ico/article.png', 'l.sort ASC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'xygg', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '');
 INSERT INTO `qinggan_project` VALUES ('169', '0', '1', '74', '0', '首页新闻图片', '', '20', '1', '', 'picture-player_list', 'picture-player_content', '0', 'images/ico/picplayer.png', 'l.sort ASC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'xwtp', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '');
 INSERT INTO `qinggan_project` VALUES ('172', '0', '1', '22', '0', '最新动态', '最新动态', '13', '1', '', 'news_list', 'news_content', '0', 'images/ico/article.png', 'l.sort DESC,l.dateline DESC,l.id DESC', '新闻主题', '', '10', '0', 'zuixindongtai', '', '', '', '0', '1', '0', '0', '0', '0', '0', '0', '', '0', '0', '1', '', '', '', '', '', '1', '');
 INSERT INTO `qinggan_project` VALUES ('171', '0', '1', '22', '0', '热点新闻', '热点新闻', '13', '1', '', 'news_list', 'news_content', '0', 'images/ico/article.png', 'l.sort DESC,l.dateline DESC,l.id DESC', '新闻主题', '', '10', '0', 'redianxinwen', '', '', '', '0', '1', '0', '0', '0', '0', '0', '0', '', '0', '0', '1', '', '', '', '', '', '1', '');
-INSERT INTO `qinggan_project` VALUES ('173', '0', '1', '68', '0', '校园风貌', '校园风貌', '255', '1', '', 'photo_list', 'photo_content', '0', '', 'l.sort ASC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'xyfm', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '');
+INSERT INTO `qinggan_project` VALUES ('173', '0', '1', '68', '0', '校园风貌', '校园风貌', '255', '1', '', 'photo_list', 'photo_content', '0', 'images/ico/photo.png', 'l.sort ASC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'xyfm', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '');
 INSERT INTO `qinggan_project` VALUES ('174', '0', '1', '74', '0', '学校新闻图片', '', '20', '1', '', 'picture-player_list', 'picture-player_content', '0', 'images/ico/picplayer.png', 'l.sort ASC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'xxxw', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '');
 INSERT INTO `qinggan_project` VALUES ('176', '0', '1', '22', '0', '招生信息', '', '12', '1', 'zsxx_index', '', '', '0', 'images/ico/article.png', 'l.sort DESC,l.dateline DESC,l.id DESC', '新闻主题', '', '10', '0', 'zsxx', '', '', '', '0', '1', '0', '0', '0', '0', '0', '0', '', '0', '0', '1', '', '', '', '', '', '1', '');
-INSERT INTO `qinggan_project` VALUES ('177', '0', '1', '68', '0', '师生风采', '师生风采', '255', '1', '', 'photo_list', 'photo_content', '0', '', 'l.sort ASC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'ssfc', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '');
+INSERT INTO `qinggan_project` VALUES ('177', '0', '1', '68', '0', '师生风采', '师生风采', '255', '1', '', 'photo_list', 'photo_content', '0', 'images/ico/photo.png', 'l.sort ASC,l.dateline DESC,l.id DESC', '', '', '30', '0', 'ssfc', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '0', '0', '', '', '', '', '', '0', '');
 
 -- ----------------------------
 -- Table structure for `qinggan_reply`
@@ -2351,7 +2323,7 @@ CREATE TABLE `qinggan_site` (
 -- ----------------------------
 -- Records of qinggan_site
 -- ----------------------------
-INSERT INTO `qinggan_site` VALUES ('1', '1', '郑州育人国际学校', '/', '1', '网站建设中', '1', '1', 'default', 'res/201506/17/969c9356661de6c5.png', '', '1', '0', '暂停注册', '0', '暂停登录', 'res/201506/17/a0a6614e7b0c749f.png', '', 'cn', '0', '', 'utf-8', '', '25', '0', '', '', '', '', '', '', '', 'prefix[P]-year-month-date-number', '0', '0', '0', '0', 'html/', 'empty', '');
+INSERT INTO `qinggan_site` VALUES ('1', '1', '郑州育人国际学校', '/', '1', '网站建设中', '1', '1', 'default', 'res/201506/17/969c9356661de6c5.png', '', '1', '0', '暂停注册', '0', '暂停登录', 'res/201506/17/a0a6614e7b0c749f.png', 'res/201506/17/0f73070f1f0ca8dc.jpg', 'cn', '0', '', 'utf-8', '', '25', '0', 'admin', 'admin123456', '', '', '', '', '', 'prefix[P]-year-month-date-number', '0', '0', '0', '0', 'html/', 'empty', '');
 
 -- ----------------------------
 -- Table structure for `qinggan_site_domain`
