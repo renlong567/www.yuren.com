@@ -59,7 +59,7 @@ p{word-wrap:break-word}
 .search .searchBtn { cursor: pointer;display: block;float: right;height: 40px;width: 74px;}
 .search .keyWord { background-color: transparent;border: medium none;color: #999;height: 30px;line-height: 30px;margin-top: 4px;width: 282px;}
 
-.head .view { clear: both;color: #009900;display: inline;float: right;font-size: 18px;height: 32px;overflow: hidden;padding-top: 14px;text-align: right;width: 500px;}
+.head .view { clear: both;color: #009900;display: inline;float: right;font-size: 18px;height: 32px;overflow: hidden;padding-top: 30px;text-align: right;width: 500px;}
 .head .view img{margin-left: -4px;}
 .head .nav{height:45px; background:#3375b9;line-height: 45px;list-style:none;}
 .head .nav ul{margin: 0 auto;width: 980px;}
