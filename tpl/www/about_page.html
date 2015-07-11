@@ -6,7 +6,7 @@
 <div class="wrap mb10">
 	<div class="page_left">
 		<dl class="sub_nav">
-			<dt>{$parent_rs.title}</dt>
+			<dt>{func P_Lang $parent_rs.title}</dt>
 			<!-- sublist pid=$parent_rs.id -->
 			<!-- loop from=$list key=$key value=$value -->
 			<dd{if $page_rs.id == $value.id} class="on"{/if}><a href="{$value.url}" title="{func P_Lang $value.title}">{func P_Lang $value.title}</a></dd>
@@ -19,12 +19,12 @@
 			<span class="breadcrumbs">
 				{lang您现在的位置：}
 				<a href="{$sys.url}" title="{$config.title}">{lang首页}</a>
-				<span class="arrow">&nbsp;</span> {$parent_rs.title}
+				<span class="arrow">&nbsp;</span> {func P_Lang $parent_rs.title}
 				<span class="arrow">&nbsp;</span> <a href="{$page_rs.url}" title="{func P_Lang $page_rs.title}">{func P_Lang $page_rs.title}</a>
 			</span>
-			{$page_rs.title}				
+			{func P_Lang $page_rs.title}				
 		</div>
-		<div class="paragraph">{$page_rs.content}</div>
+		<div class="paragraph">{func P_Lang $page_rs.content}</div>
 	</div>
 	<div class="cl"></div>
 </div>

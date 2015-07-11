@@ -40,7 +40,7 @@
                     <span>|</span>
                     <span><a href="javascript:add_fav('http://www.yureninternational.com/','{lang郑州育人国际学校}')">{lang加入收藏}</a></span>
                     <span>|</span>
-                    <span><a href="javascript:change_lang('{if $langid == 'cn'}en_US{else}cn{/if}')" style="color:red;">{if $langid == 'cn'}English{else}中文版{/if}</a></span>
+                    <span><a href="javascript:change_lang('{if $langid == 'cn' || !$langid}en_US{else}cn{/if}')" style="color:red;">{if $langid == 'cn' || !$langid}English{else}中文版{/if}</a></span>
                 </div>
             </div>
         </div>

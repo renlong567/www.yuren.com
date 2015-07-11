@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2015-06-16 14:57+0800\n"
-"PO-Revision-Date: 2015-07-08 17:42+0800\n"
+"PO-Revision-Date: 2015-07-11 23:48+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -24,8 +24,10 @@ msgstr "No products in your shopping cart"
 msgid "无法获取前端用户组信息"
 msgstr "Cannot get the usergroup information"
 
-#: content_control.php:30 plugin_control.php:22 plugin_control.php:49 post_control.php:109 post_control.php:351
-#: upload_control.php:180 upload_control.php:212 upload_control.php:240 upload_control.php:271 upload_control.php:301
+#: content_control.php:30 plugin_control.php:22 plugin_control.php:49
+#: post_control.php:109 post_control.php:351 upload_control.php:180
+#: upload_control.php:212 upload_control.php:240 upload_control.php:271
+#: upload_control.php:301
 msgid "未指定ID"
 msgstr "ID is not specified"
 
@@ -137,31 +139,38 @@ msgstr "The verification code does not exist"
 msgid "会员{user}成功退出"
 msgstr "Members, {user} successful exits"
 
-#: open_control.php:123 open_control.php:184 open_control.php:226 open_control.php:257
+#: open_control.php:123 open_control.php:184 open_control.php:226
+#: open_control.php:257
 msgid "首页"
 msgstr "Home"
 
-#: open_control.php:123 open_control.php:184 open_control.php:226 open_control.php:257
+#: open_control.php:123 open_control.php:184 open_control.php:226
+#: open_control.php:257
 msgid "上一页"
 msgstr "Prev"
 
-#: open_control.php:123 open_control.php:184 open_control.php:226 open_control.php:257
+#: open_control.php:123 open_control.php:184 open_control.php:226
+#: open_control.php:257
 msgid "下一页"
 msgstr "Next"
 
-#: open_control.php:123 open_control.php:184 open_control.php:226 open_control.php:257
+#: open_control.php:123 open_control.php:184 open_control.php:226
+#: open_control.php:257
 msgid "尾页"
 msgstr "Last"
 
-#: open_control.php:124 open_control.php:185 open_control.php:227 open_control.php:258
+#: open_control.php:124 open_control.php:185 open_control.php:227
+#: open_control.php:258
 msgid "数量："
 msgstr "Total:"
 
-#: open_control.php:124 open_control.php:185 open_control.php:227 open_control.php:258
+#: open_control.php:124 open_control.php:185 open_control.php:227
+#: open_control.php:258
 msgid "，"
 msgstr ","
 
-#: open_control.php:124 open_control.php:185 open_control.php:227 open_control.php:258
+#: open_control.php:124 open_control.php:185 open_control.php:227
+#: open_control.php:258
 msgid "页码："
 msgstr "Page:"
 
@@ -469,8 +478,9 @@ msgstr "Attachment failed to obtain information, it may have been deleted"
 msgid "数据不存在"
 msgstr "Data does not exist"
 
-#: upload_control.php:220 upload_control.php:224 upload_control.php:227 upload_control.php:248 upload_control.php:252
-#: upload_control.php:255 upload_control.php:279 upload_control.php:283 upload_control.php:286
+#: upload_control.php:220 upload_control.php:224 upload_control.php:227
+#: upload_control.php:248 upload_control.php:252 upload_control.php:255
+#: upload_control.php:279 upload_control.php:283 upload_control.php:286
 msgid "您没有权限修改此附件信息"
 msgstr "You don't have permission to modify the attachment information"
 
@@ -496,9 +506,7 @@ msgstr "Not logged in members cannot perform this operation"
 
 #: usercp_control.php:21
 msgid "您的账号有异常：无法获取相应的会员组信息，请联系管理员"
-msgstr ""
-"Your account has an exception: failed to get the appropriate user groups information, please contact your "
-"administrator"
+msgstr "Your account has an exception: failed to get the appropriate user groups information, please contact your administrator"
 
 #: usercp_control.php:88
 msgid "您没有这个权限功能，请联系网站管理员"
@@ -556,5 +564,5 @@ msgstr "Announcement"
 msgid "联系方式"
 msgstr "Contact Information"
 
-msgid "PHPOK企业程序（简称程序）是锟铻科技有限公司（前身为情感工作室）开发的一套实用性强，定制灵活的企业网站建设系统，基于PHP+MySQL架构，可运行于Linux、Windows、MacOSX、Solaris等各种平台上。"
-msgstr "PHPOK enterprise program (referred to as the program) is Kun Yu Technology Co., Ltd. (formerly known as emotional Studios) to develop a set of practical, customized and flexible enterprise website construction system based on PHP   MySQL architecture that runs on Linux, Windows, MacOSX , Solaris, and other platforms."
+msgid "<p>PHPOK企业程序（简称程序）是锟铻科技有限公司（前身为情感工作室）开发的</p><p>一套实用性强，定制灵活的企业网站建设系统。</p>"
+msgstr "<p> PHPOK enterprise program (referred to as the program) is Kun Yu Technology Co., Ltd. (formerly known as emotional studio) development </p><p> A set of practical, customized and flexible enterprise website construction system. </p>"

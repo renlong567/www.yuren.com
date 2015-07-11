@@ -14,12 +14,12 @@
 			<span class="breadcrumbs">
 				{lang您现在的位置：}
 				<a href="{$sys.url}" title="{$config.title}">{lang首页}</a>
-				<span class="arrow">&nbsp;</span> <a href="{$page_rs.url}" title="{$page_rs.title}">{$page_rs.title}</a>
+				<span class="arrow">&nbsp;</span> <a href="{$page_rs.url}" title="{func P_Lang $page_rs.title}">{func P_Lang $page_rs.title}</a>
 				<!-- if $cate_parent_rs && $cate_parent_rs != $cate_root_rs -->
-				<span class="arrow">&nbsp;</span> <a href="{$cate_parent_rs.url}" title="{$cate_parent_rs.title}">{$cate_parent_rs.title}</a>
+				<span class="arrow">&nbsp;</span> <a href="{$cate_parent_rs.url}" title="{func P_Lang $cate_parent_rs.title}">{func P_Lang $cate_parent_rs.title}</a>
 				<!-- /if -->
 				<!-- if $cate_rs -->
-				<span class="arrow">&nbsp;</span> <a href="{$cate_rs.url}" title="{$cate_rs.title}">{$cate_rs.title}</a>
+				<span class="arrow">&nbsp;</span> <a href="{$cate_rs.url}" title="{func P_Lang $cate_rs.title}">{func P_Lang $cate_rs.title}</a>
 				<!-- /if -->
 			</span>
 			{$cate_rs ? $cate_rs.title : $page_rs.title}

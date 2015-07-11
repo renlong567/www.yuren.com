@@ -99,7 +99,7 @@ class phpok_call extends phpok_control
 			$final_data = $this->$func($call_rs,$cache_id);
 		}
 
-                if(!empty($final_data))
+                if(!empty($final_data)) //RenLong 2015-07-11 底层中英文切换
                 {
                     foreach($final_data as &$value)
                     {

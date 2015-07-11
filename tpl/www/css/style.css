@@ -36,11 +36,6 @@ p{word-wrap:break-word}
     color: #f00;
     font-size: 14px;
 }
-/*.warp .spic .bd {
-    height: 236px;
-    padding: 14px;
-    position: relative;
-}*/
 .hand{cursor:pointer;}
 .red{color:red;}
 .tag{color:#000;text-decoration:underline;}
@@ -66,12 +61,12 @@ p{word-wrap:break-word}
 .head .nav li{ float:left;position:relative;list-style:none;text-align: center;}
 .head .nav li a{display:inline-block;padding: 0 32px;color: #fff;text-decoration: none; font-size:14px;}
 .head .nav li:hover a,.head .nav li.current a{ background:#23a0e7; color:#fff;}
-.head .nav li a.first,.head .nav li.current a.first{ border-radius:4px 0 0 4px;padding-left:39px;}
-.head .nav li a.last,.head .nav li.current a.last {border-right:0; border-radius:0 4px 4px 0;padding-left:39px;}
-.head .nav ul ul{ min-width: 100%; width:auto;display: none;position: absolute;top: 100%;left: 0;background: #23a0e7; z-index:1000;}
+.head .nav li a.first,.head .nav li.current a.first{ border-radius:4px 0 0 4px;}
+.head .nav li a.last,.head .nav li.current a.last {border-right:0; border-radius:0 4px 4px 0;}
+.head .nav ul ul{ width:auto;display: none;position: absolute;top: 100%;left: 0;background: #23a0e7; z-index:1000;}
 .head .nav ul ul li {background: #23a0e7;float: none;}
 .head .nav li:hover ul{display:block;}
-.head .nav ul ul li a{ border-right:0;display:inline-block;padding: 0 32px;color: #fff;text-decoration: none; font-size:14px;}
+.head .nav ul ul li a{ border-right:0;display:inline-block;color: #fff;text-decoration: none; font-size:14px;width: 100%;}
 .head .nav ul ul li a:hover{ background:#3375b9;}
 
 /* 首页Banner 样式 */
