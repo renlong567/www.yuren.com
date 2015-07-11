@@ -25,12 +25,12 @@
 			<!-- loop from=$rslist key=$key value=$value -->
 			<li>
 				<!-- if $value.thumb -->
-				<span class="n-img"><a href="{$value.url}" title="{$value.title}"><img src="{$value.thumb.gd.thumb}" alt="{$value.title}" /></a></span>
+				<span class="n-img"><a href="{$value.url}" title="{func P_Lang $value.title}"><img src="{$value.thumb.gd.thumb}" alt="{func P_Lang $value.title}" /></a></span>
 				<!-- /if -->
-				<h3><a href="{$value.url}" title="{$value.title}">{$value.title}</a></h3>
+				<h3><a href="{$value.url}" title="{func P_Lang $value.title}">{func P_Lang $value.title}</a></h3>
 				<div class="n-txt">
 					{$value.note ? phpok_cut($value.note,225,'…') : phpok_cut($value.content,225,'…')}
-					<span class="more">[<a href="{$value.url}" title="{lang查看}{$value.title}{lang详细信息}">{lang查看更多}</a>]</span>
+					<span class="more">[<a href="{$value.url}" title="{lang查看}{func P_Lang $value.title}{lang详细信息}">{lang查看更多}</a>]</span>
 				</div>
 			</li>
 			<!-- /loop -->

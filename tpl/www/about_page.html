@@ -9,7 +9,7 @@
 			<dt>{$parent_rs.title}</dt>
 			<!-- sublist pid=$parent_rs.id -->
 			<!-- loop from=$list key=$key value=$value -->
-			<dd{if $page_rs.id == $value.id} class="on"{/if}><a href="{$value.url}" title="{$value.title}">{$value.title}</a></dd>
+			<dd{if $page_rs.id == $value.id} class="on"{/if}><a href="{$value.url}" title="{func P_Lang $value.title}">{func P_Lang $value.title}</a></dd>
 			<!-- /loop -->
 		</dl>
 		<!-- include tpl=block_contactus -->
@@ -20,7 +20,7 @@
 				{lang您现在的位置：}
 				<a href="{$sys.url}" title="{$config.title}">{lang首页}</a>
 				<span class="arrow">&nbsp;</span> {$parent_rs.title}
-				<span class="arrow">&nbsp;</span> <a href="{$page_rs.url}" title="{$page_rs.title}">{$page_rs.title}</a>
+				<span class="arrow">&nbsp;</span> <a href="{$page_rs.url}" title="{func P_Lang $page_rs.title}">{func P_Lang $page_rs.title}</a>
 			</span>
 			{$page_rs.title}				
 		</div>

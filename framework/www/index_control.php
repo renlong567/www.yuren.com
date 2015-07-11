@@ -24,7 +24,7 @@ class index_control extends phpok_control
 				$tplfile = $page_rs["tpl_index"];
 			}
 			unset($page_rs);
-		}
+		}                           
 		$this->view($tplfile);
 	}
 }

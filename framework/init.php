@@ -166,6 +166,7 @@ class _init_phpok
 	{
 		$url = $this->url;
 		$afile = $this->config[$this->app_id.'_file'];
+                $langid = isset($_COOKIE['lang']) && !isset($_REQUEST['_langid']) ? $_COOKIE['lang'] : $this->get("_langid",'lang');    //RenLong 2015-06-16 加载上次选择语言包
 		if(!$afile){
 			$afile = 'index.php';
 		}
@@ -180,8 +181,8 @@ class _init_phpok
 		$this->assign("sys",$this->config);
 		$this->phpok_seo($this->site);
 		$this->assign("config",$this->site);
-		$langid = isset($_COOKIE['lang']) && !isset($_REQUEST['_langid']) ? $_COOKIE['lang'] : $this->get("_langid",'lang');    //RenLong 2015-06-16 加载上次选择语言包
-		if($this->app_id == 'admin'){
+                $this->assign('langid',$langid); //RenLong 2015-07-11 加载当前语言ID
+                if($this->app_id == 'admin'){
 			if(!$langid){
 				$langid = (isset($_SESSION['admin_lang_id']) && $_SESSION['admin_lang_id']) ? $_SESSION['admin_lang_id'] : 'default';
 			}

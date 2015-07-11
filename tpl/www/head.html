@@ -19,6 +19,12 @@
             window.location = "{url ctrl=search/}&keywords=" + encodeURI(keyword);
         }
     }
+    
+    function change_lang(val)
+    {
+	url = "{url ctrl=index/}&_langid="+val;
+	$.phpok.go(url);
+    }
 </script>
 </head>
 <body>
@@ -34,8 +40,7 @@
                     <span>|</span>
                     <span><a href="javascript:add_fav('http://www.yureninternational.com/','{lang郑州育人国际学校}')">{lang加入收藏}</a></span>
                     <span>|</span>
-                    <span><a href="index.php?_langid={if $config.lang == 'cn'}en_US{else}cn{/if}" style="color:red;">{if $config.lang == 'cn'}English{else}中文版{/if}</a></span>
-                {$config.lang}
+                    <span><a href="javascript:change_lang('{if $langid == 'cn'}en_US{else}cn{/if}')" style="color:red;">{if $langid == 'cn'}English{else}中文版{/if}</a></span>
                 </div>
             </div>
         </div>
@@ -68,11 +73,11 @@
                 <!-- php:$list = phpok('menu') -->
                 <!-- loop from=$list.rslist key=$key value=$value id=list_id -->
                 <li{if $menutitle == $value.title} class="current"{/if}>
-                    <a{if $list_id.num == 1} class="first"{/if}{if $list_id.num == $list_id.total} class="last"{/if} href="{$value.url}" title="P_Lang({$value.title})" target="{$value.target}">{$value.title}</a>
+                    <a{if $list_id.num == 1} class="first"{/if}{if $list_id.num == $list_id.total} class="last"{/if} href="{$value.url}" title="{func P_Lang $value.title}" target="{$value.target}">{func P_Lang $value.title}</a>
                     <!-- if $value.sonlist -->
                     <ul>
                         <!-- loop from=$value.sonlist key=$k value=$v -->
-                        <li><a href="{$v.url}" title="{$v.title}" target="{$v.target}">{$v.title}</a></li>
+                        <li><a href="{$v.url}" title="{func P_Lang $v.title}" target="{$v.target}">{func P_Lang $v.title}</a></li>
                         <!-- /loop -->
                     </ul>
                     <!-- /if -->

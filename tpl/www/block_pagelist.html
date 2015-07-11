@@ -6,7 +6,7 @@
 		<!-- if $value.nolink -->
 		<span>{$value.title}</span>
 		<!-- else -->
-		<a href="{$value.url}" title="{$value.title}">{$value.title}</a>
+		<a href="{$value.url}" title="{func P_Lang $value.title}">{func P_Lang $value.title}</a>
 		<!-- /if -->
 	</li>
 	<!-- /loop -->

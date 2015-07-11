@@ -520,14 +520,41 @@ msgstr "Newsletters"
 msgid "学校简介"
 msgstr "About Us"
 
+msgid "使命"
+msgstr "mission"
+
+msgid "目标"
+msgstr "goals"
+
+msgid "办学理念"
+msgstr "philosophy"
+
+msgid "育人理念"
+msgstr "student development"
+
 msgid "管理团队"
 msgstr "Leadership"
+
+msgid "师资队伍"
+msgstr "Instructors"
 
 msgid "办学特色"
 msgstr "Features"
 
+msgid "家长参与"
+msgstr "Parent Involvement"
+
+msgid "学生心声"
+msgstr "From Students"
+
 msgid "招生信息"
 msgstr "Recruitment"
+
+msgid "校园公告"
+msgstr "Announcement"
+
+msgid "联系方式"
+msgstr "Contact Information"
 
 msgid "PHPOK企业程序（简称程序）是锟铻科技有限公司（前身为情感工作室）开发的一套实用性强，定制灵活的企业网站建设系统，基于PHP+MySQL架构，可运行于Linux、Windows、MacOSX、Solaris等各种平台上。"
 msgstr "PHPOK enterprise program (referred to as the program) is Kun Yu Technology Co., Ltd. (formerly known as emotional Studios) to develop a set of practical, customized and flexible enterprise website construction system based on PHP   MySQL architecture that runs on Linux, Windows, MacOSX , Solaris, and other platforms."

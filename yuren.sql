@@ -2,15 +2,15 @@
 Navicat MySQL Data Transfer
 
 Source Server         : localhost
-Source Server Version : 50612
+Source Server Version : 50505
 Source Host           : localhost:3306
 Source Database       : yuren
 
 Target Server Type    : MYSQL
-Target Server Version : 50612
+Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2015-07-10 23:05:22
+Date: 2015-07-11 17:59:40
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -489,7 +489,7 @@ INSERT INTO `qinggan_list` VALUES ('1422', '0', '0', '22', '171', '1', '热点�
 INSERT INTO `qinggan_list` VALUES ('1428', '0', '0', '22', '172', '1', '最新动态12', '1434425409', '0', '1', '0', '1', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
 INSERT INTO `qinggan_list` VALUES ('1423', '0', '0', '22', '171', '1', '热点新闻test2', '1433646606', '0', '1', '0', '1', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
 INSERT INTO `qinggan_list` VALUES ('1424', '0', '0', '22', '171', '1', '热点新闻test3', '1433041820', '0', '1', '0', '1', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
-INSERT INTO `qinggan_list` VALUES ('1430', '0', '8', '22', '43', '1', 'test1', '1433248590', '0', '1', '0', '1', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
+INSERT INTO `qinggan_list` VALUES ('1430', '0', '8', '22', '43', '1', 'test1', '1433248590', '0', '1', '0', '6', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
 INSERT INTO `qinggan_list` VALUES ('1434', '714', '0', '23', '42', '1', '师资队伍', '1433400577', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
 INSERT INTO `qinggan_list` VALUES ('1435', '0', '0', '74', '174', '1', '最新动态', '1435583756', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');
 INSERT INTO `qinggan_list` VALUES ('1436', '0', '0', '74', '169', '1', '校园风貌', '1435756628', '0', '1', '0', '0', '', '', '', '', '', '', '0', '0', '', '0.0000', '0');

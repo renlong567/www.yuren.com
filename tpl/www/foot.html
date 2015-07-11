@@ -2,10 +2,10 @@
 	<div class="copyright">
 		<!-- php:$list = phpok('footnav') -->
 		<!-- loop from=$list.rslist key=$key value=$value id=$list_id -->
-		<a href="{$value.url}" title="{$value.title}" target="{$value.target}">{$value.title}</a>
+		<a href="{$value.url}" title="{func P_Lang $value.title}" target="{$value.target}">{func P_Lang $value.title}</a>
 		<!-- if $list_id.num == $list_id.total --><br /><!-- else --> | <!-- /if -->
 		<!-- /loop -->
-		{$config.copyright.content}
+		{func P_Lang $config.copyright.content}
 		<!--<div class="debug">{func debug_time 1 1 1 1}</div>-->
 	</div>
 </div>
@@ -17,7 +17,7 @@
 		<div class="addlist">
 			<ul>
 				<!-- loop from=$list.rslist key=$key value=$value -->
-				<li>{$value.title}<br>{$value.code}</li>
+				<li>{func P_Lang $value.title}<br>{$value.code}</li>
 				<!-- /loop -->
 				<!-- if $list.project.barcode -->
 				<li><img src="{$list.project.barcode.filename}" width="80px" alt="{$list.project.title}" /></li>
