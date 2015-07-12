@@ -40,11 +40,14 @@ p{word-wrap:break-word}
 .red{color:red;}
 .tag{color:#000;text-decoration:underline;}
 /* 公共页头样式 */
-.head{ background-color: #eaeaea;position: relative;z-index: 1;}
+/*.head{ background-color: #eaeaea;position: relative;z-index: 1;}*/
+.head{ background-color: #3375b9;position: relative;z-index: 1;}
 .head .top_box{background: #3a3d42 repeat-x scroll 0 0;height: 40px;line-height: 40px;width: 100%;}
 .head .head_right{width: 980px;margin: auto;}
 .head_right .fr span{ margin-left: 10px;font-size: 14px;}
-.head .headerCont{background-color: #eaeaea;clear: both; height: 190px;margin: 0 auto;position: relative;width: 980px;}
+/*.head .headerCont{background-color: #eaeaea;clear: both; height: 190px;margin: 0 auto;position: relative;width: 980px;}*/
+.head .headerCont{background-color: #3375b9;clear: both; height: 190px;margin: 0 auto;position: relative;width: 980px;}
+.head .headerCont h1{text-align: center;color:#fff;font-size: 5em;font-weight: lighter;padding-top: 55px;}
 .head .logo{ margin-top: 40px;float: left;}
 .head .logo span{ font-size: 100px;}
 .top_nav{height:26px; line-height:26px; text-align:right; color:#666;}
@@ -57,7 +60,8 @@ p{word-wrap:break-word}
 .head .view { clear: both;color: #009900;display: inline;float: right;font-size: 18px;height: 32px;overflow: hidden;padding-top: 30px;text-align: right;width: 500px;}
 .head .view img{margin-left: -4px;}
 .head .nav{height:45px; background:#3375b9;line-height: 45px;list-style:none;}
-.head .nav ul{margin: 0 auto;width: 980px;}
+.head .nav .nav_temp{height:100%; width: 945px;margin: 0 auto;}
+/*.head .nav ul{margin: 0 auto;width: 980px;}*/
 .head .nav li{ float:left;position:relative;list-style:none;text-align: center;}
 .head .nav li a{display:inline-block;padding: 0 32px;color: #fff;text-decoration: none; font-size:14px;}
 .head .nav li:hover a,.head .nav li.current a{ background:#23a0e7; color:#fff;}
@@ -554,7 +558,7 @@ p{word-wrap:break-word}
 
 /* 相册图集 */
 .photolist{ overflow:hidden; margin-bottom:10px;}
-.photolist li{padding:5px; float:left;border:1px solid #ccc;border-radius:5px;margin:5px 31px;box-shadow:1px 1px 5px 0px #ccc;}
+.photolist li{padding:5px; float:left;border:1px solid #ccc;border-radius:5px;margin:5px 34px;box-shadow:1px 1px 5px 0px #ccc;}
 .photolist li img{border-radius:5px 5px 0 0;width:160px;}
 .photolist li p{ line-height:22px; padding:2px; text-align:center;overflow:hidden;height:22px;}
 

@@ -4,7 +4,7 @@
         <!-- php:$list = phpok('picplayer') -->
         <ul class="pro_ul">
             <!-- loop from=$list.rslist key=$key value=$value -->
-            <li><a href="{$value.link}" target="{$value.target}" title="{$value.title}"><img src="{$value.pic.filename}" width="980" alt="{$value.title}" /></a></li>
+            <li><a href="{$value.link}" target="{$value.target}" title="{func P_Lang $value.title}"><img src="{$value.pic.filename}" width="980" height="300" alt="{func P_Lang $value.title}" /></a></li>
             <!-- /loop -->
         </ul>
         <div class="hd">
@@ -120,7 +120,7 @@
                         <li class="t">
                             <div class="con">
                                 <div class="title">
-                                    <a class="tit" title="{$v.title}" target="_blank" href="{$v.url}">{$v.title}</a>
+                                    <a class="tit" title="{func P_Lang $v.title}" target="_blank" href="{$v.url}">{func P_Lang $v.title}</a>
                                 </div>
                                 <div class="intro">
                                     <a class="more" target="_blank" href="{$v.url}">{$v.note ? phpok_cut($v.note,20,'…') : phpok_cut($v.content,20,'…')}</a>
@@ -147,7 +147,7 @@
                         <li class="t">
                             <div class="con">
                                 <div class="title">
-                                    <a class="tit" title="{$v.title}" target="_blank" href="{$v.url}">{$v.title}</a>
+                                    <a class="tit" title="{func P_Lang $v.title}" target="_blank" href="{$v.url}">{func P_Lang $v.title}</a>
                                 </div>
                                 <div class="intro">
                                     <a class="more" target="_blank" href="{$v.url}">{$v.note ? phpok_cut($v.note,20,'…') : phpok_cut($v.content,20,'…')}</a>

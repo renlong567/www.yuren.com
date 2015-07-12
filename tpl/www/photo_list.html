@@ -24,7 +24,7 @@
 		<ul class="photolist">
 			<!-- loop from=$rslist key=$key value=$value -->
 			<li>
-				<a href="{$value.url}" title="{func P_Lang $value.title}"><img src="{$value.thumb.gd.thumb}" alt="{func P_Lang $value.thumb.title}" class="img" /></a>
+                            <a href="{$value.url}" title="{func P_Lang $value.title}"><img src="{$value.thumb.gd.thumb}" alt="{func P_Lang $value.thumb.title}" width="200" height="240" class="img" /></a>
 				<p><a href="{$value.url}" title="{func P_Lang $value.title}">{func phpok_cut $value.title 12 …}</a></p>
 			</li>
 			<!-- /loop -->
