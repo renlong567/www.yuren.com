@@ -109,39 +109,12 @@
             </div>
             <div class="newBox">
                 <div class="hd">
-                    <h3 class="">{lang最新动态}</h3>
-                    <h3 class="">{lang热点新闻}</h3>
+                    <!-- php:$arclist = phpok('redianxinwen') -->
+                    <h3 class="">{func P_lang $arclist.project.title}</h3>
+                    <a href="{$list.project.url}" class="more" title="{lang阅读更多}{$list.project.title}">{lang更多}</a>
                 </div>
                 <div class="bd">
                     <ul class="topicList">
-                        <!-- php:$arclist = phpok('zuixindongtai') -->
-                        <!-- loop from=$arclist.rslist key=$k value=$v -->
-                        {if $k == 0}
-                        <li class="t">
-                            <div class="con">
-                                <div class="title">
-                                    <a class="tit" title="{func P_Lang $v.title}" target="_blank" href="{$v.url}">{func P_Lang $v.title}</a>
-                                </div>
-                                <div class="intro">
-                                    <a class="more" target="_blank" href="{$v.url}">{$v.note ? phpok_cut($v.note,20,'…') : phpok_cut($v.content,20,'…')}</a>
-                                </div>
-                            </div>
-                        </li>
-                        {else}
-                        <li class="n">
-                            <div class="con">
-                                <div class="title">
-                                    <span class="date">{func date Y-m-d $v.dateline}</span>
-                                    <a class="tit" title="{$v.title}" target="_blank" href="{$v.url}">{$v.title ? phpok_cut($v.title,20,'…') : phpok_cut($v.content,20,'…')}</a>
-                                </div>
-                            </div>
-                        </li>
-                        {/if}
-                        <!-- /loop -->
-                    </ul>
-
-                    <ul class="topicList">
-                        <!-- php:$arclist = phpok('redianxinwen') -->
                         <!-- loop from=$arclist.rslist key=$k value=$v -->
                         {if $k == 0}
                         <li class="t">
@@ -181,20 +154,20 @@
         </div>
 
         <!-- if $page_rs -->
-        <div class="m_box">
-            <div class="m_t">
-                <p class="name">{$page_rs.subtitle}</p>
-                <span class="name_en">{$page_rs.entitle}</span>
-                <!-- if $page_rs.url && $page_rs.link -->
-                <a href="{$page_rs.url}" class="more">{lang更多}</a>
-                <!-- /if -->
-                <div class="cl"></div>
-            </div>
-            <div class="home_about">
-                <img src="{$page_rs.pic}" width="129" height="133" />
-                <p>{$page_rs.note}</p>
-            </div>
-        </div>
+        <!--        <div class="m_box">
+                    <div class="m_t">
+                        <p class="name">{$page_rs.subtitle}</p>
+                        <span class="name_en">{$page_rs.entitle}</span>
+                         if $page_rs.url && $page_rs.link 
+                        <a href="{$page_rs.url}" class="more">{lang更多}</a>
+                         /if 
+                        <div class="cl"></div>
+                    </div>
+                    <div class="home_about">
+                        <img src="{$page_rs.pic}" width="129" height="133" />
+                        <p>{$page_rs.note}</p>
+                    </div>
+                </div>-->
         <!-- /if -->
 
         <div class="h_news">
@@ -227,45 +200,46 @@
             <!-- if $list_id.num % 2 == '' --><div class="clear"></div><!-- /if -->
             <!-- /loop -->
         </div>
+    </div>
 
-        <div class="spic partC" id="shishengfengcai">
-            <!-- php:$list = phpok('shishengfengcai','fields=thumb&orderby=sort') -->
-            <div class="hd">
-                <span class="more">
-                    <a class="" href="{$list.project.url}">{lang更多}</a>
-                </span>
-                <h3 class="title">
-                    <a>{$list.project.title}</a>
-                    <div class="pn">
-                        <span class="prev"></span>
-                        <span class="next"></span>
-                    </div>
-                </h3>
-            </div>
-            <div class="bd">
-                <div class="tempWrap" style="overflow:hidden; position:relative; width:660px">
-                    <ul class="imglist">
-                        <!-- loop from=$list.rslist key=$key value=$value -->
-                        <li>
-                            <a href="{$value.url}" title="{$value.title}"><img src="{$value.thumb.gd.thumb}" alt="{$value.title}" width="80" /></a>
-                            <div class="tit"><a href="{$value.url}" title="{$value.title}">{func phpok_cut $value.title 15 …}</a></div>
-                        </li>
-                        <!-- /loop -->
-                    </ul>
+    <div class="cl"></div>
+    <div class="spic partC" id="shishengfengcai">
+        <!-- php:$list = phpok('shishengfengcai','fields=thumb&orderby=sort') -->
+        <div class="hd">
+            <span class="more">
+                <a class="" href="{$list.project.url}">{lang更多}</a>
+            </span>
+            <h3 class="title">
+                <a>{$list.project.title}</a>
+                <div class="pn">
+                    <span class="prev"></span>
+                    <span class="next"></span>
                 </div>
+            </h3>
+        </div>
+        <div class="bd">
+            <div class="tempWrap" style="overflow:hidden; position:relative; width:660px">
+                <ul class="imglist">
+                    <!-- loop from=$list.rslist key=$key value=$value -->
+                    <li>
+                        <a href="{$value.url}" title="{$value.title}"><img src="{$value.thumb.gd.thumb}" alt="{$value.title}" width="115" /></a>
+                        <div class="tit"><a href="{$value.url}" title="{$value.title}">{func phpok_cut $value.title 15 …}</a></div>
+                    </li>
+                    <!-- /loop -->
+                </ul>
             </div>
         </div>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $("#shishengfengcai").slide({
-                    'mainCell': 'ul.imglist',
-                    'effect': "leftLoop",
-                    'autoPlay': true,
-                    'vis': 6
-                });
-            });
-        </script>
     </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#shishengfengcai").slide({
+                'mainCell': 'ul.imglist',
+                'effect': "leftLoop",
+                'autoPlay': true,
+                'vis': 6
+            });
+        });
+    </script>
 
     <div class="cl"></div>
     <div class="spic partE" id="photoslist">

@@ -59,7 +59,7 @@ p{word-wrap:break-word}
 .head .nav{height:45px; background:#3375b9;line-height: 45px;list-style:none;}
 .head .nav ul{margin: 0 auto;width: 980px;}
 .head .nav li{ float:left;position:relative;list-style:none;text-align: center;}
-.head .nav li a{display:inline-block;padding: 0 32px;color: #fff;text-decoration: none; font-size:14px;}
+.head .nav li a{display:inline-block;padding: 0 26px;color: #fff;text-decoration: none; font-size:14px;}
 .head .nav li:hover a,.head .nav li.current a{ background:#23a0e7; color:#fff;}
 .head .nav li a.first,.head .nav li.current a.first{ border-radius:4px 0 0 4px;}
 .head .nav li a.last,.head .nav li.current a.last {border-right:0; border-radius:0 4px 4px 0;}
@@ -797,7 +797,7 @@ a.download{background:url('../images/icon_download.png') left center no-repeat;p
 .imglist{ overflow:hidden;margin:0;padding:0;}
 .imglist li{padding:5px 5px 0 5px; float:left;margin:5px 10px;}
 .imglist li img{border-radius:5px;box-shadow:1px 1px 5px 0px #ccc;}
-.imglist li .tit{ line-height:22px; padding:2px; text-align:center;overflow:hidden;height:22px;}
+.imglist li .tit{ line-height:30px; padding:2px; text-align:center;overflow:hidden;height:22px;}
 .imglist:after{clear:both;height:0;line-height:0;content:' ';display:block;visibility:hidden;}
 
 .news{ border: 1px solid #eee;float: right;padding: 10px;width: 335px;}
@@ -808,7 +808,7 @@ a.download{background:url('../images/icon_download.png') left center no-repeat;p
 .contentB{clear: both;margin-top: 10px;float: left;width: 100%;}
 
 /*师生风采*/
-.partC {height: 198px;position: relative;}
+.partC { height: 236px;position: relative;}
 .partC .hd .prev {
     background: rgba(0, 0, 0, 0) url("../images/picOn.png") no-repeat scroll -68px 0;
     cursor: pointer;
@@ -816,7 +816,7 @@ a.download{background:url('../images/icon_download.png') left center no-repeat;p
     height: 51px;
     left: 0;
     position: absolute;
-    top: 79px;
+    top: 115px;
     width: 33px;
 }
 
@@ -827,7 +827,7 @@ a.download{background:url('../images/icon_download.png') left center no-repeat;p
     height: 51px;
     position: absolute;
     right: 0;
-    top: 79px;
+    top: 115px;
     width: 33px;
 }
 .partC .bd {
@@ -835,17 +835,17 @@ a.download{background:url('../images/icon_download.png') left center no-repeat;p
     margin-left: 30px;
     margin-top: 18px;
     overflow: hidden;
+   height: auto;
 }
 .partC .bd li {
     display: inline;
     float: left;
-    height: 140px;
+    height: 170px;
     line-height: 25px;
     margin-left: 15px;
     margin-right: 15px;
-    overflow: hidden;
     text-align: center;
-    width: 80px;
+    width: 115px;
 }
 
 /*校园风貌*/
