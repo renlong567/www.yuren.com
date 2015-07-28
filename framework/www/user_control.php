@@ -2,6 +2,10 @@
 /***********************************************************
 	Filename: {phpok}www/user_control.php
 	Note	: 会员趣事
+	Version : 4.0
+	Web		: www.phpok.com
+	Author  : qinggan <qinggan@188.com>
+	Update  : 2013年9月30日
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}
 class user_control extends phpok_control
@@ -17,14 +21,14 @@ class user_control extends phpok_control
 		if(!$uid){
 			error(P_Lang('未指定会员信息'));
 		}
-		if($uid == $_SESSION["user_id"]){
+		/*if($uid == $_SESSION["user_id"]){
 			header("Location:".$this->url('usercp'));
 			exit;
-		}
+		}*/
 		$user_rs = $this->model('user')->get_one($uid);
 		$this->assign("user_rs",$user_rs);
-		$is_atten = $this->check_atten($_SESSION["user_id"],$user_rs['user']);
-		$this->assign("atten",$is_atten);
+		//$is_atten = $this->check_atten($_SESSION["user_id"],$user_rs['user']);
+		//$this->assign("atten",$is_atten);
 		$this->view("user_info");
 	}
 

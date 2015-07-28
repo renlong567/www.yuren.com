@@ -1,6 +1,10 @@
 /***********************************************************
 	Filename: .css
 	Note	: 后台专用CSS，已合并，后台只用一个CSS文件
+	Version : 4.0
+	Web		: www.phpok.com
+	Author  : qinggan <qinggan@188.com>
+	Update  : 2014年1月7日
 ***********************************************************/
 /* 后台全局样式 */
 html{font-size:12px;font-family:"Verdana","Arial","Microsoft Yahei","sans-serif","Tahoma";margin:0;padding:0;}
@@ -82,7 +86,7 @@ select{padding:3px;}
 .main1 div.title{margin:0 auto;position:relative;}
 .main1 input.title{padding:3px 5px;width:98%;outline:0;margin: 0;background-color: #fff;}
 .main2{width:300px;float:right;margin:10px;}
-.main2 div.pfw{position:relative;border:1px solid #e4e4e4;border-radius:5px 5px 0 0;box-shadow:1px 1px 2px #e4e4e4}
+.main2 div.pfw{position:relative;border:1px solid #e4e4e4;border-radius:5px 5px 0 0;box-shadow:1px 1px 2px #e4e4e4;background:#fff;}
 .main2 div.pfw h3{height:30px;line-height:30px;font-size:14px;margin:0;padding:0 0 0 10px;background:#fafbfc;border-bottom:1px solid #e4e4e4;border-radius:5px 5px 0 0}
 .main2 div.mb10{margin-bottom:10px;}
 .main2 div.pfw input.long{width:99%;}
@@ -233,16 +237,25 @@ a.copy{background-position:-64px -48px;}
 a.end{margin-right:0;}
 a.space{background:none;cursor:default;}
 
+a.ico{background:url('../images/ico.png') left bottom no-repeat;width:16px;height:16px;display:block;cursor:pointer;float:left;margin:0 2px 0 3px;}
+a.ico.comment{background-position:0 0;}
+a.ico.add{background-position:0 -16px;}
+a.ico.edit{background-position:0 -32px;}
+a.ico.delete{background-position:0 -48px;}
+a.ico.copy{background-position:0 -64px;}
+a.ico.key{background-position:0 -144px;}
+a.ico.go{background-position:0 -176px;}
+a.ico.space{background:none;cursor:default;}
+a.ico:after{content:'.';display:block;visibility:hidden;height:0;line-height:0;overflow:hidden;clear:both;}
+
 div.cate{height:20px;margin:5px auto auto auto;padding:3px 10px 1px 10px;line-height:20px;float:left;border:1px solid #000;}
 div.cate_add
 {
 	float:left;
 	margin:5px auto auto auto;
-	padding:4px 4px 0px 4px;
+	padding:4px 4px 2px 4px;
 	border:1px solid #000;
 	border-left:0;
-	padding-bottom:1px\0; /* IE9 */
-	*padding:4px; /* IE6 或 IE7 */
 }
 
 div.cate:hover{text-decoration:underline;color:#000;}
@@ -286,7 +299,7 @@ div.error{height:30px;line-height:30px;background:url("../images/error_24.png") 
 .pagelist ul{list-style:none;margin:0;padding:0;text-align:center;float:right;}
 .pagelist ul:after{clear:both;content:"&nbsp;",display: block;visibility:hidden;}
 .pagelist ul li{display:inline;height:22px;line-height:24px;margin:0 5px 0 0;}
-.pagelist ul li a{display:inline;padding:1px 5px;border:1px solid #ddd;cursor:pointer;}
+.pagelist ul li a{display:inline;padding:3px 6px;border:1px solid #ddd;cursor:pointer;}
 .pagelist ul li a:hover{background:#efefef;border:1px solid #ccc;text-decoration:none;}
 .pagelist ul li a.current{background:#E4E4E4;border:1px solid #ccc;text-decoration:none;}
 

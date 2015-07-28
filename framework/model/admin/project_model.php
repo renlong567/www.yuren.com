@@ -2,6 +2,10 @@
 /*****************************************************************************************
 	文件： {phpok}/model/admin/project_model.php
 	备注： 项目管理
+	版本： 4.x
+	网站： www.phpok.com
+	作者： qinggan <qinggan@188.com>
+	时间： 2015年02月05日 23时22分
 *****************************************************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}
 class project_model extends project_model_base
@@ -74,8 +78,13 @@ class project_model extends project_model_base
 			$sql = "DELETE FROM ".$this->db->prefix."list_".$rs['module']." WHERE project_id=".$id;
 			$this->db->query($sql);
 		}
+		//删除主题的扩展分类
+		$sql = "DELETE FROM ".$this->db->prefix."list_cate WHERE id IN(SELECT id FROM ".$this->db->prefix."list WHERE project_id='".$id."')";
+		$this->db->query($sql);
+		//删除主题
 		$sql = "DELETE FROM ".$this->db->prefix."list WHERE project_id=".$id;
 		$this->db->query($sql);
+		//删除项目扩展
 		$sql = "SELECT id FROM ".$this->db->prefix."ext WHERE module='project-".$id."'";
 		$extlist = $this->db->get_all($sql);
 		if($extlist){

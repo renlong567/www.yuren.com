@@ -2,6 +2,10 @@
 /***********************************************************
 	Filename: {phpok}/phpok_call.php
 	Note	: PHPOK调用中心类
+	Version : 4.0
+	Web		: www.phpok.com
+	Author  : qinggan <qinggan@188.com>
+	Update  : 2013-04-20 17:42
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}
 class phpok_call extends phpok_control
@@ -88,29 +92,16 @@ class phpok_call extends phpok_control
 			return false;
 		}
 		if($call_rs['cache'] == 'false' || !$this->db->cache_status() || in_array($call_rs['type_id'],$this->_phpok_nocache_id())){
-			$final_data = $this->$func($call_rs);
+			return $this->$func($call_rs);
 		}else{
 			$cache_tbl = $this->_cache_tbl($call_rs['type_id']);
 			$cache_id = $this->db->cache_id(serialize($call_rs),$cache_tbl);
 			$cache_info = $this->db->cache_get($cache_id);
 			if($cache_info && !is_bool($cache_info)){
-				$final_data = $cache_info;
+				return $cache_info;
 			}
-			$final_data = $this->$func($call_rs,$cache_id);
+			return $this->$func($call_rs,$cache_id);
 		}
-
-                if(!empty($final_data)) //RenLong 2015-07-11 底层中英文切换
-                {
-                    foreach($final_data as &$value)
-                    {
-                        if(!empty($value) && !is_numeric($value) && is_string($value))
-                        {
-                            $value = P_Lang($value);
-                        }
-                    }
-                }
-
-                return $final_data;
 	}
 
 	//读取文章列表
@@ -243,7 +234,7 @@ class phpok_call extends phpok_control
 	{
 		$condition  = " l.site_id='".$rs['site']."' AND l.hidden=0 ";
 		//计划任务时发布文章
-		$condition .= " AND l.dateline<='".strtotime(date("Y-m-d H:00:00",$this->time))."' ";
+		$condition .= " AND l.dateline<='".strtotime(date("Y-m-d H:00:00",($this->time+3600)))."' ";
 		if($rs['pid']){
 			$condition .= " AND l.project_id=".intval($rs['pid'])." ";
 		}
@@ -1021,6 +1012,25 @@ class phpok_call extends phpok_control
 		}
 		$user_id = $rs['user_id'] ? $rs['user_id'] : $rs['phpok'];
 		return $this->model('user')->get_one($user_id);
+	}
+
+	private function _userlist($rs,$cache_id='')
+	{
+		$condition = 'u.status=1 ';
+		if($rs['is_avatar'] && $rs['is_avatar'] != 'false' && $rs['is_avatar'] != '0'){
+			$condition .= " AND u.avatar !='' ";
+		}
+		if($rs['group_id']){
+			$condition .= " AND u.group_id='".$rs['group_id']."'";
+		}
+		$psize = ($rs['psize'] && intval($rs['psize'])) ? $rs['psize'] : 20;
+		$offset = $rs['pageid'] ? (($rs['pageid'] - 1)* $psize) : 0;
+		$data = array('total'=>0);
+		$data['total'] = $this->model('user')->get_count($condition);
+		if($data['total']>0){
+			$data['rslist'] = $this->model('user')->get_list($condition,$offset,$psize);
+		}
+		return $data;
 	}
 }
 ?>

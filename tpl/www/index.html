@@ -34,12 +34,12 @@
 </script>
 <div class="wrap">
     <div class="home_right">
-        <!-- php:$list = phpok('xygg','fields=id') -->
+        <!-- php:$list = phpok('tzgg','fields=id') -->
         <div class="m_box">
             <div class="m_t">
-                <p class="name">{$list.project.title}</p>
-                <span class="name_en">{$list.project.entitle}</span>
-                <a href="{$list.project.url}" class="more" title="{lang阅读更多}{$list.project.title}">{lang更多}</a>
+                <p class="name">{$list.cate.title}</p>
+                <span class="name_en">{$list.cate.entitle}</span>
+                <a href="{$list.cate.url}" class="more" title="{lang阅读更多}{$list.cate.title}">{lang更多}</a>
                 <div class="cl"></div>
             </div>
             <ul class="home_news">
@@ -109,7 +109,7 @@
             </div>
             <div class="newBox">
                 <div class="hd">
-                    <!-- php:$arclist = phpok('redianxinwen') -->
+                    <!-- php:$arclist = phpok('xinwenredian') -->
                     <h3 class="">{func P_lang $arclist.project.title}</h3>
                     <a href="{$list.project.url}" class="more" title="{lang阅读更多}{$list.project.title}">{lang更多}</a>
                 </div>
@@ -132,7 +132,7 @@
                             <div class="con">
                                 <div class="title">
                                     <span class="date">{func date Y-m-d $v.dateline}</span>
-                                    <a class="tit" title="{$v.title}" target="_blank" href="{$v.url}">{$v.title ? phpok_cut($v.title,20,'…') : phpok_cut($v.content,20,'…')}</a>
+                                    <a class="tit" title="{$v.title}" target="_blank" href="{$v.url}">{$v.title ? phpok_cut($v.title,15,'…') : phpok_cut($v.content,15,'…')}</a>
                                 </div>
                             </div>
                         </li>
@@ -171,24 +171,22 @@
         <!-- /if -->
 
         <div class="h_news">
-            <!-- php:$list = phpok('news_catelist') -->
-            <!-- loop from=$list.sublist key=$key value=$value id=list_id -->
-            <div class="plate {if $key % 2 == 0}lf{else}rf{/if}">
+            <!-- php:$list = phpok('xwrdsy') -->
+            <div class="lf">
                 <div class="plate_title">
-                    <span class="ch_name">{$value.title}</span>
-                    <a href="{$value.url}" class="plate_more">{lang更多}</a>
+                    <span class="ch_name">{$list.cate.title}</span>
+                    <a href="{$list.cate.url}" class="plate_more">{lang更多}</a>
                 </div>
                 <dl class="plate_main">
-                    <!-- php:$arclist = phpok('titlelist','cateid='.$value.id) -->
-                    <!-- loop from=$arclist.rslist key=$k value=$v -->
+                    <!-- loop from=$list.rslist key=$k value=$v -->
                     {if $k == 0}
                     <div class="t">
                         <div class="pic">
                             <img width="110" height="74" src="{$v.thumb.filename}" />
                         </div>
                         <div class="title">
-                            <div class="hd"><a href="{$v.link}">{$v.title}</a></div>
-                            <div class="bd">&nbsp;&nbsp;&nbsp;&nbsp;{$v.content ? phpok_cut($v.content,20,'…') : phpok_cut($v.content,20,'…')}</div>
+                            <div class="hd"><a href="{$v.url}">{$v.title}</a></div>
+                            <div class="bd">&nbsp;&nbsp;&nbsp;&nbsp;{$v.note ? phpok_cut($v.note,20,'…') : phpok_cut($v.content,20,'…')}</div>
                         </div>
                     </div>
                     {else}
@@ -197,8 +195,31 @@
                     <!-- /loop -->
                 </dl>
             </div>
-            <!-- if $list_id.num % 2 == '' --><div class="clear"></div><!-- /if -->
-            <!-- /loop -->
+            <!-- php:$list = phpok('sygjxx') -->
+            <div class="rf">
+                <div class="plate_title">
+                    <span class="ch_name">{$list.cate.title}</span>
+                    <a href="{$list.cate.url}" class="plate_more">{lang更多}</a>
+                </div>
+                <dl class="plate_main">
+                    <!-- loop from=$list.rslist key=$k value=$v -->
+                    {if $k == 0}
+                    <div class="t">
+                        <div class="pic">
+                            <img width="110" height="74" src="{$v.thumb.filename}" />
+                        </div>
+                        <div class="title">
+                            <div class="hd"><a href="{$v.url}">{$v.title}</a></div>
+                            <div class="bd">&nbsp;&nbsp;&nbsp;&nbsp;{$v.note ? phpok_cut($v.note,20,'…') : phpok_cut($v.content,20,'…')}</div>
+                        </div>
+                    </div>
+                    {else}
+                    <dd><span>{func date Y-m $v.dateline}</span><a href="{$v.url}">{$v.title}</a></dd>
+                    {/if}
+                    <!-- /loop -->
+                </dl>
+            </div>
+            <div class="clear"></div>
         </div>
     </div>
 

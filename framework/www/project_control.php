@@ -2,6 +2,10 @@
 /***********************************************************
 	Filename: {phpok}/www/project_control.php
 	Note	: 网站首页及APP的封面页
+	Version : 4.0
+	Web		: www.phpok.com
+	Author  : qinggan <qinggan@188.com>
+	Update  : 2012-11-27 11:24
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}
 class project_control extends phpok_control
@@ -169,8 +173,8 @@ class project_control extends phpok_control
 			foreach($ext AS $key=>$value){
 				if($key && $value){
 					$c[] = $_ext ? "ext.".$key."='".$value."'" : "ext.".$key." LIKE '%".$value."%'";
-					$pageurl .= "ext[".$key."]=".rawurlencode($value)."&";
 				}
+				$pageurl .= "ext[".$key."]=".rawurlencode($value)."&";
 			}
 			if($c){
 				$dt['sqlext'] = implode(" AND ",$c);

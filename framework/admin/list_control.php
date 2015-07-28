@@ -2,6 +2,10 @@
 /***********************************************************
 	Filename: admin/list_control.php
 	Note	: 内容控制器
+	Version : 4.0
+	Web		: www.phpok.com
+	Author  : qinggan <qinggan@188.com>
+	Update  : 2012-10-31 19:45
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}
 class list_control extends phpok_control
@@ -57,7 +61,7 @@ class list_control extends phpok_control
 		$this->view("list_index");
 	}
 
-	function action_f()
+	public function action_f()
 	{
 		$id = $this->get("id");
 		if(!$id){
@@ -143,7 +147,7 @@ class list_control extends phpok_control
 	}
 
 
-	function set_f()
+	public function set_f()
 	{
 		$id = $this->get("id");
 		if(!$id)
@@ -187,7 +191,7 @@ class list_control extends phpok_control
 		$this->view("list_set");
 	}
 	
-	function save_f()
+	public function save_f()
 	{
 		$id = $this->get("id","int");
 		if(!$id){
@@ -221,7 +225,7 @@ class list_control extends phpok_control
 		error(P_Lang('项目信息编辑成功'),$ok_url,"ok");
 	}
 
-	function check_identifier($sign,$id=0,$site_id=0)
+	private function check_identifier($sign,$id=0,$site_id=0)
 	{
 		if(!$sign){
 			return P_Lang('标识串不能为空');
@@ -239,22 +243,6 @@ class list_control extends phpok_control
 			return P_Lang('标识符已被使用');
 		}
 		return 'ok';
-	}
-
-	// 验证字串是否符合要求
-	function identifier_f()
-	{
-		$id = $this->get("id");
-		$sign = $this->get("sign");
-		$check_rs = $this->check_identifier($sign,$id);
-		if($check_rs != "ok")
-		{
-			$this->json($check_rs);
-		}
-		else
-		{
-			$this->json(P_Lang('验证通过'),true);
-		}
 	}
 
 	//列表管理
@@ -483,7 +471,7 @@ class list_control extends phpok_control
 		$this->view("list_edit");
 	}
 
-	function ok_f()
+	public function ok_f()
 	{
 		$id = $this->get("id","int");
 		$pid = $this->get("pid","int");
@@ -621,7 +609,7 @@ class list_control extends phpok_control
  		$this->json(true);
 	}
 
-	function del_f()
+	public function del_f()
 	{
 		$id = $this->get("id");
 		if(!$id)
@@ -644,7 +632,7 @@ class list_control extends phpok_control
 		$this->json(P_Lang('主题删除成功'),true);
 	}
 
-	function content_status_f()
+	public function content_status_f()
 	{
 		$id = $this->get("id","int");
 		if(!$id)
@@ -672,7 +660,7 @@ class list_control extends phpok_control
 	}
 
 	//执行动作
-	function execute_f()
+	public function execute_f()
 	{
 		$ids = $this->get('ids');
 		if(!$ids){
@@ -704,7 +692,7 @@ class list_control extends phpok_control
 		$this->json(P_Lang('操作成功'),true);
 	}
 
-	function content_sort_f()
+	public function content_sort_f()
 	{
 		$sort = $this->get('sort');
 		if(!$sort || !is_array($sort))
@@ -718,34 +706,31 @@ class list_control extends phpok_control
 		$this->json(P_Lang('更新排序成功'),true);
 	}
 
-	function move_cate_f()
+	public function move_cate_f()
 	{
 		$ids = $this->get("ids");
 		$cate_id = $this->get("cate_id");
-		if(!$cate_id || !$ids)
-		{
+		if(!$cate_id || !$ids){
 			$this->json(P_Lang('参数传递不完整'));
 		}
 		$list = explode(",",$ids);
-		foreach($list AS $key=>$value)
-		{
+		foreach($list AS $key=>$value){
 			$value = intval($value);
-			if($value)
-			{
-				$mid = $this->model('list')->get_mid($value);
-				if($mid)
-				{
-					$array = array("cate_id"=>$cate_id);
-					$this->model('list')->save($array,$value);
-					$this->model('list')->update_ext($array,$mid,$value);
-				}
+			if(!$value){
+				continue;
 			}
+			$mid = $this->model('list')->get_mid($value);
+			if($mid){
+				$this->model('list')->update_ext(array("cate_id"=>$cate_id),$mid,$value);
+			}
+			$this->model('list')->save(array('cate_id'=>$cate_id),$value);
+			$this->model('list')->save_ext_cate($value,array($cate_id));
 		}
 		$this->json(P_Lang('更新成功'),true);
 	}
 
 	//设置属性
-	function attr_set_f()
+	public function attr_set_f()
 	{
 		$ids = $this->get("ids");
 		$val = $this->get("val");
@@ -802,7 +787,7 @@ class list_control extends phpok_control
 	}
 
 	//更多批处理功能
-	function plaction_f()
+	public function plaction_f()
 	{
 		$id = $this->get('id');
 		if(!$id){
@@ -825,21 +810,18 @@ class list_control extends phpok_control
 		$this->view('list_plaction');
 	}
 
-	function plaction_submit_f()
+	public function plaction_submit_f()
 	{
 		$pid = $this->get('pid');
-		if(!$pid)
-		{
+		if(!$pid){
 			$this->json(P_Lang('未指定项目ID'));
 		}
 		$this->popedom_auto($id);
 		$project_rs = $this->model('project')->get_one($pid);
-		if(!$project_rs)
-		{
+		if(!$project_rs){
 			$this->json(P_Lang("项目信息不存在"));
 		}
-		if(!$project_rs['module'])
-		{
+		if(!$project_rs['module']){
 			$this->json(P_Lang('未绑定模块，不能使用此功能'));
 		}
 		$startid = $this->get('startid','int');
@@ -880,6 +862,81 @@ class list_control extends phpok_control
 		}
 		$this->db->query($sql);
 		$this->json(P_Lang('批处理操作成功'),true);
+	}
+
+	public function comment_f()
+	{
+		$id = $this->get('id','int');
+		if(!$id){
+			error(P_Lang('未指定ID'),'','error');
+		}
+		$rs = $this->model('list')->get_one($id);
+		if(!$rs){
+			error(P_Lang('数据不存在'),'','error');
+		}
+		$this->popedom_auto($rs['project_id']);
+		if(!$this->popedom['comment']){
+			error(P_Lang('您没有权限执行此操作'),'','error');
+		}
+		$this->assign("rs",$rs);
+		$pageurl = $this->url("list","comment","id=".$id);
+		$condition = "tid='".$id."' AND parent_id=0";
+		$keywords = $this->get("keywords");
+		$pageid = $this->get($this->config["pageid"],"int");
+		if(!$pageid){
+			$pageid = 1;
+		}
+		$psize = $this->config["psize"] ? $this->config["psize"] : 30;
+		$total = $this->model('reply')->get_total($condition);
+		if($total>0){
+			$offset = ($pageid-1) * $psize;
+			$rslist = $this->model('reply')->get_list($condition,$offset,$psize,"id");
+			if($rslist){
+				$uidlist = array();
+				foreach($rslist AS $key=>$value){
+					if($value["uid"]){
+						$uidlist[] = $value["uid"];
+					}
+				}
+				$idlist = array_keys($rslist);
+				$condition = "tid='".$tid."' AND parent_id IN(".implode(",",$idlist).")";
+				$sublist = $this->model('reply')->get_list($condition,0,0);
+				if($sublist){
+					foreach($sublist AS $key=>$value){
+						if($value["uid"]) $uidlist[] = $value["uid"];
+						$rslist[$value["parent_id"]]["sublist"][$value["id"]] = $value;
+					}
+				}
+				if($uidlist && count($uidlist)>0){
+					$uidlist = array_unique($uidlist);
+					$ulist = $this->model('user')->get_all_from_uid(implode(",",$uidlist),'id');
+					if(!$ulist) $ulist = array();
+					foreach($rslist AS $key=>$value){
+						if($value["uid"]){
+							$value["uid"] = $ulist[$value["uid"]];
+						}
+						if($value["sublist"]){
+							foreach($value["sublist"] AS $k=>$v){
+								if($v){
+									$v["uid"] = $ulist[$v["uid"]];
+								}
+								$value["sublist"][$k] = $v;
+							}
+						}
+						$rslist[$key] = $value;
+					}
+				}
+				$this->assign("rslist",$rslist);
+			}
+			if($total>$psize){
+				$string = 'home='.P_Lang('首页').'&prev='.P_Lang('上一页').'&next='.P_Lang('下一页').'&last='.P_Lang('尾页').'&half=5';
+				$string.= '&add='.P_Lang('数量：').'(total)/(psize)'.P_Lang('，').P_Lang('页码：').'(num)/(total_page)&always=1';
+				$pagelist = phpok_page($pageurl,$total,$pageid,$psize,$string);
+				$this->assign("pagelist",$pagelist);
+			}
+			$this->assign("total",$total);
+		}
+		$this->view("list_comment");
 	}
 }
 ?>

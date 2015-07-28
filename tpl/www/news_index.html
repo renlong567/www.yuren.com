@@ -19,7 +19,7 @@
                 <span class="arrow">&nbsp;</span> <a href="{$cate_rs.url}" title="{$cate_rs.title}">{$cate_rs.title}</a>
                 <!-- /if -->
             </span>
-            {lang热点新闻}
+            {func P_Lang $page_rs.title}
         </div>
 
         <div class="partA">
@@ -51,7 +51,7 @@
             <div class="newBox">
                 <div class="bd">
                     <ul class="topicList">
-                        <!-- php:$arclist = phpok('redianxinwen') -->
+                        <!-- php:$arclist = phpok('xinwenredian') -->
                         <!-- loop from=$arclist.rslist key=$k value=$v -->
                         {if $k == 0}
                         <li class="t">
@@ -93,7 +93,7 @@
             <div class="h_news">
                 <!-- php:$list = phpok('news_catelist') -->
                 <!-- loop from=$list.sublist key=$key value=$value id=list_id -->
-                <div class="plate {if $key % 2 == 0}lf{else}rf{/if}">
+                <div class="plate {if $key % 2 != 0}lf{else}rf{/if}">
                     <div class="plate_title">
                         <span class="ch_name">{$value.title}</span>
                         <a href="{$value.url}" class="plate_more">{lang更多}</a>

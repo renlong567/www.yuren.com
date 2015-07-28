@@ -2,6 +2,10 @@
 /**********************************************************************
 	Filename	: {phpok}/admin/res_action_control.php
 	Note		: 附件常见动作操作
+	Version		: 4.0
+	Web			: www.phpok.com
+	Author		: qinggan <qinggan@188.com>
+	Update		: 2013-04-06 00:52
 **********************************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}
 class res_action_control extends phpok_control

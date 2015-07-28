@@ -2,6 +2,10 @@
 /***********************************************************
 	Filename: phpok/admin/global.func.php
 	Note	: 后台通用函数加载
+	Version : 4.0
+	Web		: www.phpok.com
+	Author  : qinggan <qinggan@188.com>
+	Update  : 2012-10-27 14:04
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}
 

@@ -2,6 +2,10 @@
 /*****************************************************************************************
 	文件： {phpok}/form/upload_form.php
 	备注： 上传控件管理
+	版本： 4.x
+	网站： www.phpok.com
+	作者： qinggan <qinggan@188.com>
+	时间： 2015年03月07日 17时54分
 *****************************************************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}
 class upload_form extends _init_auto
@@ -15,6 +19,7 @@ class upload_form extends _init_auto
 	{
 		$this->addjs('js/webuploader/webuploader.min.js');
 		$this->addcss('js/webuploader/webuploader.css');
+		$this->addjs('js/webuploader/admin.upload.js');
 	}
 
 	public function phpok_config()
@@ -133,7 +138,6 @@ class upload_form extends _init_auto
 
 	private function _format_admin($rs)
 	{
-		$this->addjs('js/webuploader/admin.upload.js');
 		if($rs["content"]){
 			if(is_string($rs["content"])){
 				$res = $this->model('res')->get_list_from_id($rs['content']);
@@ -156,30 +160,33 @@ class upload_form extends _init_auto
 		}
 		//上传类型
 		$upload_type = array('title'=>'图片','ext'=>'jpg,gif,png','maxsize'=>'512000','swfupload'=>'*.jpg,*.png,*.gif');
-		$ext = $rs['ext'] ? unserialize($rs['ext']) : array();
+		$ext = ($rs['ext'] && is_string($rs['ext'])) ? unserialize($rs['ext']) : ($rs['ext'] ? $rs['ext'] : array());
 		if($ext['cate_id']){
 			$cateinfo = $this->model('rescate')->get_one($ext['cate_id']);
-			if($cateinfo){
-				$upload_type = array('title'=>($cateinfo['typeinfo'] ? $cateinfo['typeinfo'] : $cateinfo['title']));
-				$upload_type['ext'] = $cateinfo['filetypes'] ? $cateinfo['filetypes'] : 'jpg,png,gif';
-				$upload_type['maxsize'] = $cateinfo['filemax'] * 1024;
-				$upload_type['id'] = $ext['cate_id'];
-				$tmp = array();
-				foreach(explode(",",$upload_type['ext']) as $key=>$value){
-					$tmp[] = "*.".$value;
-				}
-				$upload_type['swfupload'] = implode(", ",$tmp);
+		}
+		if(!$cateinfo){
+			$cateinfo = $this->model('rescate')->get_default();
+		}
+		if($cateinfo){
+			$upload_type = array('title'=>($cateinfo['typeinfo'] ? $cateinfo['typeinfo'] : $cateinfo['title']));
+			$upload_type['ext'] = $cateinfo['filetypes'] ? $cateinfo['filetypes'] : 'jpg,png,gif';
+			$upload_type['maxsize'] = $cateinfo['filemax'] * 1024;
+			$upload_type['id'] = $ext['cate_id'];
+			$tmp = array();
+			foreach(explode(",",$upload_type['ext']) as $key=>$value){
+				$tmp[] = "*.".$value;
 			}
+			$upload_type['swfupload'] = implode(", ",$tmp);
+			$rs['cate_id'] = $cateinfo['id'];
 		}
 		$rs['upload_type'] = $upload_type;
+		//echo "<pre>".print_r($rs,true)."</pre>";
 		$this->assign("_rs",$rs);
 		return $this->fetch($this->dir_phpok.'form/html/upload_admin_tpl.html','abs-file',false);
 	}
 
 	private function _format_default($rs)
 	{
-		$this->cssjs();
-		$this->addjs('js/webuploader/admin.upload.js');
 		if($rs["content"]){
 			if(is_string($rs["content"])){
 				$res = $this->model('res')->get_list_from_id($rs['content']);
@@ -203,20 +210,23 @@ class upload_form extends _init_auto
 
 		//上传类型
 		$upload_type = array('title'=>'图片','ext'=>'jpg,gif,png','maxsize'=>'512000','swfupload'=>'*.jpg,*.png,*.gif');
-		$ext = $rs['ext'] ? unserialize($rs['ext']) : array();
+		$ext = ($rs['ext'] && is_string($rs['ext'])) ? unserialize($rs['ext']) : ($rs['ext'] ? $rs['ext'] : array());
 		if($ext['cate_id']){
 			$cateinfo = $this->model('rescate')->get_one($ext['cate_id']);
-			if($cateinfo){
-				$upload_type = array('title'=>($cateinfo['typeinfo'] ? $cateinfo['typeinfo'] : $cateinfo['title']));
-				$upload_type['ext'] = $cateinfo['filetypes'] ? $cateinfo['filetypes'] : 'jpg,png,gif';
-				$upload_type['maxsize'] = $cateinfo['filemax'] * 1024;
-				$upload_type['id'] = $ext['cate_id'];
-				$tmp = array();
-				foreach(explode(",",$upload_type['ext']) as $key=>$value){
-					$tmp[] = "*.".$value;
-				}
-				$upload_type['swfupload'] = implode(", ",$tmp);
+		}
+		if(!$cateinfo){
+			$cateinfo = $this->model('rescate')->get_default();
+		}
+		if($cateinfo){
+			$upload_type = array('title'=>($cateinfo['typeinfo'] ? $cateinfo['typeinfo'] : $cateinfo['title']));
+			$upload_type['ext'] = $cateinfo['filetypes'] ? $cateinfo['filetypes'] : 'jpg,png,gif';
+			$upload_type['maxsize'] = $cateinfo['filemax'] * 1024;
+			$upload_type['id'] = $ext['cate_id'];
+			$tmp = array();
+			foreach(explode(",",$upload_type['ext']) as $key=>$value){
+				$tmp[] = "*.".$value;
 			}
+			$upload_type['swfupload'] = implode(", ",$tmp);
 		}
 		$rs['upload_type'] = $upload_type;
 		$this->assign("_rs",$rs);

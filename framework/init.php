@@ -2,6 +2,10 @@
 /***********************************************************
 	Filename: phpok/init.php
 	Note	: PHPOK框架入口引挈文件，请不要改动此文件
+	Version : 4.0
+	Web		: www.phpok.com
+	Author  : qinggan <qinggan@188.com>
+	Update  : 2012-10-15 15:30
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}
 //强制使用UTF-8编码
@@ -125,9 +129,9 @@ class _init_phpok
 	//授权相关信息
 	public $license = "LGPL";
 	public $license_code = "ED988858BCB1903A529C762DBA51DD40";
-	public $license_date = "";
-	public $license_name = "";
-	public $license_site = "";
+	public $license_date = "2012-10-29";
+	public $license_name = "phpok";
+	public $license_site = "phpok.com";
 	public $license_powered = true;
 
 	//是否是手机端，如果使用手机端可能会改写网址
@@ -182,7 +186,7 @@ class _init_phpok
 		$this->phpok_seo($this->site);
 		$this->assign("config",$this->site);
                 $this->assign('langid',$langid); //RenLong 2015-07-11 加载当前语言ID
-                if($this->app_id == 'admin'){
+		if($this->app_id == 'admin'){
 			if(!$langid){
 				$langid = (isset($_SESSION['admin_lang_id']) && $_SESSION['admin_lang_id']) ? $_SESSION['admin_lang_id'] : 'default';
 			}
@@ -228,7 +232,7 @@ class _init_phpok
 		}
 	}
 
-        //语言包变量格式化
+	//语言包变量格式化
 	final public function lang_format($info,$var)
 	{
 		if(!$info) return false;
@@ -654,12 +658,6 @@ class _init_phpok
 	final public function get($id,$type="safe",$ext="")
 	{
 		$val = isset($_POST[$id]) ? $_POST[$id] : (isset($_GET[$id]) ? $_GET[$id] : "");
-                
-                if($type == 'lang')
-                {
-                    setcookie('lang',$val);
-                }
-
 		if($val == ''){
 			if($type == 'int' || $type == 'intval' || $type == 'float' || $type == 'floatval'){
 				return 0;
@@ -706,7 +704,9 @@ class _init_phpok
 		}
 		if($type == 'html_js' || ($type == 'html' && $ext)){
 			$msg = stripslashes($msg);
-			$msg = $this->lib('string')->xss_clean($msg);
+			if(!$_SESSION['admin_id']){
+				$msg = $this->lib('string')->xss_clean($msg);
+			}
 			$msg = $this->lib('string')->clear_url($msg,$this->url);
 			return addslashes($msg);
 		}
@@ -921,28 +921,24 @@ class _init_phpok
 	private function _action($ctrl='index',$func='index')
 	{
 		//如果App_id非指定的三种，强制初始化
-		if(!in_array($this->app_id,array('api','www','admin')))
-		{
+		if(!in_array($this->app_id,array('api','www','admin'))){
 			$this->app_id = 'www';
 		}
 		$reserved = array('login','js','ajax','inp');
 		$is_login = $this->config[$this->app_id]['is_login'] ? true : false;
 		$is_admin = $this->config[$this->app_id]['is_admin'] ? true : false;
-		if($is_admin && !$_SESSION['admin_id'] && !in_array($ctrl,$reserved))
-		{
+		if($is_admin && !$_SESSION['admin_id'] && !in_array($ctrl,$reserved)){
 			$ctrl = 'login';
 			$go_url = $this->url($ctrl);
 			$this->_location($go_url);
 		}
-		if($is_login && !$_SESSION['user_id'] && !in_array($ctrl,$reserved))
-		{
+		if($is_login && !$_SESSION['user_id'] && !in_array($ctrl,$reserved)){
 			$ctrl = 'login';
 			$go_url = $this->url($ctrl);
 			$this->_location($go_url);
 		}
 		$dir_root = $this->dir_phpok.$this->app_id.'/';
-		if($ctrl == 'js' || $ctrl == 'ajax' || $ctrl == "inp")
-		{
+		if($ctrl == 'js' || $ctrl == 'ajax' || $ctrl == "inp"){
 			$dir_root = $this->dir_phpok;
 		}
 		//加载应用文件
@@ -1158,48 +1154,27 @@ class phpok_model extends _init_auto
 
 class phpok_plugin extends _init_auto
 {
-	//默认父类，装载语言包
-	function plugin()
+	public function plugin()
 	{
 		parent::__construct();
-		//读取语言ID
-		$id = $this->plugin_id();
-		if($this->site['lang'] && is_file($this->dir_root.'plugins/'.$id.'/langs/'.$this->site['lang'].'.xml'))
-		{
-			$langs = xml_to_array(file_get_contents($this->dir_root.'plugins/'.$id.'/langs/'.$this->site['lang'].'.xml'));
-			if($langs && is_array($langs))
-			{
-				$langs = $this->lib('ubb')->to_html($langs);
-				if($GLOBALS['app']->lang)
-				{
-					$GLOBALS['app']->lang = array_merge($langs,$GLOBALS['app']->lang);
-				}
-				else
-				{
-					$GLOBALS['app']->lang = $langs;
-				}
-				$this->assign('lang',$GLOBALS['app']->lang);
-			}
-		}
 	}
 
 	final public function plugin_id()
 	{
 		$name = get_class($this);
 		$lst = explode("_",$name);
-		return $lst[1];
+		unset($lst[0]);
+		return implode("_",$lst);
 	}
 
 	final public function plugin_info($id='')
 	{
 		if(!$id) $id = $this->plugin_id();
 		$rs = $this->model('plugin')->get_one($id);
-		if(!$rs)
-		{
+		if(!$rs){
 			$rs = array('id'=>$id);
 		}
-		if($rs['param'])
-		{
+		if($rs['param']){
 			$rs['param'] = unserialize($rs['param']);
 		}
 		$rs['path'] = $this->dir_root.'plugins/'.$id.'/';
@@ -1209,53 +1184,43 @@ class phpok_plugin extends _init_auto
 	//存储插件配置
 	final public function plugin_save($ext,$id="")
 	{
-		if(!$id) $id = $this->plugin_id();
-		if(!$id) return false;
+		if(!$id){
+			$id = $this->plugin_id();
+		}
+		if(!$id){
+			return false;
+		}
 		$rs = $this->model('plugin')->get_one($id);
-		if(!$rs) return false;
+		if(!$rs){
+			return false;
+		}
 		$info = ($ext && is_array($ext)) ? serialize($ext) : '';
 		$this->model('plugin')->update_param($id,$info);
 	}
 	
-	//cf，控制接入点
-	function load_after($cf,$param="")
-	{
-		//接入点不存在时，取消执行
-		if(!$cf) return false;
-		//接入点不符合要求时，取消执行
-		if(!in_array($cf,$this->AP)) return false;
-		//取得接入点
-	}
-
-	// 接入点列表
-	function cf_list()
-	{
-		$list = array();
-		$list["list-ok"] = "存储内容数据";
-		$list["list-edit"] = "编辑内容数据";
-		return $list;
-	}
-
 	//加载插件模板
-	function plugin_tpl($name,$id='')
+	final public function plugin_tpl($name,$id='')
 	{
-		if(!$id) $id = $this->plugin_id();
+		if(!$id){
+			$id = $this->plugin_id();
+		}
 		$file = $this->dir_root.'plugins/'.$id.'/template/'.$name;
-		if(is_file($file))
-		{
+		if(file_exists($file)){
 			return $this->fetch($file,'abs-file');
 		}
 		return false;
 	}
 
-	//输入模板
-	function echo_tpl($name,$id='')
+	final public function echo_tpl($name,$id='')
 	{
-		if(!$id) $id = $this->plugin_id();
+		if(!$id){
+			$id = $this->plugin_id();
+		}
 		$file = $this->dir_root.'plugins/'.$id.'/template/'.$name;
-		$this->view($file,'abs-file');
-	}	
-	
+		if(file_exists($file)){
+			$this->view($file,'abs-file');
+		}
+	}
 }
 
 //安全注销全局变量
@@ -1265,8 +1230,7 @@ $app = new _init_phpok();
 include_once($app->dir_phpok."phpok_helper.php");
 $app->init_site();
 $app->init_view();
-function init_app()
-{
+function init_app(){
 	return $GLOBALS['app'];
 }
 //核心函数，phpok_head_js，用于加载自定义扩展中涉及到的js
@@ -1276,8 +1240,7 @@ function phpok_head_js()
 	if(!$jslist || !is_array($jslist)) return false;
 	$jslist = array_unique($jslist);
 	$html = "";
-	foreach($jslist AS $key=>$value)
-	{
+	foreach($jslist AS $key=>$value){
 		$html .= '<script type="text/javascript" src="'.$value.'" charset="utf-8"></script>'."\n";
 	}
 	return $html;
@@ -1289,8 +1252,7 @@ function phpok_head_css()
 	if(!$csslist || !is_array($csslist)) return false;
 	$csslist = array_unique($csslist);
 	$html = "";
-	foreach($csslist AS $key=>$value)
-	{
+	foreach($csslist AS $key=>$value){
 		$html .= '<link rel="stylesheet" type="text/css" href="'.$value.'" charset="utf-8" />'."\n";
 	}
 	return $html;

@@ -2,6 +2,10 @@
 /*****************************************************************************************
 	文件： {phpok}/admin/rescate_control.php
 	备注： 资源归档管理
+	版本： 4.x
+	网站： www.phpok.com
+	作者： qinggan <qinggan@188.com>
+	时间： 2015年04月24日 23时05分
 *****************************************************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}
 class rescate_control extends phpok_control
@@ -98,7 +102,7 @@ class rescate_control extends phpok_control
 		if(!$typeinfo){
 			$this->json(P_Lang('附件类型说明不能为空'));
 		}
-		$maxinfo = str_replace(array('K','M','KB','MB','GB','G'),'',get_cfg_var('upload_max_filesize')) * 1000;
+		$maxinfo = str_replace(array('K','M','KB','MB','GB','G'),'',get_cfg_var('upload_max_filesize')) * 1024;
 		$filemax = $this->get('filemax','int');
 		if(!$filemax || ($filemax && $filemax>$maxinfo)){
 			$filemax = $maxinfo;

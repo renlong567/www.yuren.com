@@ -2,6 +2,10 @@
 /***********************************************************
 	Filename: phpok/phpok_helper.php
 	Note	: 通用函数
+	Version : 4.0
+	Web		: www.phpok.com
+	Author  : qinggan <qinggan@188.com>
+	Update  : 2012-10-17 14:49
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}
 
@@ -746,12 +750,12 @@ function tpl_head($array=array())
 		$html .= '<html xmlns="http://www.w3.org/1999/xhtml">'."\n";
 		$html .= '<head>'."\n\t".'<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />'."\n\t";
 	}
-	$html .= '<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">'."\n\t";
+	$html .= '<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />'."\n\t";
 	$html .= '<meta http-equiv="Pragma" content="no-cache" />'."\n\t";
 	$html .= '<meta http-equiv="Cache-control" content="no-cache,no-store,must-revalidate,max-age=3" />'."\n\t";
 	$html .= '<meta http-equiv="Expires" content="Mon, 26 Jul 1997 05:00:00 GMT" />'."\n\t";
 	$html .= '<meta name="renderer" content="webkit">'."\n\t";
-	$html .= '<meta name="author" content="" />'."\n\t";
+	$html .= '<meta name="author" content="phpok,admin@phpok.com" />'."\n\t";
 	$html .= '<meta name="license" content="'.$GLOBALS['app']->license.'" />'."\n\t";
 	$seo = $GLOBALS['app']->site['seo'];
 	if($seo['keywords']){
@@ -847,9 +851,8 @@ function tpl_head($array=array())
 function form_edit($id,$content="",$type="text",$attr="",$return='echo')
 {
 	if(!$id) return false;
-	$array = array("identifier"=>$id,"form_type"=>$type,"content"=>$content);
-	if($attr)
-	{
+	$array = array("id"=>$id,"identifier"=>$id,"form_type"=>$type,"content"=>$content);
+	if($attr){
 		parse_str($attr,$list);
 		if($list) $array = array_merge($list,$array);
 	}
@@ -881,7 +884,7 @@ function form_html($type='text',$id='phpok',$attr='',$content='')
 //取得授权时间
 function license_date()
 {
-	if($GLOBALS['app']->license_site == '.yureninternational.com') return '2005-'.date("Y",$GLOBALS['app']->time);
+	if($GLOBALS['app']->license_site == '.phpok.com') return '2005-'.date("Y",$GLOBALS['app']->time);
 	$date_start = substr($GLOBALS['app']->license_date,0,4);
 	$date_end = date("Y",$GLOBALS['app']->time);
 	if($date_start >= $date_end) return $date_end;
