@@ -2,9 +2,6 @@
 /***********************************************************
 	Filename: app/admin/control/email.php
 	Note	: 邮件发送操作
-	Version : 3.0
-	Author  : qinggan
-	Update  : 2011-03-12
 ***********************************************************/
 class email_control extends phpok_control
 {

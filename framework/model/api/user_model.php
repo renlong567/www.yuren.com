@@ -2,9 +2,6 @@
 /***********************************************************
 	Filename: {$phpok}/model/user.php
 	Note	: 会员模块
-	Version : 3.0
-	Author  : qinggan
-	Update  : 2013年5月4日
 ***********************************************************/
 class user_model extends user_model_base
 {

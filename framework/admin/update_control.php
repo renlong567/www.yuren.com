@@ -1,10 +1,6 @@
 <?php
 /***********************************************************
 	Note	: phpok4升级引挈控制器
-	Version : 4.x
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
-	Update  : 2015年06月11日 14时33分
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}
 class update_control extends phpok_control

@@ -2,9 +2,6 @@
 /***********************************************************
 	Filename: libs/autoload/trans.php
 	Note	: 数据安全传输
-	Version : 3.0
-	Author  : qinggan
-	Update  : 2009-10-20
 ***********************************************************/
 class trans_lib
 {

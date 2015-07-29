@@ -2,9 +2,6 @@
 /***********************************************************
 	Filename: app/admin/user.php
 	Note	: 会员中心
-	Version : 3.0
-	Author  : qinggan
-	Update  : 2009-12-23
 ***********************************************************/
 class user_control extends phpok_control
 {

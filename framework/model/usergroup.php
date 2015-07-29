@@ -2,9 +2,6 @@
 /***********************************************************
 	Filename: {phpok}/model/usergroup.php
 	Note	: 会员组模块
-	Version : 3.0
-	Author  : qinggan
-	Update  : 2011-03-14
 ***********************************************************/
 class usergroup_model_base extends phpok_model
 {

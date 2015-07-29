@@ -2,9 +2,6 @@
 /***********************************************************
 	Filename: libs/system/email.php
 	Note	: 发送邮件类
-	Version : 3.0
-	Author  : qinggan
-	Update  : 2010-05-10
 ***********************************************************/
 //引入phpmail控件发送邮件
 class email_lib

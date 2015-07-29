@@ -19,11 +19,11 @@
             window.location = "{url ctrl=search/}&keywords=" + encodeURI(keyword);
         }
     }
-    
+
     function change_lang(val)
     {
-	url = "{url ctrl=index/}&_langid="+val;
-	$.phpok.go(url);
+        url = "{url ctrl=index/}&_langid=" + val;
+        $.phpok.go(url);
     }
 </script>
 </head>
@@ -49,21 +49,20 @@
             <div class="fr">
                 <div class="search">
                     <a class="searchBtn" href="javascript:gSearch()"></a>
-                    <input id="topKeyWord" class="keyWord" type="text" onfocus="this.value = '';this.style.color = '#333'" maxlength="50">
+                    <input id="topKeyWord" class="keyWord" type="text" onfocus="this.value = '';
+                            this.style.color = '#333'" maxlength="50">
                 </div>
                 <div class="view">
                     <input id="tongji" type="hidden" value="145400" name="tongji">
                     <span class="tit"><img src="images/fangwen.gif"></span>
-                    <span id="TotalNum" class="con">
-                        <img border="0" src="images/0.gif">
-                        <img border="0" src="images/0.gif">
-                        <img border="0" src="images/1.gif">
-                        <img border="0" src="images/4.gif">
-                        <img border="0" src="images/5.gif">
-                        <img border="0" src="images/4.gif">
-                        <img border="0" src="images/0.gif">
-                        <img border="0" src="images/0.gif">
-                    </span>
+                    <span class="con">1</span>
+                    <span class="con">1</span>
+                    <span class="con">1</span>
+                    <span class="con">1</span>
+                    <span class="con">1</span>
+                    <span class="con">1</span>
+                    <span class="con">1</span>
+                    <span class="con">1</span>
                 </div>
             </div>
         </div>

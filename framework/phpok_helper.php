@@ -2,10 +2,6 @@
 /***********************************************************
 	Filename: phpok/phpok_helper.php
 	Note	: 通用函数
-	Version : 4.0
-	Web		: www.phpok.com
-	Author  : qinggan <qinggan@188.com>
-	Update  : 2012-10-17 14:49
 ***********************************************************/
 if(!defined("PHPOK_SET")){exit("<h1>Access Denied</h1>");}
 

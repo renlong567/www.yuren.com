@@ -5,7 +5,7 @@ $(document).ready(function(){
 	$("#post_submit").submit(function(){
 		if(!$("#title").val())
 		{
-			alert('{$page_rs.alias_title ? $page_rs.alias_title : "{lang主题}"}{lang不能为空}');
+			alert('{$page_rs.alias_title ? $page_rs.alias_title : "{func P_Lang 主题}"}{lang不能为空}');
 			return false;
 		}
 		if(!$("#link").val())
@@ -57,18 +57,18 @@ $(document).ready(function(){
 		<input type="hidden" name="cate_id" value="{$cate_rs.id}" />
 		<div class="publish">
 			<table>
-			<tr>
+                            <tr class="tr">
 				<td class="l_title" valign="top">{$page_rs.alias_title ? $page_rs.alias_title : '{lang主题}'}：</td>
 				<td class="td"><input name="title" id="title" type="text" class="r_input" /></td>
 			</tr>
 			<!-- loop from=$extlist key=$key value=$value -->
-			<tr>
+			<tr class="tr">
 				<td class="l_title" valign="top">{$value.title}：</td>
 				<td class="td">{$value.html} {$value.note}</td>
 			</tr>
 			<!-- /loop -->
 			<!-- if $sys.is_vcode && function_exists("imagecreate") -->
-			<tr>
+			<tr class="tr">
 				<td class="l_title" valign="top">{lang验证码：}</td>
 				<td class="td">
 					<input class="vcode"  type="text" name="_chkcode" id="_chkcode" />
@@ -84,9 +84,9 @@ $(document).ready(function(){
 				</td>
 			</tr>
 			<!-- /if -->
-			<tr>
-				<td>&nbsp;</td>
-				<td><input name="" type="submit" class="bbsbtn" value="{lang发布}" /></td>
+                        <tr class="tr">
+                            <td></td>
+                            <td><input name="" type="submit" class="bbsbtn" value="{lang发布}" /></td>
 			</tr>
 			</table>
 		</div>

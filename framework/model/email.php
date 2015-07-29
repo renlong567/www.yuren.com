@@ -2,9 +2,6 @@
 /***********************************************************
 	Filename: {phpok}/model/email.php
 	Note	: 邮件内容管理器
-	Version : 3.0
-	Author  : qinggan
-	Update  : 2013年06月30日 23时42分
 ***********************************************************/
 class email_model_base extends phpok_model
 {
