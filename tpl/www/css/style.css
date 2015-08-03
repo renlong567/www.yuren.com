@@ -277,7 +277,11 @@ p{word-wrap:break-word}
 .sub_nav dt{ height:35px; border-bottom:2px solid #3375b9; padding-left:3px; line-height:35px; font-size:16px;}
 .sub_nav dd{ height:45px; line-height:50px; border-bottom:1px solid #ccc; font-size:14px;text-align: center;}
 .sub_nav dd.on a{color:red;font-weight:bold;}
-.sub_nav dd a:hover{ text-decoration:none;}
+.sub_nav dd:hover{  background: #f7efef none repeat scroll 0 0;
+    border-color: #f5dede #f5dede #f5dede #3375b9;
+    border-style: none none none solid;
+    border-width: 0 0 0 3px;
+}
 
 .page_contact{ overflow:hidden; font-size:14px;}
 .page_contact dt,.categ{height:35px; border-bottom:2px solid #3375b9; padding-left:3px; line-height:35px; font-size:16px;margin-bottom: 10px;}
@@ -301,7 +305,7 @@ p{word-wrap:break-word}
 /* 面包屑 */
 .breadcrumbs{float:right; font-size:12px; line-height:35px;}
 .breadcrumbs span.arrow{background:url('../images/icon3.gif') center center no-repeat;padding:0 3px;}
-.breadcrumbs a:hover{ color:#00C;}
+.breadcrumbs a:hover{ color:#f00;}
 
 
 .paragraph{ line-height:22px; padding-bottom:10px;}
@@ -778,7 +782,7 @@ a.download{background:url('../images/icon_download.png') left center no-repeat;p
     color: #f00;
 }
 .h_news .plate_main dd a{ background:url("../images/arrow-right.png") left center no-repeat; padding-left:12px; color:#172c45; width:260px;height:26px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis; display:block;float:left;}
-.h_news .plate_main dd a:hover{ color:#1f5aa5; text-decoration:none; line-height:26px;}
+.h_news .plate_main dd a:hover{ color:#f00; text-decoration:none; line-height:26px;}
 .h_news .plate_main dd span{ float:right;}
 
 
