@@ -13,6 +13,7 @@ class index_control extends phpok_control
 
 	public function index_f()
 	{
+                $this->model('ext')->pv();  //RenLong 2015-08-03 访问统计
 		$tmp = $this->model('id')->id('index',$this->site['id'],true);
 		$tplfile = 'index';
 		if($tmp){

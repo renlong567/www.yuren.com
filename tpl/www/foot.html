@@ -14,21 +14,21 @@
 </div>
 <!-- php:$list = phpok('kefu') -->
 <!-- if $list.project && $list.rslist -->
-<div id="right-float-box" class="im_floatonline">
+<!--<div id="right-float-box" class="im_floatonline">
 	<div class="float-box-content">
 		<div class="toptitle">{$list.project.title}</div>
 		<div class="addlist">
 			<ul>
-				<!-- loop from=$list.rslist key=$key value=$value -->
+				 loop from=$list.rslist key=$key value=$value 
 				<li>{func P_Lang $value.title}<br>{$value.code}</li>
-				<!-- /loop -->
-				<!-- if $list.project.barcode -->
+				 /loop 
+				 if $list.project.barcode 
 				<li><img src="{$list.project.barcode.filename}" width="80px" alt="{$list.project.title}" /></li>
-				<!-- /if -->
+				 /if 
 			</ul>
 		</div>
 	</div>
-</div>
+</div>-->
 <!-- /if -->
 </body>
 </html>

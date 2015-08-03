@@ -376,7 +376,9 @@
         </div>
         <div class="home_link">
             <!-- loop from=$list.rslist key=$key value=$value -->
-            <a href="{$value.link}" target="{$value.target}" title="{$value.title}">{$value.title}</a>
+            <a href="{$value.link}" target="{$value.target}" title="{$value.title}">
+                <img src="{$value.thumb.filename}" alt="{$value.title}" width="134" height="38" />
+            </a>
             <!-- /loop -->
         </div>
     </div>

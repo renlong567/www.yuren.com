@@ -48,13 +48,14 @@ p{word-wrap:break-word}
 .head .logo{ margin-top: 40px;float: left;}
 .head .logo span{ font-size: 100px;}
 .top_nav{height:26px; line-height:26px; text-align:right; color:#666;}
-.head .headerCont .fr{ width:380px;float:right;margin-top: 50px;}
+.head .headerCont .fr{ width:380px;float:right;margin-top: 40px;}
+.head .headerCont .fr .qq{ float:right;padding-top: 10px;}
 
 .search { background: rgba(0, 0, 0, 0) url("../images/ser.gif") no-repeat scroll 0 0;clear: both;float: right;height: 42px;line-height: 42px;margin-top: 10px;overflow: hidden;width: 364px;}
 .search .searchBtn { cursor: pointer;display: block;float: right;height: 40px;width: 74px;}
 .search .keyWord { background-color: transparent;border: medium none;color: #999;height: 30px;line-height: 30px;margin-top: 4px;width: 282px;}
 
-.head .view { clear: both;color: #009900;display: inline;float: right;font-size: 18px;height: 32px;overflow: hidden;padding-top: 30px;text-align: right;width: 500px;}
+.head .view { clear: both;color: #009900;display: inline;float: right;font-size: 18px;height: 32px;overflow: hidden;padding-top: 10px;text-align: right;width: 500px;}
 .head .view .tit {margin-right: 5px;}
 .head .view .con{display: block;float: right;border-right: 2px solid #fff;width: 24px;height: 28px;background-color: #920;color: #fff;text-align: center;font-family: "Times New Roman";font-size: 23px;}
 .head .nav{height:45px; background:#3375b9;line-height: 45px;list-style:none;}

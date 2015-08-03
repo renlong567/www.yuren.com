@@ -53,16 +53,30 @@
                             this.style.color = '#333'" maxlength="50">
                 </div>
                 <div class="view">
-                    <input id="tongji" type="hidden" value="145400" name="tongji">
+                    <!-- php:$list = str_pad($config.copyright.pv,8,0,STR_PAD_LEFT) -->
+                    <!-- php:$num = str_split($list) -->
                     <span class="tit"><img src="images/fangwen.gif"></span>
-                    <span class="con">1</span>
-                    <span class="con">1</span>
-                    <span class="con">1</span>
-                    <span class="con">1</span>
-                    <span class="con">1</span>
-                    <span class="con">1</span>
-                    <span class="con">1</span>
-                    <span class="con">1</span>
+                    <span class="con">{$num.7}</span>
+                    <span class="con">{$num.6}</span>
+                    <span class="con">{$num.5}</span>
+                    <span class="con">{$num.4}</span>
+                    <span class="con">{$num.3}</span>
+                    <span class="con">{$num.2}</span>
+                    <span class="con">{$num.1}</span>
+                    <span class="con">{$num.0}</span>
+                </div>
+                <div class="qq">
+                    <!-- php:$list = phpok('kefu') -->
+                    <!-- if $list.project && $list.rslist -->
+			<ul>
+                            <!-- loop from=$list.rslist key=$key value=$value -->
+                            <li>{$value.code}</li>
+                            <!-- /loop -->
+                            <!-- if $list.project.barcode -->
+                            <li><img src="{$list.project.barcode.filename}" width="80px" alt="{$list.project.title}" /></li>
+                            <!-- /if -->
+			</ul>
+                    <!-- /if -->
                 </div>
             </div>
         </div>

@@ -138,4 +138,18 @@ class ext_model_base extends phpok_model
 		}
 		return $list;
 	}
+        
+        /**
+         * @desc 访问统计
+         * @author RenLong
+         * @date 2015-08-03
+         */
+        public function pv()
+        {
+            $sql = 'UPDATE ' . $this->db->prefix.'extc a SET a.content=a.content+1 WHERE a.id=(SELECT id FROM (';
+            $sql .= 'SELECT ext.id FROM '.$this->db->prefix.'ext ext ';
+            $sql.= 'INNER JOIN '.$this->db->prefix.'extc extc ON(ext.id=extc.id) ';
+            $sql.= 'WHERE ext.identifier =\'pv\') id)';
+            $this->db->query($sql);
+        }
 }
