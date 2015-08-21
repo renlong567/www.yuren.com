@@ -46,8 +46,8 @@
             </div>
         </div>
         <div class="headerCont">
-            <div class="logo"><a href="{$sys.url}" title="{$config.title}"><img src="{$config.logo}" alt="{$config.title}" /></a></div>
-            <div class="fr">
+            <div class="logo"><a href="{$sys.url}" title="{$config.title}"><img src="{$config.logo}" alt="{$config.title}" width="500" /></a></div>
+            <div class="fl">
                 <div class="search">
                     <a class="searchBtn" href="javascript:gSearch()"></a>
                     <input id="topKeyWord" class="keyWord" type="text" onfocus="this.value = '';
@@ -66,17 +66,19 @@
                     <span class="con">{$num.1}</span>
                     <span class="con">{$num.0}</span>
                 </div>
+            </div>
+            <div class="fr">
                 <div class="qq">
                     <!-- php:$list = phpok('kefu') -->
                     <!-- if $list.project && $list.rslist -->
-			<ul>
-                            <!-- loop from=$list.rslist key=$key value=$value -->
-                            <li>{$value.code}</li>
-                            <!-- /loop -->
-                            <!-- if $list.project.barcode -->
-                            <li><img src="{$list.project.barcode.filename}" width="80px" alt="{$list.project.title}" /></li>
-                            <!-- /if -->
-			</ul>
+                    <ul>
+                        <!-- loop from=$list.rslist key=$key value=$value -->
+                        <li>{$value.code}</li>
+                        <!-- /loop -->
+                        <!-- if $list.project.barcode -->
+                        <li><img src="{$list.project.barcode.filename}" width="80" alt="{$list.project.title}" /></li>
+                        <!-- /if -->
+                    </ul>
                     <!-- /if -->
                 </div>
             </div>

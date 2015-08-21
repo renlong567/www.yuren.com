@@ -48,8 +48,8 @@ p{word-wrap:break-word}
 .head .logo{ margin-top: 40px;float: left;}
 .head .logo span{ font-size: 100px;}
 .top_nav{height:26px; line-height:26px; text-align:right; color:#666;}
-.head .headerCont .fr{ width:380px;float:right;margin-top: 40px;}
-.head .headerCont .fr .qq{ float:right;padding-top: 10px;}
+.head .headerCont .fl{ width:380px;margin-top: 40px;}
+.head .headerCont .fr .qq{margin-top: 50px; }
 
 .search { background: rgba(0, 0, 0, 0) url("../images/ser.gif") no-repeat scroll 0 0;clear: both;float: right;height: 42px;line-height: 42px;margin-top: 10px;overflow: hidden;width: 364px;}
 .search .searchBtn { cursor: pointer;display: block;float: right;height: 40px;width: 74px;}
