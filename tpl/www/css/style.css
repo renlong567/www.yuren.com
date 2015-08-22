@@ -753,7 +753,7 @@ a.download{background:url('../images/icon_download.png') left center no-repeat;p
 .h_news .plate_title .ch_name{ color:#2257a3; float:left; margin-right:5px; font-size:16px; line-height:30px;}
 .h_news .plate_title .en_name{ color:#585858; float:left; margin-right:5px; font-size:14px; padding-top:5px; line-height:25px; height:25px;}
 .h_news .plate_title .plate_more{ float:right; background:url("../images/more.jpg") left center no-repeat; padding-left:13px; line-height:30px;font-size: 14px; }
-.h_news .plate_main{ overflow:hidden;height: 214px;}
+.h_news .plate_main{ overflow:hidden;height: 270px;}
 .h_news .plate_main dt{ width:330px; height:156px; overflow:hidden; margin-bottom:10px;}
 .h_news .plate_main dt img{ width:330px; height:156px; }
 .h_news .plate_main dd{ overflow:hidden; height:30px; border-bottom:1px dashed #d2d2d2; line-height:26px;}
