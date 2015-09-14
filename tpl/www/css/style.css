@@ -72,10 +72,10 @@ p{word-wrap:break-word}
 .head .nav ul ul li a:hover{ background:#3375b9;}
 
 /* 首页Banner 样式 */
-.home_banner{ background: rgba(0, 0, 0, 0) url("../images/babg.jpg") no-repeat scroll center center;  height: 350px;}
-#fous { height: 330px;margin: 0 auto;padding-top: 12px;position: relative;width: 980px;}
-#fous .hd .prev { background: rgba(0, 0, 0, 0) url("../images/bon2.png") no-repeat scroll 0 0;cursor: pointer;display: block;height: 66px;left: -78px;position: absolute;top: 40%;width: 66px;}
-#fous .hd .next { background: rgba(0, 0, 0, 0) url("../images/bon2.png") no-repeat scroll 0 -66px;cursor: pointer;display: block;height: 66px;position: absolute;right: -78px;top: 40%;width: 66px;}
+.home_banner{ /* background: rgba(0, 0, 0, 0) url("../images/babg.jpg") no-repeat scroll center center; */ height: 315px;}
+#fous { height: 330px;margin: 0 auto;/*padding-top: 12px;*/position: relative;width: 980px;}
+#fous .hd .prev { /* background: rgba(0, 0, 0, 0) url("../images/bon2.png") no-repeat scroll 0 0;*/ cursor: pointer;display: block;height: 66px;left: -78px;position: absolute;top: 40%;width: 66px;}
+#fous .hd .next { /* background: rgba(0, 0, 0, 0) url("../images/bon2.png") no-repeat scroll 0 -66px;*/ cursor: pointer;display: block;height: 66px;position: absolute;right: -78px;top: 40%;width: 66px;}
 .home_banner .pro_ul{ width:980px; height:300px;list-style:none;}
 .home_banner .page_ul{ bottom: 46px;left: 48%;position: absolute;}
 .home_banner .page_ul li { background: rgba(0, 0, 0, 0) url("../images/bon1.png") no-repeat scroll 0 0;cursor: pointer;display: inline;float: left;height: 16px;margin-right: 1px;width: 16px;}
