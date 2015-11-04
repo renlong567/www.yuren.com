@@ -279,9 +279,9 @@ p{word-wrap:break-word}
 .sub_nav dd a{ color: #3375b9;}
 .sub_nav dd.on a{color:red;font-weight:bold;}
 .sub_nav dd:hover{  background: #f7efef none repeat scroll 0 0;
-    border-color: #f5dede #f5dede #f5dede #3375b9;
-    border-style: none none none solid;
-    border-width: 0 0 0 3px;
+                    border-color: #f5dede #f5dede #f5dede #3375b9;
+                    border-style: none none none solid;
+                    border-width: 0 0 0 3px;
 }
 
 .page_contact{ overflow:hidden; font-size:14px;}
@@ -318,7 +318,7 @@ p{word-wrap:break-word}
 .news_list .n-img {float: left;padding-right: 15px;width: 131px;text-align: center;}
 .news_list .n-img img{ width:131px; height:97px;}
 .news_list h3 {padding: 5px 0 11px; font-size:13px;}
-.news_list h3 a{font-size:13px;}
+.news_list h3 a{font-size:20px;color: #000;}
 .news_list .n-txt {color: #979797;text-indent: 24px;line-height: 20px;}
 .news_list .more, .news_list .more a {color: #34ACE2;}
 
@@ -843,7 +843,7 @@ a.download{background:url('../images/icon_download.png') left center no-repeat;p
     margin-left: 30px;
     margin-top: 18px;
     overflow: hidden;
-   height: auto;
+    height: auto;
 }
 .partC .bd li {
     display: inline;
