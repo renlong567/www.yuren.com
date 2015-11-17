@@ -13,7 +13,7 @@ define("LICENSE_SITE",".yureninternational.com");
 //授权码，16位或32位的授权码，要求全部大写
 define("LICENSE_CODE","FD42ABF3940BF0BC0DF22DD2B038ADDF");
 //授权者称呼，企业授权填写公司名称，个人授权填写姓名
-define("LICENSE_NAME","郑州育人国际学校");
+define("LICENSE_NAME","郑州航空港育人国际学校");
 //显示开发者信息，即Powered by信息
 define("LICENSE_POWERED",true);
 ?>
