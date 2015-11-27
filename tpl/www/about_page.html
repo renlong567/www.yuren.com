@@ -19,7 +19,7 @@
 			<span class="breadcrumbs">
 				{lang您现在的位置：}
 				<a href="{$sys.url}" title="{$config.title}">{lang首页}</a>
-				<span class="arrow">&nbsp;</span> {func P_Lang $parent_rs.title}
+                                <span class="arrow">&nbsp;</span><a href="javascript:void(0)" title="{func P_Lang $parent_rs.title}">{func P_Lang $parent_rs.title}</a>
 				<span class="arrow">&nbsp;</span> <a href="{$page_rs.url}" title="{func P_Lang $page_rs.title}">{func P_Lang $page_rs.title}</a>
 			</span>
 			{func P_Lang $page_rs.title}				
