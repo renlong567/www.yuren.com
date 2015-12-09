@@ -75,9 +75,10 @@
                 <!-- if $config.contactus.address --><div>{lang地址：}{$config.contactus.address}</div><!-- /if -->
                 <!-- if $config.contactus.email --><div>Email：{$config.contactus.email}</div><!-- /if -->
                 <!-- if $config.contactus.zipcode --><div>{lang邮编：}{$config.contactus.zipcode}</div><!-- /if -->
-            	<!-- if $config.contactus.fullname --><div>{lang联系人1：}{$config.contactus.fullname}</div><!-- /if -->
-                <!-- if $config.contactus.contacts2 --><div>{lang联系人2：}{$config.contactus.contacts2}</div><!-- /if -->
-            </div>
+                <!-- if $config.contactus.fullname --><div>{$config.contactus.fullname}</div><!-- /if -->
+                <!-- if $config.contactus.contacts2 --><div>{$config.contactus.contacts2}</div><!-- /if -->
+                <!-- if $config.contactus.contacts3 --><div>{$config.contactus.contacts3}</div><!-- /if -->
+                <!-- if $config.contactus.tel --><div>{lang固定电话：}{$config.contactus.tel}</div><!-- /if --></div>
         </div>
         <div class="m_box"><a href="http://map.baidu.com/?newmap=1&s=s%26wd%3D%E9%83%91%E5%B7%9E%E7%BB%8F%E5%BC%80%E5%8C%BA%E8%82%B2%E4%BA%BA%E5%AD%A6%E6%A0%A1%26c%3D268&from=alamap&tpl=mapcity" target="_blank" title="点击打开百度地图查看"><img src="/images/map.png" /></a></div>
     </div>
@@ -111,7 +112,7 @@
             <div class="newBox">
                 <div class="hd">
                     <!-- php:$arclist = phpok('xinwenredian') -->
-                    <h3 class=""><a href="{$list.cate.url}">{func P_lang $arclist.cate.title}</a></h3>
+                    <h3 class=""><a href="{$arclist.cate.url}">{func P_lang $arclist.cate.title}</a></h3>
                     <!--<a href="{$list.cate.url}" class="more" title="{lang阅读更多}{$list.cate.title}">{lang更多}</a>-->
                 </div>
                 <div class="bd">
@@ -199,8 +200,8 @@
             <!-- php:$list = phpok('sygjxx') -->
             <div class="rf">
                 <div class="plate_title">
-                    <span class="ch_name">{$list.project.title}</span>
-                    <a href="{$list.cate.url}" class="plate_more">{lang更多}</a>
+                    <span class="ch_name">国际小学</span>
+                    <a href="{$list.project.url}" class="plate_more">{lang更多}</a>
                 </div>
                 <dl class="plate_main">
                     <!-- loop from=$list.rslist key=$k value=$v -->

@@ -203,7 +203,7 @@ p{word-wrap:break-word}
 .home_about img{ float:left; margin-right:10px;}
 .home_about p{ margin-bottom:5px;}
 
-.home_contact{ overflow:hidden; line-height:22px; padding-right:3px;}
+.home_contact{ overflow:hidden;font-size: 14px; line-height:30px; padding-right:3px;}
 .home_contact h3{ font-size:14px; line-height:30px;}
 
 .sort{ overflow:hidden; margin-bottom:5px;}
@@ -756,7 +756,7 @@ a.download{background:url('../images/icon_download.png') left center no-repeat;p
 .h_news .plate_main{ overflow:hidden;height: 270px;}
 .h_news .plate_main dt{ width:330px; height:156px; overflow:hidden; margin-bottom:10px;}
 .h_news .plate_main dt img{ width:330px; height:156px; }
-.h_news .plate_main dd{ overflow:hidden; height:30px; border-bottom:1px dashed #d2d2d2; line-height:26px;}
+.h_news .plate_main dd{ overflow:hidden; height:30px; border-bottom:1px dashed #d2d2d2; line-height:35px;}
 .h_news .plate_main .t{
     overflow:hidden;
     background: rgba(0, 0, 0, 0) repeat-x scroll left bottom;
@@ -782,7 +782,7 @@ a.download{background:url('../images/icon_download.png') left center no-repeat;p
 .h_news .plate_main .t .title .hd a:hover {
     color: #f00;
 }
-.h_news .plate_main dd a{ background:url("../images/arrow-right.png") left center no-repeat; padding-left:12px; color:#172c45; width:260px;height:26px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis; display:block;float:left;}
+.h_news .plate_main dd a{ background:url("../images/arrow-right.png") left center no-repeat; padding-left:12px; color:#172c45;height:26px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis; display:block;float:left;}
 .h_news .plate_main dd a:hover{ color:#f00; text-decoration:none; line-height:26px;}
 .h_news .plate_main dd span{ float:right;}
 
