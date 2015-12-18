@@ -810,8 +810,8 @@ a.download{background:url('../images/icon_download.png') left center no-repeat;p
 
 .news{ border: 1px solid #eee;float: right;padding: 10px;width: 335px;}
 
-.lf{float: left;}
-.rf{float:right;}
+.lf{float: left;width: 330px;}
+.rf{float:right;width: 330px;}
 
 .contentB{clear: both;margin-top: 10px;float: left;width: 100%;}
 

@@ -192,7 +192,7 @@
                         </div>
                     </div>
                     {else}
-                    <dd><span>{func date Y-m $v.dateline}</span><a href="{$v.url}">{$v.title}</a></dd>
+                    <dd><span>{func date Y-m $v.dateline}</span><a href="{$v.url}">{func phpok_cut $v.title 13 …}</a></dd>
                     {/if}
                     <!-- /loop -->
                 </dl>
@@ -200,7 +200,7 @@
             <!-- php:$list = phpok('sygjxx') -->
             <div class="rf">
                 <div class="plate_title">
-                    <span class="ch_name">国际小学</span>
+                    <span class="ch_name">{$list.project.title}</span>
                     <a href="{$list.project.url}" class="plate_more">{lang更多}</a>
                 </div>
                 <dl class="plate_main">
@@ -216,7 +216,7 @@
                         </div>
                     </div>
                     {else}
-                    <dd><span>{func date Y-m $v.dateline}</span><a href="{$v.url}">{$v.title}</a></dd>
+                    <dd><span>{func date Y-m $v.dateline}</span><a href="{$v.url}">{func phpok_cut $v.title 13 …}</a></dd>
                     {/if}
                     <!-- /loop -->
                 </dl>
@@ -226,7 +226,7 @@
             <div class="lf">
                 <div class="plate_title">
                     <span class="ch_name">{$list.project.title}</span>
-                    <a href="{$list.cate.url}" class="plate_more">{lang更多}</a>
+                    <a href="{$list.project.url}" class="plate_more">{lang更多}</a>
                 </div>
                 <dl class="plate_main">
                     <!-- loop from=$list.rslist key=$k value=$v -->
@@ -241,7 +241,7 @@
                         </div>
                     </div>
                     {else}
-                    <dd><span>{func date Y-m $v.dateline}</span><a href="{$v.url}">{$v.title}</a></dd>
+                    <dd><span>{func date Y-m $v.dateline}</span><a href="{$v.url}">{func phpok_cut $v.title 13 …}</a></dd>
                     {/if}
                     <!-- /loop -->
                 </dl>
@@ -249,8 +249,8 @@
             <!-- php:$list = phpok('sygjgz') -->
             <div class="rf">
                 <div class="plate_title">
-                    <span class="ch_name">{$list.project.title}</span>
-                    <a href="{$list.cate.url}" class="plate_more">{lang更多}</a>
+                    <span class="ch_name">视频中心</span>
+                    <a href="{$list.project.url}" class="plate_more">{lang更多}</a>
                 </div>
                 <dl class="plate_main">
                     <!-- loop from=$list.rslist key=$k value=$v -->
@@ -265,7 +265,7 @@
                         </div>
                     </div>
                     {else}
-                    <dd><span>{func date Y-m $v.dateline}</span><a href="{$v.url}">{$v.title}</a></dd>
+                    <dd><span>{func date Y-m $v.dateline}</span><a href="{$v.url}">{func phpok_cut $v.title 13 …}</a></dd>
                     {/if}
                     <!-- /loop -->
                 </dl>

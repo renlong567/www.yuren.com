@@ -112,7 +112,7 @@
                             </div>
                         </div>
                         {else}
-                        <dd><span>{func date Y-m $v.dateline}</span><a href="{$v.url}">{$v.title}</a></dd>
+                        <dd><span>{func date Y-m $v.dateline}</span><a href="{$v.url}">{func phpok_cut $v.title 13 …}</a></dd>
                         {/if}
                         <!-- /loop -->
                     </dl>
